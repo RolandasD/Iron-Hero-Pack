@@ -1,0 +1,87 @@
+RD Mark 3, 4 & 5 files added:
+
+--- RD MARK 3 ---
+- assets/sind/data/heroes/rd_mark3.js
+- assets/sind/renderers/heroes/rd_mark3.js
+- assets/sind/data/fabricator/nodes/rd_mark3.json
+- assets/sind/data/fabricator/recipes/rd_mark3.json
+- assets/sind/textures/heroes/rdmark3/mark1_layer1.png
+- assets/sind/textures/heroes/rdmark3/mark1_layer2.png
+- assets/sind/textures/heroes/rdmark3/mark1_extra.png
+- assets/sind/textures/heroes/rdmark3/mark1_mask.png
+
+--- RD MARK 4 ---
+- assets/sind/data/heroes/rd_mark4.js
+- assets/sind/renderers/heroes/rd_mark4.js
+- assets/sind/data/fabricator/nodes/rd_mark4.json
+- assets/sind/data/fabricator/recipes/rd_mark4.json
+- assets/sind/textures/heroes/rdmark4/mark1_layer1.png
+- assets/sind/textures/heroes/rdmark4/mark1_layer2.png
+- assets/sind/textures/heroes/rdmark4/mark1_extra.png
+- assets/sind/textures/heroes/rdmark4/mark1_mask.png
+
+--- RD MARK 5 ---
+- assets/sind/data/heroes/rd_mark5.js
+- assets/sind/renderers/heroes/rd_mark5.js
+- assets/sind/data/fabricator/nodes/rd_mark5.json
+- assets/sind/data/fabricator/recipes/rd_mark5.json
+- assets/sind/textures/heroes/rdmark5/mark1_layer1.png
+- assets/sind/textures/heroes/rdmark5/mark1_layer2.png
+- assets/sind/textures/heroes/rdmark5/mark1_extra.png
+- assets/sind/textures/heroes/rdmark5/mark1_mask.png
+
+Where to put them in your heropack zip/folder:
+1. Put rd_markN.js files into assets/sind/data/heroes/
+2. Put rd_markN.js files into assets/sind/renderers/heroes/
+3. Put rd_markN.json files into assets/sind/data/fabricator/nodes/
+4. Put rd_markN.json files into assets/sind/data/fabricator/recipes/
+5. Put rdmarkN/ folders into assets/sind/textures/heroes/
+
+What each version does vs its predecessor:
+
+RD Mark 3 / Plated Chassis (vs Mark 2):
+- Textures shifted to cool grey-steel (hue rotation +10deg, saturation x0.60).
+- Better fall resistance (12 → 13).
+- Slightly improved speed and jump.
+- Flamethrower fuel burns more efficiently (drain 0.021 vs 0.023).
+- Still no flight.
+- Fabricator requires RD Mark 2 (sind:rd_mark2).
+
+RD Mark 4 / Proto Booster (vs Mark 3):
+- Textures shifted to darker charcoal with a blue-grey tinge (hue +20deg, saturation x0.40).
+- PUNCH_DAMAGE increases to 4 (first punch upgrade in the chain).
+- Better fall resistance (13 → 15).
+- Noticeably improved speed and jump.
+- Flamethrower fuel burns more efficiently (drain 0.019).
+- Still no flight.
+- Fabricator requires RD Mark 3 (sind:rd_mark3).
+
+RD Mark 5 / Pre-Ignition (vs Mark 4):
+- Textures shifted to near-silver / polished steel (hue +25deg, saturation x0.22).
+- Tier bumps to 5.
+- Better fall resistance (15 → 17).
+- Improved speed and jump, approaching final Mark 1 values.
+- Flamethrower still available, fuel drain 0.017.
+- FLIGHT ENABLED — first suit in the RD prototype chain with propelled flight.
+  (propelled_flight is no longer blocked in isModifierEnabled.)
+- Fabricator requires RD Mark 4 (sind:rd_mark4).
+
+Stat comparison across the full chain:
+                  Mark1   Mark2   Mark3   Mark4   Mark5   (Mark 1 final)
+Tier              4       4       4       4       5       5
+PUNCH_DAMAGE      3       3       3       4       4       5
+FALL_RESISTANCE   10.0    12.0    13.0    15.0    17.0    18.0
+JUMP_HEIGHT       -0.45   -0.43   -0.41   -0.36   -0.29   -0.25
+BASE_SPEED        -0.35   -0.33   -0.31   -0.26   -0.22   -0.20
+Scale             1.50    1.45    1.40    1.30    1.20    1.10
+Fuel drain rate   0.025   0.023   0.021   0.019   0.017   0.015
+Flight            No      No      No      No      YES     Yes
+Arm Rocket        No      No      No      No      No      Yes
+
+Fabricator unlock chain:
+  RD Mark 1 → RD Mark 2 → RD Mark 3 → RD Mark 4 → RD Mark 5 → (Mark 1)
+
+Recipe cost progression:
+  Mark 3: 14 tutridium, 4 titanium, 18 iron, 3 coal
+  Mark 4: 16 tutridium, 5 titanium, 20 iron, 2 coal
+  Mark 5: 20 tutridium, 6 titanium, 24 iron, 2 coal
