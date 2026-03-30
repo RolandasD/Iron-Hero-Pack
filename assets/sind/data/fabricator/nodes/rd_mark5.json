@@ -1,0 +1,11 @@
+{
+  "suit": "sind:rd_mark5",
+  "requirements": [
+    "fiskheroes:tier4_5",
+    "sind:arc_reactor",
+    "sind:early_stark_tech",
+    "fiskheroes:defense",
+    "fiskheroes:melee",
+    "sind:rd_mark4"
+  ]
+}
