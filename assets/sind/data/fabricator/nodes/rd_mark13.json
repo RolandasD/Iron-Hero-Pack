@@ -1,5 +1,5 @@
 {
-  "suit": "sind:mark3",
+  "suit": "sind:rd_mark13",
   "requirements": [
     "fiskheroes:tier6_7",
     "sind:arc_reactor",
@@ -8,7 +8,6 @@
     "fiskheroes:defense2",
     "fiskheroes:melee",
     "fiskheroes:ranged2",
-    "sind:arc_reactor",
-    "sind:rd_mark10"
+    "sind:mark4"
   ]
 }
