@@ -1,13 +1,12 @@
 {
-  "suit": "sind:mark2",
+  "suit": "sind:rd_mark6",
   "requirements": [
-    "fiskheroes:tier6_7",
+    "fiskheroes:tier4_5",
     "sind:arc_reactor",
     "sind:early_stark_tech",
     "fiskheroes:flight",
     "fiskheroes:defense",
     "fiskheroes:melee",
-    "fiskheroes:ranged",
-    "sind:rd_mark8"
+    "sind:mark1"
   ]
 }
