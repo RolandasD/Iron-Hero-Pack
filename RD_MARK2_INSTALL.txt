@@ -1,0 +1,42 @@
+RD Mark 2 files added:
+- assets/sind/data/heroes/rd_mark2.js
+- assets/sind/renderers/heroes/rd_mark2.js
+- assets/sind/data/fabricator/nodes/rd_mark2.json
+- assets/sind/data/fabricator/recipes/rd_mark2.json
+- assets/sind/textures/heroes/rdmark2/mark1_layer1.png
+- assets/sind/textures/heroes/rdmark2/mark1_layer2.png
+- assets/sind/textures/heroes/rdmark2/mark1_extra.png
+- assets/sind/textures/heroes/rdmark2/mark1_mask.png
+
+Where to put them in your heropack zip/folder:
+1. Put rd_mark2.js into assets/sind/data/heroes/
+2. Put rd_mark2.js into assets/sind/renderers/heroes/
+3. Put rd_mark2.json into assets/sind/data/fabricator/nodes/
+4. Put rd_mark2.json into assets/sind/data/fabricator/recipes/
+5. Put rdmark2/ folder into assets/sind/textures/heroes/
+
+What this version does vs RD Mark 1:
+- Reuses the Mark 1 model (same silhouette, new texture colour).
+- Textures shifted to a slightly cooler steel-grey tone (less rusty, more refined).
+- Slightly better fall resistance (10 → 12).
+- Very slightly improved speed and jump (one small step in the mk1→mk5 chain).
+- Flamethrower fuel burns marginally more efficiently (drain 0.023 vs 0.025).
+- Still no flight — that comes in a later RD mark.
+- Still no arm rocket — that comes in a later RD mark.
+- Fabricator requires RD Mark 1 to be built first (sind:rd_mark1).
+
+Stat comparison:
+                  RD Mark 1   RD Mark 2   (eventual Mark 1)
+Tier              4           4           5
+PUNCH_DAMAGE      3           3           5
+FALL_RESISTANCE   10.0        12.0        18.0
+JUMP_HEIGHT       -0.45       -0.43       -0.25
+BASE_SPEED        -0.35       -0.33       -0.20
+Scale             1.5         1.45        1.1
+Fuel drain rate   0.025       0.023       0.015
+Flight            No          No          Yes
+Arm Rocket        No          No          Yes
+
+Recommended next step:
+Create RD Mark 3 as the first suit with limited boost-assisted mobility
+(short burst flight, still no sustained flight or arm rocket).
