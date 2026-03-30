@@ -1,0 +1,8 @@
+{
+  "name": "rd_mark2",
+  "parent": "fiskheroes:iron_man",
+  "display_name": "RD Mark 2",
+  "description": "First refined prototype. Balanced and stable.",
+  "tier": 2,
+  "rarity": "COMMON"
+}
