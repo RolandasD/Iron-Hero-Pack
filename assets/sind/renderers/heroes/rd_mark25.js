@@ -1,12 +1,12 @@
 extend("sind:advanced_lasers");
 loadTextures({
-    "layer1": "sind:mark20/mark20_layer1",
-    "layer2": "sind:mark20/mark20_layer2",
-    "suit": "sind:mark20/mark20_suit.tx.json",
-    "mask": "sind:mark9/mark9_mask.tx.json",
+    "layer1": "sind:rdmark25/mark20_layer1",
+    "layer2": "sind:rdmark25/mark20_layer2",
+    "suit": "sind:rdmark25/mark20_suit.tx.json",
+    "mask": "sind:rdmark25/mark9_mask.tx.json",
     "chin": "sind:null",
-    "rocket": "sind:mark20/mark20_rocket.tx.json",
-    "chest": "sind:mark20/mark20_chest",
-    "cannons": "sind:mark20/mark20_cannon",
-    "flaps": "sind:mark12/mark12_flaps.tx.json"
+    "rocket": "sind:rdmark25/mark20_rocket.tx.json",
+    "chest": "sind:rdmark25/mark20_chest",
+    "cannons": "sind:rdmark25/mark20_cannon",
+    "flaps": "sind:rdmark25/mark12_flaps.tx.json"
 });
