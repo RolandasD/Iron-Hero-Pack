@@ -1,0 +1,302 @@
+{
+  "name": "- Iron Man Armor Mk XLIII:",
+  "modifiers": {
+    "fiskheroes:leaping": {
+      "leapAmount": [2.5, 0.15],
+      "soundEvents": {
+        "LEAP": ["fiskheroes:iron_man_flight_enable"]
+      }
+    },
+    "fiskheroes:sentry_mode": {
+      "soundEvents": {
+        "OPEN": "fiskheroes:sentry_mode_open",
+        "CLOSE": "fiskheroes:sentry_mode_close"
+      }
+    },
+    "fiskheroes:shield": {
+      "shield": {
+        "health": 80.0,
+        "regeneration": 8.0,
+        "recoveryDelay": 20,
+        "cooldown": 100
+      },
+      "coverage": {
+        "yawRadius": 90.0,
+        "pitchRadius": 90.0,
+        "yawOffset": 0.0,
+        "pitchOffset": 0.0
+      },
+      "knockback": 0.2,
+      "isToggle": true,
+      "soundEvents": {
+        "BLOCK_START": "sind:arm_open2",
+        "BLOCK_STOP": "sind:arm_close",
+        "DEFLECT": "fiskheroes:shield_deflect",
+        "DISARM": "fiskheroes:shield_disarm"
+      }
+    },
+    "fiskheroes:transformation|flares": {
+      "key": "FLARES",
+      "transformation": {
+        "toggleData": "sind:dyn/flares",
+        "timerData": "sind:dyn/flares_timer",
+        "time": 20
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:flares_open", "sind:flares"],
+        "DISABLE": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|flares_c": {
+      "cooldown": {
+        "toggleData": "sind:dyn/flares",
+        "cooldownData": "sind:dyn/flares_cooldown",
+        "duration": 30,
+        "recovery": 0.25
+      }
+    },
+    "fiskheroes:controlled_flight|flight_unibeam": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false,
+      "canRoll": false,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:controlled_flight|flight_normal": {
+      "speed": 0.09,
+      "boostSpeed": 0.22,
+      "canBoost": true,
+      "canRoll": true,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:repulsor_blast|standard": {
+      "damageProfile": {
+        "damage": 11.0,
+        "types": {
+          "ENERGY": 1
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 1,
+          "HIT_COOLDOWN": 0
+        }
+      },
+      "range": 48,
+      "speed": 20,
+      "spread": 0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:repblast"
+      }
+    },
+    "fiskheroes:lightning_cast|tnt": {
+      "damageProfile": {
+        "damage": 22.5,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:lightning_cast|fc": {
+      "damageProfile": {
+        "damage": 18.75,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:lightning_cast|gp": {
+      "damageProfile": {
+        "damage": 15.0,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:transformation|arm": {
+      "key": "AROCKET",
+      "transformation": {
+        "toggleData": "sind:dyn/armgun_bool",
+        "timerData": "sind:dyn/armgun_timer",
+        "time": 10
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:arm_open",
+        "DISABLE": "sind:arm_close"
+      }
+    },
+    "fiskheroes:transformation|scrockets": {
+      "key": "SCROCKETS",
+      "transformation": {
+        "toggleData": "sind:dyn/srockets",
+        "timerData": "sind:dyn/srockets_timer",
+        "time": 0
+      }
+    },
+    "fiskheroes:cooldown": {
+      "cooldown": {
+        "toggleData": "sind:dyn/srockets",
+        "cooldownData": "sind:dyn/srockets_cooldown",
+        "duration": 30,
+        "recovery": 0.25
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:energy_projection|energy_proj": {
+      "damageProfile": {
+        "damage": 3.25,
+        "types": {
+          "ENERGY": 1,
+          "FIRE": 0.25
+        },
+        "properties": {
+          "HIT_COOLDOWN": 4,
+          "REDUCE_KNOCKBACK": 0.8,
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 80
+        }
+      },
+      "range": 38,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": "sind:mk85_beam_start",
+        "SHOOT_STOP": "sind:mk85_beam_stop",
+        "BEAM_AMBIENT": "sind:mk85_beam_loop"
+      }
+    },
+    "fiskheroes:heat_vision|heat_vis": {
+      "damageProfile": {
+        "damage": 8.5,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        },
+        "properties": {
+          "HIT_COOLDOWN": 0,
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 80
+        }
+      },
+      "canDoGriefing": false,
+      "range": 20,
+      "radius": 0.1
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:charged_beam|cb_standard": {
+      "damageProfile": {
+        "damage": 8,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "chargeTime": 50,
+      "duration": 50,
+      "cooldownTime": 80,
+      "range": 18.0,
+      "radius": 1.0,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:mk85_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "sind:unibeam"
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/gunmag.png",
+      "data": "sind:dyn/srockets_cooldown"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/gp_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('gp_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/fc_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('fc_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/tnt_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('tnt_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/flares.png",
+      "data": "sind:dyn/flares_cooldown"
+    }
+  ]
+}

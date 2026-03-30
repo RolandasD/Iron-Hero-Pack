@@ -1,0 +1,15 @@
+{data_0} = curve {data_0}
+
+{data_1} = curve {data_1}
+
+{slide_rotX} = clamp({pitch}' * {data_0}, -30', 95')
+{slide_rotY} = clamp(({yaw} - {bodyYaw})' * {data_0}, -12, 6)
+
+{slide_posX} = (({yaw} - {bodyYaw})/20)  * {data_0} - ({data_0})
+{slide_posY} @ {data_0} -'> clamp(-{pitch}', -2, 2)
+
+{pivot4_rotX} = ({pitch}' * {data_0}) - {slide_rotX}
+{pivot4_rotY} = -clamp((-{pitch}' * {data_0}) - {slide_rotY}, 0', 0')
+
+{barrell_rotZ} = {data_1} * {ticks} * 10
+{Pivot1_rotX} += -75'{data_0} * {data_2}

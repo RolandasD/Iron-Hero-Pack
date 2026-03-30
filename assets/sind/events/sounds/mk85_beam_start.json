@@ -1,0 +1,7 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.beam.start",
+  "condition": {
+    "continue": "entity.getData('fiskheroes:energy_projection')"
+  }
+}

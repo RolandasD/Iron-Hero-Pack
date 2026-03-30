@@ -1,0 +1,56 @@
+{data_0}=curve{data_0}
+{telekinesis_time}={data_0}
+{telekinesis_0}=curve animate2({telekinesis_time},10,0,0.4,9.6)
+{telekinesis_1}=curve animate2({telekinesis_time},9.5,0.5,0.5,9)
+{telekinesis_2}=curve animate2({telekinesis_time},0.86,0.14,0.36,0.5)
+{telekinesis_3}=curve animate2({telekinesis_time},0.5,0,0.14,0.36)
+{telekinesis_4}=curve animate2({telekinesis_time},9.86,0.14,0.36,9.5)
+
+
+{leftArmBuster_rotX} @ {telekinesis_0} -> -79.9625769541'
+{leftArmBuster_rotY} @ {telekinesis_0} -> 34.9238497548'
+{leftArmBuster_rotZ} @ {telekinesis_0} -> 0.870384675'
+{leftArmBuster_posY}+=-2{telekinesis_0}
+
+{lowerLeftArm_rotX} @ {telekinesis_0} -> 15'
+{lowerLeftArm_rotY} @ {telekinesis_0} -> 0'
+{lowerLeftArm_rotZ} @ {telekinesis_0} -> 0'
+
+{wrist_posY}+=11{telekinesis_1}
+
+{wholeHandLeft_posY}+=-15{telekinesis_2}
+{wholeHandLeft_posY}+=-26{telekinesis_1}
+
+{foreLeftLower_posY}+=5.5{telekinesis_1}
+
+{bars_posY}+=6{telekinesis_1}
+
+{handLeft_posX}+=1{telekinesis_3}
+{handLeft_posX}+=1{telekinesis_4}
+{handLeft_posY}+=-3{telekinesis_4}
+
+{pivotLeft_rotX} @ {data_0} -> {pitch}'
+{pivotLeft_rotY} @ {data_0} -> ({yaw} - {bodyYaw})'
+;--------------------------------------------------------------
+{data_1}=curve{data_1}
+
+{leftArmBuster_rotX} @ {data_1} -> -88.5964135048'-25'
+{leftArmBuster_rotY} @ {data_1} -> 10.3721054069'
+{leftArmBuster_rotZ} @ {data_1} -> -86.217807257'
+{leftArmBuster_posX}+=3.5{data_1}
+{leftArmBuster_posY}+=4.3{data_1}
+
+{lowerLeftArm_rotX} @ {data_1} -> 15.0136453387'
+{lowerLeftArm_rotY} @ {data_1} -> -2.4147632009'
+{lowerLeftArm_rotZ} @ {data_1} -> -0.6474309976'
+
+{pivotLeft_rotX} @ {data_1} -> {pitch}'
+{pivotLeft_rotY} @ {data_1} -> ({yaw} - {bodyYaw})'
+;--------------------------------------------------------------
+{data_2}=curve{data_2}
+{data_2} = sin({data_2} * pi)
+{repulsorFistLeft_posX}+=0.8641799523{data_2}{data_1}
+{repulsorFistLeft_posY}+=6.1186663023{data_2}{data_1}
+{repulsorFistLeft_posZ}+=-2.7161766683{data_2}{data_1}
+
+{innerRingLeft_posY}+=1.5{data_2}{data_1}

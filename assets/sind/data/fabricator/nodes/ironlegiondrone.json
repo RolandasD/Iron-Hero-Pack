@@ -1,0 +1,14 @@
+{
+  "suit": "sind:ironlegiondrone",
+  "requirements": [
+    "fiskheroes:tier6_7",
+    "sind:arc_reactor",
+    "sind:advanced_stark_tech",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee",
+    "fiskheroes:ranged2",
+    "sind:iron_legion2",
+    "sind:mark41"
+  ]
+}

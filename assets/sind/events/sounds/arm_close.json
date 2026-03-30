@@ -1,0 +1,6 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:armrocket_close",
+  "volume": 2.0,
+  "fadeOut": 2
+}

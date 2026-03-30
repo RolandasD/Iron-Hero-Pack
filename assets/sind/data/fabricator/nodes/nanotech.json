@@ -1,0 +1,18 @@
+{
+  "display": {
+    "name": {
+      "translate": "Nanotech Stark Technology (IV)"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/nanotech.png"
+    }
+  },
+  "requirements": [
+    "sind:advanced_stark_tech",
+    "fiskheroes:nanites"
+  ],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

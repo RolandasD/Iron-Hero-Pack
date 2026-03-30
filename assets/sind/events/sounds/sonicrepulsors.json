@@ -1,0 +1,9 @@
+{
+  "sound": "fiskheroes:suit.reverseflash.vibration.loop",
+  "condition": "entity.getData('sind:dyn/beam_charging2')",
+  "volume": 0.75,
+  "pitch": "0.5",
+  "loop": true,
+  "fadeIn": 15,
+  "fadeOut": 15
+}

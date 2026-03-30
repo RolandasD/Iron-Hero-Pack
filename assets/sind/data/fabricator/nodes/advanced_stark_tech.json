@@ -1,0 +1,17 @@
+{
+  "display": {
+    "name": {
+      "translate": "Advanced Stark Technology (III)"
+    },
+    "icon": {
+      "texture": "fiskheroes:textures/gui/nodes/stark.png"
+    }
+  },
+  "requirements": [
+    "sind:stark_tech"
+  ],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

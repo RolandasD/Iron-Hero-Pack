@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/shf/shfcannon/mark100_shfcannonmodel",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_shfcannonmodel_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_shfcannonmodel_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(3 * (Math.max((entity.getInterpolatedData('fiskheroes:aimed_timer')-0.85)*(100/15) , 0))) | 0",
+      "values": {
+        "min": 1,
+        "max": 3
+      }
+    }
+  },
+  "isDynamic": true
+}

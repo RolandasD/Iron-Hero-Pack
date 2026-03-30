@@ -1,0 +1,5 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:piece2",
+  "pitch": "1.1 - (Math.random() * 0.9)"
+}

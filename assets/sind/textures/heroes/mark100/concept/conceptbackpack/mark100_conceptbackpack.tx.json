@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/concept/conceptbackpack/mark100_conceptbackpack",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_conceptbackpack_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_conceptbackpack_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(22 * entity.getInterpolatedData('sind:dyn/flight_timer')), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 22
+      }
+    }
+  },
+  "isDynamic": true
+}

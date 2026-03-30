@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.boost.loop",
+  "condition": "entity.getData('sind:dyn/hulkbuster_timer') < 0.33 && entity.getWornChestplate().suitType().split('/')[0] == 'sind:mark43'",
+  "loop": true,
+  "fadeIn": 5,
+  "fadeOut": 5,
+  "volume": 0.4
+}

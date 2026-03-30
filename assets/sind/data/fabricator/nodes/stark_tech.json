@@ -1,0 +1,17 @@
+{
+  "display": {
+    "name": {
+      "translate": "Stark Technology (II)"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/stark2.png"
+    }
+  },
+  "requirements": [
+    "sind:early_stark_tech"
+  ],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

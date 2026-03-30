@@ -1,0 +1,2 @@
+{data} = curve {data}
+{rightArm_rotX} -= 30'*{data}

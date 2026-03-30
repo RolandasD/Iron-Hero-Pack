@@ -1,0 +1,20 @@
+{
+  "name": "J.A.R.V.I.S O.S",
+  "modifiers": {
+    "fiskheroes:shadowdome": {
+      "chargeTime": 0,
+      "duration": 1,
+      "radius": 15.0,
+      "soundEvents": {
+        "CAST": "sind:radar"
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/gunmag.png",
+      "data": "sind:dyn/mob_cooldown"
+    }
+  ]
+}

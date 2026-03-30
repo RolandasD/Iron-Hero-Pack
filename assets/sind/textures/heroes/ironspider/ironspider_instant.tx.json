@@ -1,0 +1,23 @@
+{
+    "texture": {
+      "in": "sind:ironspider/ironspider_instant",
+      "transform": [
+        {
+          "operation": "XOR",
+          "supply": "sind:xor/ironspider/ironspider_instant_<TIMER>"
+        }
+      ],
+      "out": "sind:generated/ironspider_instant_<TIMER>"
+    },
+    "getters": {
+      "TIMER": {
+        "key": "Math.ceil(4 * entity.getInterpolatedData('sind:dyn/rep_timer')) | 0",
+        "values": {
+          "min": 0,
+          "max": 4
+        }
+      }
+    },
+    "isDynamic": true
+  }
+  

@@ -1,0 +1,14 @@
+{data_1} = curve ({data_1} * 2)
+{data_1} *= {data_0} == 1
+
+{topLeftClawFirst_rotX} += 60'if({data_2} == 1, {data_1}, 0)
+{topLeftClawSecond_rotX} += 10'if({data_2} == 1, {data_1}, 0)
+
+{topRightClawFirst_rotX} += 60'if({data_2} == 2, {data_1}, 0)
+{topRightClawSecond_rotX} += 10'if({data_2} == 2, {data_1}, 0)
+
+{bottomLeftClawFirst_rotX} += 60'if({data_2} == 3, {data_1}, 0)
+{bottomLeftClawSecond_rotX} += 10'if({data_2} == 3, {data_1}, 0)
+
+{bottomRightClawFirst_rotX} += 60'if({data_2} == 4, {data_1}, 0)
+{bottomRightClawSecond_rotX} += 10'if({data_2} == 4, {data_1}, 0)

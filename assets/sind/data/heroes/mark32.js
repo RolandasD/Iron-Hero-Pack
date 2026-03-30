@@ -1,0 +1,46 @@
+var landing = implement("sind:external/superhero_landing");
+var jarvis = implement("sind:external/jarvis");
+var iron_man = implement("sind:external/iron_man_base");
+
+function init(hero) {
+    hero.setName("Iron Man/Mark 32 (XXXII) - \u00A75R\u00A78o\u00A75m\u00A78e\u00A75o");
+    hero.addPowers("sind:mk32", "sind:combat", "sind:jarvis", "sind:bigreactor", "sind:adv");
+    //tier, sentry, is advanced, type of rocket, can use arm laser, leftclick weapon type, isfriday, tony system
+    iron_man.init(hero, 7, true, true, null, false, "shield", false, true);
+    hero.addAttribute("PUNCH_DAMAGE", 7.5, 0);
+    hero.addAttribute("WEAPON_DAMAGE", 1.0, 0);
+    hero.addAttribute("FALL_RESISTANCE", 8.0, 0);
+    hero.addAttribute("DAMAGE_REDUCTION", 4.0, 0);
+
+    hero.addKeyBind("SHIELD", "Shield", -1);
+    hero.addKeyBind("BLADE", "Toggle Blades", 4);
+
+    hero.addAttributeProfile("BLADE", bladeProfile);
+    hero.setDamageProfile(getDamageProfile);
+    hero.addDamageProfile("BLADE", { "types": { "SHARP": 1.0 } });
+
+    hero.setTickHandler((entity, manager) => {
+        iron_man.tick(entity, manager);
+        if (!entity.is("DISPLAY") && entity.is("PLAYER")) {
+            landing.tick(entity, manager);
+            jarvis.health(entity, manager, "jarvis");
+            jarvis.lowhealth(entity, manager, "jarvis");
+            jarvis.mobscanner(entity, manager, "jarvis");
+            jarvis.heatwarning(entity, manager, "jarvis");
+            jarvis.timers(entity, manager);
+
+            manager.incrementData(entity, "sind:dyn/clamp_timer", 20, entity.getData("fiskheroes:blade"));
+        }
+    });
+}
+
+function bladeProfile(profile) {
+    profile.inheritDefaults();
+    profile.addAttribute("PUNCH_DAMAGE", 11.5, 0);
+}
+function getDamageProfile(entity) {
+    return entity.getData("fiskheroes:blade") ? "BLADE" : null;
+}
+function getAttributeProfile(entity) {
+    return entity.getData("fiskheroes:beam_shooting_timer") > 0 ? "DONTMOVE" : entity.getData("fiskheroes:blade") ? "BLADE" : null;
+}

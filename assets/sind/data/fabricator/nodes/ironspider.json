@@ -1,0 +1,16 @@
+{
+  "suit": "sind:ironspider",
+  "requirements": [
+    "fiskheroes:tier6_7",
+    "sind:arc_reactor",
+    "sind:nanotech",
+    "sind:compact",
+    "fiskheroes:spiderverse",
+    "fiskheroes:defense2",
+    "fiskheroes:melee2",
+    "fiskheroes:traversal2",
+    "fiskheroes:regeneration2",
+    "fiskheroes:ranged2",
+    "fiskheroes:object_manipulation"
+  ]
+}

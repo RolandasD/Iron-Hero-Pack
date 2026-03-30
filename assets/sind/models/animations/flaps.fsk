@@ -1,0 +1,21 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{data_2} = curve {data_2}
+{data_3} = sin(pi*{data_3})
+
+{cosa} = cos({bodyYaw}')
+{sina} = sin({bodyYaw}')
+{strafe} = {motX}{cosa} + {motZ}{sina}
+
+{leftflap_rotX} @ {data_0} -> 25' + (if({strafe} > 0, 70'*{strafe}, 0)) + 10'{data_3}
+{rightflap_rotX} @ {data_0} -> 25' + (if({strafe} < 0, -70'*{strafe}, 0)) + 10'{data_3}
+{rightflap_rotY} @ {data_0} -> 12.5'{data_3}
+{leftflap_rotY} @ {data_0} -> -12.5'{data_3}
+{rightflap_rotZ} @ {data_0} -> -10'{data_3}
+{leftflap_rotZ} @ {data_0} -> 10'{data_3}
+
+{rightflap_rotX} @ {data_1} -> 100'
+{leftflap_rotX} @ {data_1} -> 100'
+
+{rightflap_rotY} @ {data_2} -> 80'
+{leftflap_rotY} @ {data_2} -> -80'

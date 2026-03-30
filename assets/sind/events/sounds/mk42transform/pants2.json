@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:piece1",
+  "pitch": "1.1 - (Math.random() * 0.7)",
+  "condition": "entity.getData('sind:dyn/mark42_pants_timer') < 0.889",
+  "delay": 44,
+  "volume": 0.5,
+  "fadeOut": 5
+}

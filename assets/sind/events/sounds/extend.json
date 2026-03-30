@@ -1,0 +1,9 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:extend",
+    "condition": "fiskheroes:gravity_manip",
+    "volume": 0.1,
+    "pitch": "1.0 - 0.2 * entity.getInterpolatedData('fiskheroes:gravity_amount')",
+    "fadeOut": 20
+  }
+  

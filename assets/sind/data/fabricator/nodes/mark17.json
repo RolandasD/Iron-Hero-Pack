@@ -1,0 +1,16 @@
+{
+  "suit": "sind:mark17",
+  "requirements": [
+    "fiskheroes:tier6_7",
+    "sind:arc_reactor",
+    "sind:stark_tech",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee",
+    "fiskheroes:ranged2",
+    "sind:iron_legion",
+    "sind:enlarged_reactor",
+    "sind:enhanced_vision",
+    "sind:mark7"
+  ]
+}

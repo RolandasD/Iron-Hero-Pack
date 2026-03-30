@@ -1,0 +1,7 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:landing",
+  "pitch": "1.15 - Math.random() * 0.3",
+  "delay": 69,
+  "volume": 1
+}

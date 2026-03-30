@@ -1,0 +1,15 @@
+{
+  "suit": "sind:mark48",
+  "requirements": [
+    "fiskheroes:tier8_9",
+    "sind:arc_reactor",
+    "sind:advanced_stark_tech",
+    "fiskheroes:flight",
+    "fiskheroes:defense3",
+    "fiskheroes:melee2",
+    "fiskheroes:ranged2",
+    "sind:heavy",
+    "sind:enhanced_vision2",
+    "sind:mark44"
+  ]
+}

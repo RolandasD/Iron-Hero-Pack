@@ -1,0 +1,420 @@
+{data_0} *= {data_8}
+{data_1} *= {data_8}
+{data_2} *= {data_8}
+{data_3} *= {data_8}
+{data_4} *= {data_8}
+{data_5} *= {data_8}
+{data_6} *= {data_8}
+{data_7} *= {data_8}
+
+{data_10} *= {data_8}
+{data_11} *= {data_8}
+{data_12} *= {data_8}
+
+{not_aiming} = 1 - {data_4}
+{not_energyproj} = 1 - {data_3}
+{not_leaping} = 1 - {data_2}
+
+;TG HEROES GET OUT AND STOP LOOKING AT MY CODE
+
+;mk43 initial pose
+{head_rotX}+=22.5'(1-{data_0})
+{head_posY}+=-34.75
+{head_posZ}+=1.5
+{body_posY}+=-35
+{body_posZ}+=2
+{leftArm_posY}+=-35
+{leftArm_posZ}+=2
+{rightArm_posY}+=-35
+{rightArm_posZ}+=2
+{leftLeg_posY}+=-39.3
+{leftLeg_posZ}+=-0.2
+{rightLeg_posY}+=-39.3
+{rightLeg_posZ}+=-0.2
+
+;head movement
+{headBuster_rotX} += clamp({pitch}', -50', 10')(1-{data_0})*{data_8}
+{headBuster_rotY} += ({yaw} - {bodyYaw})'(1-{data_0})*{data_8}
+{head_rotX} += clamp({pitch}', -45', 45')({data_0})*{data_8}
+{head_rotY} += ({yaw} - {bodyYaw})'({data_0})*{data_8}
+;unibeam
+{data_10} = ({data_10}-{data_11})*{data_12}
+{leftArmBuster_rotX} @ {data_10} -> -133.876006006'
+{leftArmBuster_rotY} @ {data_10} -> 49.0792574431'{data_10}
+{leftArmBuster_rotZ} @ {data_10} -> -35.9997804182'{data_10}
+{leftArmBuster_posY}+=2.8{data_10}
+
+{rightArmBuster_rotX}@ {data_10} -> -69.2480259449'{data_10}
+{rightArmBuster_rotY}@ {data_10} -> -47.812974379'{data_10}
+{rightArmBuster_rotZ}@ {data_10} -> -3.9672588193'{data_10}
+{rightArmBuster_posX}+= -0.2{data_10}
+{rightArmBuster_posY}+= 1.4{data_10}
+
+{headBuster_posY}+= 1.3{data_11}
+{headBuster_posZ}+= -0.9{data_11}
+
+{bodyBuster_rotX}@ {data_11} -> 17.5'
+{bodyBuster_posY}+= 1.4{data_11}
+{bodyBuster_posZ}+= -0.6{data_11}
+
+{player_rotX}@ {data_11} -> 17.5'
+{player_posY}+= 1.4{data_11}
+{player_posZ}+= -0.6{data_11}
+
+{leftArmBuster_rotX} @ {data_11} -> -8.9868124298'
+{leftArmBuster_rotY} @ {data_11} -> -49.7912850629'
+{leftArmBuster_rotZ} @ {data_11} -> -70.4506848147'
+{leftArmBuster_posX}+= 1.1{data_11}
+{leftArmBuster_posY}+= 3.5{data_11}
+{leftArmBuster_posZ}+= -1{data_11}
+
+{rightArmBuster_rotX}@ {data_11} -> -17.2144281079'
+{rightArmBuster_rotY}@ {data_11} -> 37.0410288383'
+{rightArmBuster_rotZ}@ {data_11} -> 66.241996818'
+{rightArmBuster_posX}+= -0.8{data_11}
+{rightArmBuster_posY}+= 3.8{data_11}
+{rightArmBuster_posZ}+= -1{data_11}
+
+{leftLegBuster_rotX} @ {data_11} -> 45'
+{leftLegBuster_posY}+= 2.1{data_11}
+
+{rightLegBuster_rotX}@ {data_11} -> -7'
+{footRight_rotX}@ {data_11} -> 10'
+{footLeft_rotX}@ {data_11} -> -15'
+;--------------------------------------------------------------------------------------------------
+;sprint
+;{data_1} = curve{data_1}
+{sprinting}={data_1}(1-{data_5})
+{headBuster_posY}+=2{sprinting}
+{headBuster_posZ}+=-6{sprinting}
+
+{bodyBuster_rotX}+=15'{sprinting}
+{bodyBuster_posY}+=1{sprinting}
+{bodyBuster_posZ}+=-6{sprinting}
+
+{rightArmBuster_posY}+=1{sprinting}
+{rightArmBuster_posZ}+=-6{sprinting}
+
+{leftArmBuster_posY}+=1{sprinting}
+{leftArmBuster_posZ}+=-6{sprinting}
+
+{player_rotX}+=15'{sprinting}
+{player_posY}+=1{sprinting}
+{player_posZ}+=-6{sprinting}
+;-------------------------------------------------------------------------------------------------
+;crouch
+{data_8}=curve animate2({crouch_time},10,0,1,9)
+
+{headBuster_posY}+=6.25{data_8}
+
+{bodyBuster_rotX}+=10'{data_8}
+{bodyBuster_posY}+=5.5{data_8}
+{bodyBuster_posZ}+=1.5{data_8}
+
+{rightArmBuster_rotX}+=-0.2186512015'{data_8}
+{rightArmBuster_rotY}+=-4.995229008'{data_8}
+{rightArmBuster_rotZ}+=10.0095374083'{data_8}
+{rightArmBuster_posY}+=6.25{data_8}
+{rightArmBuster_posZ}+=1{data_8}
+
+{leftArmBuster_rotX}+=-0.2186512015'{data_8}
+{leftArmBuster_rotY}+=4.995229008'{data_8}
+{leftArmBuster_rotZ}+=-10.0095374083'{data_8}
+{leftArmBuster_posY}+=6.25{data_8}
+{leftArmBuster_posZ}+=1{data_8}
+
+{leftLegBuster_rotX}+=-32.5'{data_8}
+{leftLegBuster_posY}+=6.75{data_8}
+{leftLegBuster_posZ}+=3.5{data_8}
+
+{lowerLeftLeg_rotX}+=32.5'{data_8}
+
+{rightLegBuster_rotX}+=-32.5'{data_8}
+{rightLegBuster_posY}+=6.75{data_8}
+{rightLegBuster_posZ}+=3.5{data_8}
+
+{lowerRightLeg_rotX}+=32.5'{data_8}
+
+{player_rotX}+=5'{data_8}
+{player_posY}+=5.5{data_8}
+{player_posZ}+=7.5{data_8}
+;--------------------------------------------------------------------------------------------------
+;mask open
+{data_0} = curve {data_0}
+{maskOpenHarley_time}={data_0}
+{maskOpenHarley_0}=curve animate2({maskOpenHarley_time},1,0,0.52,0.48)
+{maskOpenHarley_1}=curve animate2({maskOpenHarley_time},9.48,0.52,0.48,9)
+{maskOpenHarley_2}=curve animate2({maskOpenHarley_time},10,0,1,9)
+{maskOpenHarley_3}=curve animate2({maskOpenHarley_time},10,0,0.52,9.48)
+
+
+{headBuster_rotX}+=-23'{maskOpenHarley_0}
+{headBuster_rotX}+=-86'{maskOpenHarley_1}
+{headBuster_posY}+=-5.22{maskOpenHarley_0}
+{headBuster_posZ}+=1.98{maskOpenHarley_0}
+{headBuster_posY}+=-3.3{maskOpenHarley_1}
+{headBuster_posZ}+=3.8{maskOpenHarley_1}
+
+{chestLeft_rotX}+=6.3917053785'{maskOpenHarley_0}
+{chestLeft_rotY}+=-22.1143054882'{maskOpenHarley_0}
+{chestLeft_rotZ}+=-15.3920532172'{maskOpenHarley_0}
+{chestLeft_rotX}+=11.6469541202'{maskOpenHarley_1}
+{chestLeft_rotY}+=-23.4094456375'{maskOpenHarley_1}
+{chestLeft_rotZ}+=-27.4209527282'{maskOpenHarley_1}
+
+{chestRight_rotX}+=6.6791665605'{maskOpenHarley_0}
+{chestRight_rotY}+=22.5701703198'{maskOpenHarley_0}
+{chestRight_rotZ}+=15.5511453512'{maskOpenHarley_0}
+{chestRight_rotX}+=12.1522117938'{maskOpenHarley_1}
+{chestRight_rotY}+=24.2962763171'{maskOpenHarley_1}
+{chestRight_rotZ}+=27.6252807334'{maskOpenHarley_1}
+
+{shoulderLeft_rotX}+=-19.5384731954'{maskOpenHarley_2}
+{shoulderLeft_rotY}+=-7.8689120618'{maskOpenHarley_2}
+{shoulderLeft_rotZ}+=4.436711685'{maskOpenHarley_2}
+{shoulderLeft_posZ}+=1.2{maskOpenHarley_2}
+
+{shoulderRight_rotX}+=-19.5384731954'{maskOpenHarley_2}
+{shoulderRight_rotY}+=7.8689120618'{maskOpenHarley_2}
+{shoulderRight_rotZ}+=-4.436711685'{maskOpenHarley_2}
+{shoulderRight_posZ}+=1.2{maskOpenHarley_2}
+
+{centreChest_rotX}+=25'{maskOpenHarley_3}
+{centreChest_posY}+=9{maskOpenHarley_3}
+{centreChest_posZ}+=1.8{maskOpenHarley_3}
+;--------------------------------------------------------------------------------------------------
+;walk
+{data_7} = curve {data_7}
+{sprint_factor}= (1 + 0.3{data_1})
+{walk_time}=1.15sin(({limbSwing}/13) % 1)
+{cond} = {limbSwingAmount}(1-{data_5})*(if({data_6} == 0, 1, 0))*(1-{data_7})1.5
+{walk_0}=animate2({walk_time},0.25,0,0,0.25){cond}{not_leaping}
+{walk_1}=animate2({walk_time},0.5,0,0.25,0.25){cond}{not_leaping}
+{walk_2}=animate2({walk_time},0.5,0.25,0.25,0.25){cond}{not_leaping}
+{walk_3}=animate2({walk_time},0.5,0.5,0.25,0.25){cond}{not_leaping}
+{walk_4}=animate2({walk_time},9.25,0.75,0.25,9){cond}{not_leaping}
+{walk_5}=animate2({walk_time},0.5,0,0,0.5){cond}{not_leaping}
+{walk_6}=animate2({walk_time},0.75,0,0.5,0.25){cond}{not_leaping}
+
+{bone_posY}+=-0.5{walk_0}
+{bone_posY}+=1{walk_1}
+{bone_posY}+=-0.5{walk_2}
+{bone_posY}+=1{walk_3}
+{bone_posY}+=-0.5{walk_4}
+
+{headBuster_rotY}+=5.5'{walk_5}
+{headBuster_rotY}+=-5.5'{walk_6}
+{headBuster_rotY}+=5.5'{walk_4}
+
+{bodyBuster_rotY}+=15'{walk_0}
+{bodyBuster_rotY}+=-8'{walk_1}
+{bodyBuster_rotY}+=-15'{walk_2}
+{bodyBuster_rotY}+=8'{walk_3}
+{bodyBuster_rotY}+=15'{walk_4}
+
+{rightArmBuster_rotX}+=23.4'{walk_0}
+{rightArmBuster_rotY}+=20.7'{walk_0}
+{rightArmBuster_rotY}+=-10.5'{walk_1}
+{rightArmBuster_rotX}+=-11.6'{walk_2}
+{rightArmBuster_rotY}+=-9.25'{walk_2}
+{rightArmBuster_rotY}+=22'{walk_3}
+{rightArmBuster_rotX}+=23.4'{walk_4}
+{rightArmBuster_rotY}+=20.7'{walk_4}
+{rightArmBuster_posX}+=1.75{walk_0}
+{rightArmBuster_posZ}+=6{walk_0}
+{rightArmBuster_posZ}+=-1.5{walk_1}
+{rightArmBuster_posZ}+=-7{walk_2}
+{rightArmBuster_posX}+=1.25{walk_3}
+{rightArmBuster_posZ}+=1{walk_3}
+{rightArmBuster_posX}+=1.75{walk_4}
+{rightArmBuster_posZ}+=6{walk_4}
+
+{lowerRightArm_rotX}+=7.5'{walk_5}*{sprint_factor}*{not_aiming}
+{lowerRightArm_rotX}+=-17.5'{walk_6}*{sprint_factor}*{not_aiming}
+{lowerRightArm_rotX}+=7.5'{walk_4}*{sprint_factor}*{not_aiming}
+
+{leftArmBuster_rotX}+=-11.6'{walk_0}
+{leftArmBuster_rotY}+=9.25'{walk_0}
+{leftArmBuster_rotY}+=-22'{walk_1}
+{leftArmBuster_rotX}+=23.4'{walk_2}
+{leftArmBuster_rotY}+=-20.7'{walk_2}
+{leftArmBuster_rotY}+=10.5'{walk_3}
+{leftArmBuster_rotX}+=-11.6'{walk_4}
+{leftArmBuster_rotY}+=9.25'{walk_4}
+{leftArmBuster_posZ}+=-7{walk_0}
+{leftArmBuster_posX}+=-1.25{walk_1}
+{leftArmBuster_posZ}+=1{walk_1}
+{leftArmBuster_posX}+=-1.75{walk_2}
+{leftArmBuster_posZ}+=6{walk_2}
+{leftArmBuster_posZ}+=-1.5{walk_3}
+{leftArmBuster_posZ}+=-7{walk_4}
+
+{lowerLeftArm_rotX}+=-17.5'{walk_5}*{sprint_factor}*{not_energyproj}
+{lowerLeftArm_rotX}+=7.5'{walk_6}*{sprint_factor}*{not_energyproj}
+{lowerLeftArm_rotX}+=-17.5'{walk_4}*{sprint_factor}*{not_energyproj}
+
+{lowerLeftLeg_rotX}+=20'{walk_0}*{sprint_factor}
+{lowerLeftLeg_rotX}+=30'{walk_1}*{sprint_factor}
+{lowerLeftLeg_rotX}+=10'{walk_3}*{sprint_factor}
+{lowerLeftLeg_rotX}+=20'{walk_4}*{sprint_factor}
+
+{lowerRightLeg_rotX}+=10'{walk_1}*{sprint_factor}
+{lowerRightLeg_rotX}+=20'{walk_2}*{sprint_factor}
+{lowerRightLeg_rotX}+=30'{walk_3}*{sprint_factor}
+
+{player_rotY}+=15'{walk_0}
+{player_rotY}+=-8'{walk_1}
+{player_rotY}+=-15'{walk_2}
+{player_rotY}+=8'{walk_3}
+{player_rotY}+=15'{walk_4}
+{player_posY}+=-0.5{walk_0}
+{player_posY}+=1{walk_1}
+{player_posY}+=-0.5{walk_2}
+{player_posY}+=1{walk_3}
+{player_posY}+=-0.5{walk_4}
+
+{leftLegBuster_rotX}+=22.5'{walk_0}*{sprint_factor}
+{leftLegBuster_rotX}+=-37.5'{walk_1}*{sprint_factor}
+{leftLegBuster_rotX}+=15'{walk_3}*{sprint_factor}
+{leftLegBuster_rotX}+=22.5'{walk_4}*{sprint_factor}
+{leftLegBuster_posY}+=1.75{walk_0}*{sprint_factor}
+{leftLegBuster_posZ}+=-2{walk_0}*{sprint_factor}
+{leftLegBuster_posY}+=1.75{walk_1}*{sprint_factor}
+{leftLegBuster_posY}+=0.25{walk_2}*{sprint_factor}
+{leftLegBuster_posY}+=-1.25{walk_3}*{sprint_factor}
+{leftLegBuster_posY}+=1.75{walk_4}*{sprint_factor}
+{leftLegBuster_posZ}+=-2{walk_4}*{sprint_factor}
+
+{rightLegBuster_rotX}+=15'{walk_1}*{sprint_factor}
+{rightLegBuster_rotX}+=22.5'{walk_2}*{sprint_factor}
+{rightLegBuster_rotX}+=-37.5'{walk_3}*{sprint_factor}
+{rightLegBuster_posY}+=0.25{walk_0}*{sprint_factor}
+{rightLegBuster_posY}+=-1.25{walk_1}*{sprint_factor}
+{rightLegBuster_posY}+=1.75{walk_2}*{sprint_factor}
+{rightLegBuster_posZ}+=-2{walk_2}*{sprint_factor}
+{rightLegBuster_posY}+=1.75{walk_3}*{sprint_factor}
+{rightLegBuster_posY}+=0.25{walk_4}*{sprint_factor}
+;--------------------------------------------------------------------------------------------------
+;leap
+{data_2}=curve{data_2}*(1-{data_5})
+
+{headBuster_rotX} += 30'{data_2}(1-{data_0})
+{headBuster_posZ} +=-6{data_2}
+
+{bodyBuster_rotX} @ {data_2} -> 15'
+{bodyBuster_posZ}+=-6{data_2}
+
+{rightArmBuster_rotX} @ {data_2} -> 50.8907316195'
+{rightArmBuster_rotY} @ {data_2} -> -14.1056225022'
+{rightArmBuster_rotZ} @ {data_2} -> -0.110203763'
+{rightArmBuster_posZ}+=-4{data_2}{not_aiming}
+
+{lowerRightArm_rotX} @ {data_2} -> 5'
+
+{leftArmBuster_rotX} @ {data_2} -> 50.8907316195'
+{leftArmBuster_rotY} @ {data_2} -> 14.1056225022'
+{leftArmBuster_rotZ} @ {data_2} -> 0.110203763'
+{leftArmBuster_posZ}+=-4{data_2}{not_energyproj}
+
+{lowerLeftArm_rotX} @ {data_2} -> 5'
+
+{lowerLeftLeg_rotX} @ {data_2} -> 37.5'
+
+{lowerRightLeg_rotX} @ {data_2} -> 37.5'
+
+{player_rotX} @ {data_2} -> 15'
+{player_posZ}+=-6{data_2}
+
+{leftLegBuster_rotX} @ {data_2} -> 20.2835594545'
+{leftLegBuster_rotY} @ {data_2} -> -9.391285802'
+{leftLegBuster_rotZ} @ {data_2} -> -3.451178397'
+
+{rightLegBuster_rotX} @ {data_2} -> 20.2835594545'
+{rightLegBuster_rotY} @ {data_2} -> 9.391285802'
+{rightLegBuster_rotZ} @ {data_2} -> 3.451178397'
+;--------------------------------------------------------------------------------------------------
+; right arm aim 
+{data_4} = curve{data_4}
+{aimRight_time}={data_4}
+{aimRight_0}=curve animate2({aimRight_time},4,0,1,3)
+{aimRight_1}=curve animate2({aimRight_time},1,0,0.5,0.5)
+{aimRight_2}=curve animate2({aimRight_time},3.5,0.5,0.5,3)
+
+{headBuster_rotY}+=5'{aimRight_0}
+
+{bodyBuster_rotY}+=-10'{aimRight_0}
+
+{data_4fix} = {data_4}^20
+
+{pivotRight_rotX} @ {data_4fix} -> {pitch}'
+{pivotRight_rotY} @ {data_4fix} -> ({yaw} - {bodyYaw})'
+
+{rightArmBuster_rotX} @ {aimRight_1} -> -93.5819010004'
+{rightArmBuster_rotY} @ {aimRight_1} -> -13.0825473447'
+{rightArmBuster_rotZ} @ {aimRight_1} -> 34.6343939628'
+{rightArmBuster_rotX} @ {aimRight_2} -> -88.5964135048'
+{rightArmBuster_rotY} @ {aimRight_2} -> -10.3721054069'
+{rightArmBuster_rotZ} @ {aimRight_2} -> 86.217807257'
+{rightArmBuster_posY}+=0.7{aimRight_1}
+{rightArmBuster_posX}+=-3.5{aimRight_2}
+{rightArmBuster_posY}+=4.3{aimRight_2}
+{rightArmBuster_posZ}+=-4{aimRight_2}
+
+{lowerRightArm_rotX} @ {aimRight_1} -> 12.3604570079'
+{lowerRightArm_rotY} @ {aimRight_1} -> -26.9533561297'
+{lowerRightArm_rotZ} @ {aimRight_1} -> -5.6725187557'
+{lowerRightArm_rotX} @ {aimRight_2} -> 15.0136453387'
+{lowerRightArm_rotY} @ {aimRight_2} -> 2.4147632009'
+{lowerRightArm_rotZ} @ {aimRight_2} -> 0.6474309976'
+{lowerRightArm_posX}+=-1.7{aimRight_1}
+{lowerRightArm_posZ}+=-1.4{aimRight_1}
+
+{leftArmBuster_rotY}+=-24'{aimRight_0}
+{leftArmBuster_posZ}+=2.3{aimRight_0}
+
+{player_rotY}+=-10'{aimRight_0}
+
+{head_rotY}+=10'{aimRight_0}
+;--------------------------------------------------------------------------------------------------
+;left arm aim (for energy proj)
+{data_3} = curve{data_3}
+{aimLeft_time}={data_3}
+{aimLeft_0}=curve animate2({aimLeft_time},4,0,1,3)
+{aimLeft_1}=curve animate2({aimLeft_time},1,0,0.5,0.5)
+{aimLeft_2}=curve animate2({aimLeft_time},3.5,0.5,0.5,3)
+
+{headBuster_rotY}+=-5'{aimLeft_0}
+
+{bodyBuster_rotY}+=10'{aimLeft_0}
+
+{data_3fix} = {data_3}^20
+
+{pivotLeft_rotX} @ {data_3fix} -> {pitch}'
+{pivotLeft_rotY} @ {data_3fix} -> ({yaw} - {bodyYaw})'
+
+{rightArmBuster_posZ}+=2.3{aimLeft_0}
+
+{leftArmBuster_rotX} @ {aimLeft_1} -> -93.5819010004'
+{leftArmBuster_rotY} @ {aimLeft_1} -> 13.0825473447'
+{leftArmBuster_rotZ} @ {aimLeft_1} -> -34.6343939628'
+{leftArmBuster_rotX} @ {aimLeft_2} -> -88.5964135048'
+{leftArmBuster_rotY} @ {aimLeft_2} -> 10.3721054069'
+{leftArmBuster_rotZ} @ {aimLeft_2} -> -86.217807257'
+{leftArmBuster_posY}+=0.7{aimLeft_1}
+{leftArmBuster_posX}+=3.5{aimLeft_2}
+{leftArmBuster_posY}+=4.3{aimLeft_2}
+{leftArmBuster_posZ}+=-4{aimLeft_2}
+
+{lowerLeftArm_rotX} @ {aimLeft_1} -> 12.3604570079'
+{lowerLeftArm_rotY} @ {aimLeft_1} -> 26.9533561297'
+{lowerLeftArm_rotZ} @ {aimLeft_1} -> 5.6725187557'
+{lowerLeftArm_rotX} @ {aimLeft_2} -> 15.0136453387'
+{lowerLeftArm_rotY} @ {aimLeft_2} -> -2.4147632009'
+{lowerLeftArm_rotZ} @ {aimLeft_2} -> -0.6474309976'
+{lowerLeftArm_posX}+=1.7{aimLeft_1}
+{lowerLeftArm_posZ}+=-1.4{aimLeft_1}
+
+{player_rotY}+=10'{aimLeft_0}
+
+{head_rotY}+=-10'{aimLeft_0}
+;--------------------------------------------------------------------------------------------------

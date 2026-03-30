@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "The First Iron Legion (Mark 8-41)."
+    },
+    "icon": {
+      "texture": "sind:textures/items/heroes/mark17_0.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 2,
+    "XP_LEVELS": 10
+  }
+}

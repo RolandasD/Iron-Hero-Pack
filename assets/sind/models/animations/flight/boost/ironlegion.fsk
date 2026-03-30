@@ -1,0 +1,51 @@
+{x} = min({vel}, 1){data_1}{d1}{d} / 2.5
+
+{RightArm2_rotX} += 15'{data_1} + {x}
+{RightArm2_rotZ} += 10'{data_1}
+{LeftArm2_rotX} += 15'{data_1} - {x}
+{LeftArm2_rotZ} -= 10'{data_1}
+{RightLeg2_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg2_rotX} += 15'{data_1} - 0.3{x}
+
+{RightArm3_rotX} += 15'{data_1} + {x}
+{RightArm3_rotZ} += 10'{data_1}
+{LeftArm3_rotX} += 15'{data_1} - {x}
+{LeftArm3_rotZ} -= 10'{data_1}
+{RightLeg3_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg3_rotX} += 15'{data_1} - 0.3{x}
+
+{RightArm4_rotX} += 15'{data_1} + {x}
+{RightArm4_rotZ} += 10'{data_1}
+{LeftArm4_rotX} += 15'{data_1} - {x}
+{LeftArm4_rotZ} -= 10'{data_1}
+{RightLeg4_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg4_rotX} += 15'{data_1} - 0.3{x}
+
+{RightArm5_rotX} += 15'{data_1} + {x}
+{RightArm5_rotZ} += 10'{data_1}
+{LeftArm5_rotX} += 15'{data_1} - {x}
+{LeftArm5_rotZ} -= 10'{data_1}
+{RightLeg5_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg5_rotX} += 15'{data_1} - 0.3{x}
+
+{RightArm6_rotX} += 15'{data_1} + {x}
+{RightArm6_rotZ} += 10'{data_1}
+{LeftArm6_rotX} += 15'{data_1} - {x}
+{LeftArm6_rotZ} -= 10'{data_1}
+{RightLeg6_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg6_rotX} += 15'{data_1} - 0.3{x}
+
+{RightArm7_rotX} += 15'{data_1} + {x}
+{RightArm7_rotZ} += 10'{data_1}
+{LeftArm7_rotX} += 15'{data_1} - {x}
+{LeftArm7_rotZ} -= 10'{data_1}
+{RightLeg7_rotX} += 15'{data_1} + 0.3{x}
+{LeftLeg7_rotX} += 15'{data_1} - 0.3{x}
+
+{d} *= {data_1} / 1'
+{x} = min({vel} / 2, 1) / 2
+; out "rotate" (-{data_1}({pitch} + 80), 1, 0, 0)
+; out "rotate" ({d1}{d}, 0, 1, 0)
+; out "rotate" (-{d1}{d}{x}, 0, 0, 1)
+; out "rotate" ({d}{x}, 1, 0, 0)
+; out "translate" (0, -0.8{data_1}, 0)

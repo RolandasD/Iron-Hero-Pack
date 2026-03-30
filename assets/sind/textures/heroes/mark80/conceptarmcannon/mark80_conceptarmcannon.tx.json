@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark80/conceptarmcannon/mark80_conceptarmcannon",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_conceptarmcannon_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark80_conceptarmcannon_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(12 * Math.max(0, entity.getInterpolatedData('fiskheroes:aiming_timer')-entity.getInterpolatedData('fiskheroes:energy_projection_timer')) ), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 12
+      }
+    }
+  },
+  "isDynamic": true
+}

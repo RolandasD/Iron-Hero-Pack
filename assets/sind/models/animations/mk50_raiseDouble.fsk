@@ -1,0 +1,3 @@
+{data} = curve {data}
+{leftArm_rotZ} -= 10'*{data}
+{rightArm_rotZ} += 10'*{data}

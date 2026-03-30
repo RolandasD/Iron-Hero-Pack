@@ -1,0 +1,43 @@
+{
+  "name": "E.D.I.T.H O.S",
+  "modifiers": {
+    "fiskheroes:shadowdome": {
+      "chargeTime": 0,
+      "duration": 1,
+      "radius": 15.0,
+      "soundEvents": {
+        "CAST": "sind:radar"
+      }
+    },
+    "fiskheroes:spellcasting": {
+      "spells": {
+        "fiskheroes:drones": {
+          "sequence": "",
+          "cooldown": 250,
+          "centerDist": 6.0,
+          "quantity": 5,
+          "range": 32.0,
+          "damageProfile": {
+            "damage": 3.5,
+            "types": {
+              "BULLET": 1.0
+            },
+            "properties": {
+              "REDUCE_KNOCKBACK": 0.8
+            }
+          }
+        }
+      },
+      "soundEvents": {
+        "CAST_FAIL": "fiskheroes:spell_fail"
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/gunmag.png",
+      "data": "sind:dyn/mob_cooldown"
+    }
+  ]
+}

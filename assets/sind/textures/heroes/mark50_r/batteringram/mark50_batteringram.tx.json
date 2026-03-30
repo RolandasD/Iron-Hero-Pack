@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark50_r/batteringram/mark50_batteringram",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/mark50_batteringram_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark50_r_batteringram_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(16 * entity.getInterpolatedData('sind:dyn/slot1_timer')), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 16
+      }
+    }
+  },
+  "isDynamic": true
+}

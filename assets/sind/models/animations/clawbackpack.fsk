@@ -1,0 +1,9 @@
+{left_lat_rotY}+=-90'{data_0}
+{left_lat_posZ}+=-3{data_0}
+
+{right_lat_rotY}+=90'{data_0}
+{right_lat_posZ}+=-3{data_0}
+
+{spine_rotY}+=-90'{data_0}
+{spine_posX}+=20000{data_0}
+{spine_posZ}+=3{data_0}

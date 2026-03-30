@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark5/mark5",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/mk5/<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark5_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(25 * entity.getInterpolatedData('sind:dyn/b_timer')) | 0",
+      "values": {
+        "min": 0,
+        "max": 25
+      }
+    }
+  },
+  "isDynamic": true
+}

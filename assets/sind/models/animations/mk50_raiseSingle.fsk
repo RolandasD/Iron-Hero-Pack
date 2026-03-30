@@ -1,0 +1,2 @@
+{data} = curve {data}
+{rightArm_rotZ} += 5'*{data}

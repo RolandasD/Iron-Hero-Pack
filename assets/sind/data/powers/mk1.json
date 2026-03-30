@@ -1,0 +1,71 @@
+{
+  "name": "- Iron Man Armor Mk I:",
+  "modifiers": {
+    "fiskheroes:propelled_flight": {
+      "soundEvents": {
+        "BOOST": ["sind:firestorm_flight_enable", "sind:firestorm_flight_loop"]
+      }
+    },
+    "fiskheroes:flame_blast": {
+      "damageProfile": {
+        "damage": 5.5,
+        "types": {
+          "FIRE": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 160,
+          "IGNITE": 2
+        }
+      },
+      "range": 15.0,
+      "soundEvents": {
+        "SHOOT": [
+          "sind:firestorm_flight_enable",
+          "sind:firestorm_flight_loop"
+        ]
+      }
+    },
+    "fiskheroes:transformation|arm": {
+      "key": "AROCKET",
+      "transformation": {
+        "toggleData": "sind:dyn/armgun_bool",
+        "timerData": "sind:dyn/armgun_timer",
+        "time": 10
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:mk1_rocket"
+      }
+    },
+    
+    "fiskheroes:lightning_cast|gp": {
+      "damageProfile": {
+        "damage": 8.0,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:metal_skin": {}
+  },
+  "hud": [
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/lava.png",
+      "data": "sind:dyn/fuel"
+    }
+  ]
+}

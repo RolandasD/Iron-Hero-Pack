@@ -1,0 +1,150 @@
+extend("fiskheroes:hero_basic");
+loadTextures({
+    "layer1": "sind:mark1/mark1_layer1",
+    "layer2": "sind:mark1/mark1_layer2",
+    "lights": "sind:lights/lights_noeyes",
+    "everything": "sind:mark1/mark1_extra",
+    "mask": "sind:mark1/mark1_mask",
+    "hud_mask": "sind:hud/hud_mask"
+});
+var utils = implement("fiskheroes:external/utils");
+var iron_man_boosters = implement("fiskheroes:external/iron_man_boosters");
+var iron_man_helmet = implement("sind:external/mk1_helmet");
+var repulsor;
+var jarvis = implement("sind:external/jarvis");
+var hud_mask;
+
+var helmet;
+var reactor, reactor1, accessories, accessories1, accessories2;
+var metal_heat;
+var leftArm, leftArm2
+
+function init(renderer) {
+    parent.init(renderer);
+    renderer.setTexture((entity, renderLayer) => {
+        return entity.getData("fiskheroes:suit_open_timer") > 0 ? "suit" : renderLayer == "LEGGINGS" ? "layer2" : "layer1";
+    });
+
+    renderer.setLights((entity, renderLayer) => {
+        return (!entity.isInWater() && renderLayer == "CHESTPLATE") ? "lights" : null;
+    });
+    //  renderer.fixHatLayer("HELMET");
+    renderer.showModel("LEGGINGS", "rightLeg", "leftLeg");
+    renderer.showModel("CHESTPLATE", "rightArm", "leftArm", "body");
+}
+
+function initEffects(renderer) {
+    helmet = iron_man_helmet.createFaceplate(renderer, "mask", null);
+    boosters = iron_man_boosters.create(renderer, "fiskheroes:repulsor_layer_%s", true);
+
+    var larmModel = utils.createModel(renderer, "sind:mk1leftarm", "everything", null);
+    larmModel.bindAnimation("sind:armrocket").setData((entity, data) => {
+        data.load(0, Math.min(entity.getInterpolatedData("sind:dyn/armrockets_timer"), entity.getInterpolatedData("sind:dyn/armgun_timer")));
+        data.load(1, entity.isPunching() && entity.getData("sind:dyn/armgun_bool") && entity.getInterpolatedData("sind:dyn/armrockets_timer") >= 1);
+    });
+    reactor = renderer.createEffect("fiskheroes:model").setModel(larmModel);
+    reactor.anchor.set("leftArm");
+
+    reactor1 = renderer.createEffect("fiskheroes:model");
+    reactor1.setModel(utils.createModel(renderer, "sind:mk1chest", "everything"));
+    reactor1.anchor.set("body");
+
+    accessories = renderer.createEffect("fiskheroes:model");
+    accessories.setModel(utils.createModel(renderer, "sind:mk1rightarm", "everything"));
+    accessories.anchor.set("rightArm");
+
+    accessories1 = renderer.createEffect("fiskheroes:model");
+    accessories1.setModel(utils.createModel(renderer, "sind:mk1rightleg", "everything"));
+    accessories1.anchor.set("rightLeg");
+
+    accessories2 = renderer.createEffect("fiskheroes:model");
+    accessories2.setModel(utils.createModel(renderer, "sind:mk1leftleg", "everything"));
+    accessories2.anchor.set("leftLeg");
+
+    utils.addCameraShake(renderer, 0.015, 1.5, "fiskheroes:flight_boost_timer");
+    utils.bindParticles(renderer, "sind:mk1").setCondition(entity => entity.getData("fiskheroes:jetpacking"));
+
+    //fake left arm credit to shadow
+    leftArm = renderer.createEffect("fiskheroes:model");
+    leftArm.setModel(utils.createModel(renderer, "sind:leftArm", "layer1"));
+    leftArm.anchor.set("rightArm");
+    leftArm.anchor.ignoreAnchor(true);
+    leftArm2 = renderer.createEffect("fiskheroes:model");
+    leftArm2.setModel(larmModel);
+    leftArm2.anchor.set("rightArm");
+    leftArm2.anchor.ignoreAnchor(true);
+
+    utils.bindBeam(renderer, "fiskheroes:lightning_cast", "sind:rockets4", "leftArm", 0xffffff, [
+        { "firstPerson": [7.75, 3.0, -9.0], "offset": [3.25, 8.0, -0.5], "size": [1.0, 1.0] }
+    ]).setParticles(renderer.createResource("PARTICLE_EMITTER", "fiskheroes:impact_charged_beam"));
+
+    accessories.setOffset(-4.95, -2.75, 0);
+    reactor.setOffset(4.95, -2.75, 0);
+    accessories2.setOffset(2, -12.15, 0);
+    accessories1.setOffset(-2, -12.15, 0);
+    leftArm.setRotation(-90, 90, 0);
+    leftArm2.setRotation(-90, 90, 0);
+
+    lightsoff = renderer.createEffect("fiskheroes:overlay");
+    lightsoff.texture.set("lights");
+
+    metal_heat = renderer.createEffect("fiskheroes:metal_heat");
+    metal_heat.includeEffects(helmet.effect, reactor, accessories, accessories1, accessories2, reactor1, leftArm, leftArm2);
+
+    hud_mask = jarvis.create_mask(renderer, utils);
+}
+
+function initAnimations(renderer) {
+    parent.initAnimations(renderer);
+    utils.addFlightAnimationWithLanding(renderer, "iron_man.FLIGHT", "fiskheroes:flight/iron_man.anim.json");
+    utils.addHoverAnimation(renderer, "iron_man.HOVER", "fiskheroes:flight/idle/iron_man");
+    addAnimationWithData(renderer, "iron_man.LAND", "sind:ironman_landing", "fiskheroes:dyn/superhero_landing_timer")
+        .priority = -8;
+
+    addAnimationWithData(renderer, "iron_man.ROLL", "fiskheroes:flight/barrel_roll", "fiskheroes:barrel_roll_timer")
+        .priority = 10;
+    addAnimation(renderer, "iron_man.ROCKET", "sind:mk1_aim").setData((entity, data) => {
+        data.load(Math.min(entity.getInterpolatedData("sind:dyn/armgun_timer"), 1));
+    }).priority = 14;
+    addAnimation(renderer, "iron_man.MASK", "sind:mk1_mask").setData((entity, data) => {
+        data.load(entity.getInterpolatedData("fiskheroes:mask_open_timer2"));
+    }).priority = 13;
+    renderer.removeCustomAnimation("basic.ENERGY_PROJ");
+}
+
+function render(entity, renderLayer, isFirstPersonArm) {
+    boosters.render(entity, renderLayer, isFirstPersonArm, false);
+    if (!isFirstPersonArm) {
+        if (renderLayer == "HELMET") {
+            var timer = entity.getData("fiskheroes:mask_open") ? Math.min(1, (10/4 * (Math.max(0,entity.getInterpolatedData("fiskheroes:mask_open_timer2") - 0.16)))) : Math.min(10/4 * entity.getInterpolatedData("fiskheroes:mask_open_timer2"), 1);
+            //var timer = (Math.pow(Math.E, entity.getInterpolatedData("fiskheroes:mask_open_timer2") * 4) - 1) / (Math.pow(Math.E, 4) - 1);
+            helmet.render(timer);
+        }
+        else if (renderLayer == "CHESTPLATE") {
+            accessories.render();
+            reactor.render();
+            reactor1.render();
+        }
+        else if (renderLayer == "LEGGINGS") {
+            accessories1.render();
+            accessories2.render();
+        }else if (renderLayer == "BOOTS") {
+        }
+    }
+    if (entity.isInWater()) {
+        lightsoff.render();
+    }
+    if(renderLayer == "HELMET"){
+        hud_mask.render(entity, renderLayer, isFirstPersonArm);
+    }
+
+    var timer2 = Math.min(entity.getInterpolatedData("sind:dyn/armgun_timer"), 1);
+    if (isFirstPersonArm && timer2 > 0) {
+        leftArm.setOffset(-7.9, 7+2.1+2, 15 - timer2 * 14.8);
+        leftArm.render();
+        leftArm2.setOffset(-7.9, 7+2.1+2, 15 - timer2 * 14.8);
+        leftArm2.render();
+    }
+    metal_heat.opacity = entity.getInterpolatedData("fiskheroes:metal_heat");
+    metal_heat.render();
+}

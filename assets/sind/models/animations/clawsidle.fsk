@@ -1,0 +1,2 @@
+{rightArm_rotZ} += 7.5'{data}
+{leftArm_rotZ} -= 7.5'{data}

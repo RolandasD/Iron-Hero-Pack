@@ -1,0 +1,210 @@
+{
+  "name": "Hulkbuster",
+  "modifiers": {
+    "fiskheroes:heat_vision|jackhammer": {
+      "damageProfile": {
+        "damage": 6.0,
+        "types": {
+          "BLUNT": 1
+        },
+        "properties": {
+          "HIT_COOLDOWN": 5
+        }
+      },
+      "canDoGriefing": false,
+      "range": 2.0,
+      "radius": 0.1,
+      "soundEvents": {
+        "BEAM_AMBIENT": "sind:hulkbuster_punch"
+      }
+    },
+    "fiskheroes:transformation|change": {
+      "key": "CHANGE_ARM",
+      "transformation": {
+        "toggleData": "sind:dyn/hulkbuster_arm",
+        "timerData": "sind:dyn/hulkbuster_arm_timer",
+        "time": 80
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:hulkbustertransform/armfire",
+          "sind:hulkbustertransform/arm1", "sind:hulkbustertransform/arm2", 
+          "sind:hulkbustertransform/arm3", "sind:hulkbustertransform/arm4"],
+        "DISABLE": ["sind:hulkbusterdetransform/armfire",
+          "sind:hulkbusterdetransform/arm1", "sind:hulkbusterdetransform/arm2", 
+          "sind:hulkbusterdetransform/arm3", "sind:hulkbusterdetransform/arm4"]
+      }
+    },
+    "fiskheroes:telekinesis": {
+      "telekinesis": {
+        "crushMelons": false,
+        "crushThrowables": false,
+        "squeezeChickens": false,
+        "explodeCreepers": false,
+        "destroyInanimates": false
+      },
+      "canGrab": {
+        "mobs": true,
+        "items": false,
+        "projectiles": false,
+        "inanimates": false
+      },
+      "range": 2.0,
+      "soundEvents": {
+        "GRAB": "sind:hulkbuster_grab"
+      }
+    },
+    "fiskheroes:transformation|tele": {
+      "key": "TELEKINESIS2",
+      "transformation": {
+        "toggleData": "sind:dyn/rep",
+        "timerData": "sind:dyn/telekinesis_timer",
+        "time": 5
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:hulkbuster_lock"
+      }
+    },
+    "fiskheroes:tentacles": {
+      "tentacles": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "fiskheroes:repulsor_blast|hb": {
+      "damageProfile": {
+        "damage": 15.5,
+        "types": {
+          "ENERGY": 1
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 1,
+          "HIT_COOLDOWN": 0
+        }
+      },
+      "range": 48,
+      "speed": 20,
+      "spread": 0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:hulkbuster_repulsor"
+      }
+    },
+    "fiskheroes:charged_beam|cb_hb": {
+      "damageProfile": {
+        "damage": 11.5,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "chargeTime": 50,
+      "duration": 50,
+      "cooldownTime": 80,
+      "range": 18.0,
+      "radius": 1.0,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:mk85_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "sind:unibeam"
+      }
+    },
+    "fiskheroes:energy_projection|energy_proj_hb": {
+      "damageProfile": {
+        "damage": 4.75,
+        "types": {
+          "ENERGY": 1,
+          "FIRE": 0.25
+        },
+        "properties": {
+          "HIT_COOLDOWN": 4,
+          "REDUCE_KNOCKBACK": 0.8,
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 80
+        }
+      },
+      "range": 38,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": "sind:mk85_beam_start",
+        "SHOOT_STOP": "sind:mk85_beam_stop",
+        "BEAM_AMBIENT": "sind:mk85_beam_loop"
+      }
+    },
+    "fiskheroes:transformation": {
+      "key": "TRANSFORM",
+      "transformation": {
+        "toggleData": "sind:dyn/hulkbuster",
+        "timerData": "sind:dyn/hulkbuster_timer",
+        "time": 120
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:mk43summon", "sind:hulkbustertransform/fire",
+        "sind:hulkbustertransform/1", "sind:hulkbustertransform/2", "sind:hulkbustertransform/3", "sind:hulkbustertransform/4",
+        "sind:hulkbustertransform/5", "sind:hulkbustertransform/6", "sind:hulkbustertransform/7", "sind:hulkbustertransform/8",
+        "sind:hulkbustertransform/9", "sind:hulkbustertransform/10", "sind:hulkbustertransform/11", "sind:hulkbustertransform/12",
+        "sind:hulkbustertransform/13"
+      ],
+        "DISABLE": ["sind:mk43summon2", "sind:hulkbusterdetransform/fire",
+        "sind:hulkbusterdetransform/1", "sind:hulkbusterdetransform/2", "sind:hulkbusterdetransform/3", "sind:hulkbusterdetransform/4",
+        "sind:hulkbusterdetransform/5", "sind:hulkbusterdetransform/6", "sind:hulkbusterdetransform/7", "sind:hulkbusterdetransform/8",
+        "sind:hulkbusterdetransform/9", "sind:hulkbusterdetransform/10", "sind:hulkbusterdetransform/11", "sind:hulkbusterdetransform/12",
+        "sind:hulkbusterdetransform/13"
+      ]
+      }
+    },
+    "fiskheroes:ground_smash": {
+      "damageProfile": {
+        "damage": 12,
+        "types": {
+          "EXPLOSION": 2.25
+        }
+      },
+      "isInstant": true,
+      "affectsUser": true,
+      "radius": 4,
+      "cooldownTime": 40
+    },
+    "fiskheroes:earthquake": {
+      "damageProfile": {
+        "damage": 6.5,
+        "types": {
+          "EXPLOSION": 1.0
+        }
+      },
+      "radius": 5,
+      "duration": 30,
+      "cooldownTime": 40
+    },
+    "fiskheroes:transformation|ground_smash": {
+      "key": "GROUND_SMASH_VISUAL",
+      "transformation": {
+        "toggleData": "sind:dyn/ground_smash",
+        "timerData": "sind:dyn/ground_smash_timer",
+        "time": 5
+      },
+      "isToggle": false
+    },
+    "fiskheroes:transformation|earthquake": {
+      "key": "EARTH",
+      "transformation": {
+        "toggleData": "sind:dyn/earthquake",
+        "timerData": "sind:dyn/earthquake_timer",
+        "time": 5
+      },
+      "isToggle": false
+    },
+    "fiskheroes:damage_immunity": {
+      "damageType": "EXPLOSION"
+    }
+  }
+}

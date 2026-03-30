@@ -1,0 +1,13 @@
+{
+    "texture": {
+      "in": "sind:ironlegiondrone/ironlegiondrones",
+      "transform": [
+        {
+          "operation": "OR",
+          "supply": "sind:ironlegiondrone/ironlegiondrones_r4"
+        }
+      ],
+      "out": "sind:generated/ironlegiondrones_r4_gen"
+    }
+  }
+  

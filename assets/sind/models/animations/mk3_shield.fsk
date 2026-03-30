@@ -1,0 +1,33 @@
+{0}=curve animate2({data},5,0,0.74,4.26)
+{1}=curve animate2({data},5,0,0.5,4.5)
+{2}=curve animate2({data},5,0,0.48,4.52)
+{3}=curve animate2({data},5,0,0.28,4.72)
+{4}=curve animate2({data},0.88,0,0.5,0.38)
+{5}=curve animate2({data},4.5,0.5,0.38,4.12)
+{6}=curve animate2({data},5,0,1,4)
+{7}=curve animate2({data},0.38,0,0.18,0.2)
+{8}=curve animate2({data},4.62,0.38,0.48,4.14)
+{9}=curve animate2({data},0.72,0,0.24,0.48)
+{10}=curve animate2({data},4.76,0.24,0.48,4.28)
+
+{underback_rotX}+=-5'{0}
+{underback_posZ}+=0.25{1}
+
+{underfront_rotX}+=25'{2}
+{underfront_posZ}+=-0.75{3}
+
+{front_rotX}+=35'{4}+36.6416781265'{5}
+{front_rotY}+=-7.1510185903'{5}
+{front_rotZ}+=-2.2670798061'{5}
+{front_posZ}+=-1.25{4}-1.25{5}
+{front_posX}+=-0.25{5}
+
+{back_rotX}+=-7.5'{6}
+{back_posZ}+=0.75{1}
+
+{backpanel_rotZ}+=1'{7}
+{backpanel_rotX}+=-12.5'{8}
+{backpanel_rotY}+=80'{8}
+{backpanel_posX}+=-2{9}
+{backpanel_posX}+=-2.5{10}
+{backpanel_posZ}+=0.5{10}

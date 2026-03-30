@@ -1,0 +1,10 @@
+{
+    "texture": "sind:mark46/mark46_ip_mask_<OPEN>",
+    "getters": {
+      "OPEN": {
+        "key": "entity.getInterpolatedData('fiskheroes:mask_open_timer2') > 0",
+        "values": ["true", "false"]
+      }
+    }
+  }
+  

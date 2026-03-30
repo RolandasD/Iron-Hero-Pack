@@ -1,0 +1,10 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.boost.loop",
+  "condition": "entity.getData('sind:dyn/srockets_timer') < 0.95 && entity.getData('sind:dyn/srockets')",
+  "loop": true,
+  "fadeIn": 5,
+  "fadeOut": 10,
+  "delay": 25,
+  "volume": 0.5
+}

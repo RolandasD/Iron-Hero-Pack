@@ -1,0 +1,89 @@
+{cancel} = min(max({data_0}, {data_1}) * 4, 1)
+{head_posX} @ {cancel} -> 0
+{head_posY} @ {cancel} -> 0
+{head_posZ} @ {cancel} -> 0
+
+{rightArm_rotX} @ {cancel} -> 0
+{rightArm_rotY} @ {cancel} -> 0
+{rightArm_rotZ} @ {cancel} -> 0
+{rightArm_posX} @ {cancel} -> -5
+{rightArm_posY} @ {cancel} -> 2
+{rightArm_posZ} @ {cancel} -> 0
+
+{leftArm_rotX} @ {cancel} -> 0
+{leftArm_rotY} @ {cancel} -> 0
+{leftArm_rotZ} @ {cancel} -> 0
+{leftArm_posX} @ {cancel} -> 5
+{leftArm_posY} @ {cancel} -> 2
+{leftArm_posZ} @ {cancel} -> 0
+
+{body_rotX} @ {cancel} -> 0
+{body_rotY} @ {cancel} -> 0
+{body_rotZ} @ {cancel} -> 0
+{body_posX} @ {cancel} -> 0
+{body_posY} @ {cancel} -> 0
+{body_posZ} @ {cancel} -> 0
+
+{leftLeg_posX} @ {cancel} -> 2
+{leftLeg_posY} @ {cancel} -> 12
+{leftLeg_posZ} @ {cancel} -> 0
+
+{rightLeg_posX} @ {cancel} -> -2
+{rightLeg_posY} @ {cancel} -> 12
+{rightLeg_posZ} @ {cancel} -> 0
+
+{data_0} *= 1 - {data_1}
+
+;data 0
+{rightArm_rotX}+=-150'{data_0}
+{rightArm_rotY}+=120'{data_0}
+{rightArm_rotZ}+=-10'{data_0}
+{rightArm_posX}+=-0.5{data_0}
+
+{leftArm_rotX}+=-150'{data_0}
+{leftArm_rotY}+=-120'{data_0}
+{leftArm_rotZ}+=10'{data_0}
+{leftArm_posX}+=0.5{data_0}
+
+{rightLeg_rotX}+=12.5'{data_0}
+{rightLeg_rotY}+=2'{data_0}
+{rightLeg_rotZ}+=8'{data_0}
+{rightLeg_posZ}+=2{data_0}
+
+{leftLeg_rotX}+=-6'{data_0}
+{leftLeg_rotZ}+=-7'{data_0}
+{leftLeg_posZ}+=-2{data_0}
+
+;data 1
+{head_rotX}+=25'{data_1}
+
+{head_posZ}+=-11{data_1}
+{head_posY}+=9.5{data_1}
+
+{body_rotX}+=(70'){data_1}
+{body_posZ}+=-10{data_1}
+{body_posY}+=9{data_1}
+
+{rightArm_rotX}+=-33'{data_1}
+{rightArm_rotY}+=-25'{data_1}
+{rightArm_rotZ}+=-28'{data_1}
+{rightArm_posX}+=-0.5{data_1}
+{rightArm_posY}+=7{data_1}
+{rightArm_posZ}+=-9{data_1}
+
+{leftArm_rotX}+=-33'{data_1}
+{leftArm_rotY}+=25'{data_1}
+{leftArm_rotZ}+=28'{data_1}
+{leftArm_posX}+=0.5{data_1}
+{leftArm_posY}+=7{data_1}
+{leftArm_posZ}+=-9{data_1}
+
+{rightLeg_rotX}+=-10'{data_1}
+{rightLeg_rotY}+=-2.6'{data_1}
+{rightLeg_rotZ}+=-2.3'{data_1}
+{rightLeg_posZ}+={data_1}
+
+{leftLeg_rotX}+=25'{data_1}
+{leftLeg_rotY}+=4.5'{data_1}
+{leftLeg_rotZ}+=2'{data_1}
+{leftLeg_posZ}+=-{data_1}

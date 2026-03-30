@@ -1,0 +1,7 @@
+{data} = curve ({data}*2)
+{rightArm_rotX} @ {data} -> -230'
+{rightArm_rotY} @ {data} -> 15'
+{rightArm_rotZ} @ {data} -> 20'
+{rightArm_posX} @ {data} -> -5
+{rightArm_posY} @ {data} -> 2
+{rightArm_posZ} @ {data} -> 0

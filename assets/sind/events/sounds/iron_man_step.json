@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.walk",
+  "condition": {
+    "start": "entity.getData('fiskheroes:moving') && entity.isOnGround()"
+  },
+  "volume": 0.3,
+  "pitch": "0.9 + Math.random() * 0.3"
+}

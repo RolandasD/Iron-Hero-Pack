@@ -1,0 +1,21 @@
+{data_0} = curve {data_0}
+{data_1} = (21 * {data_0})
+{data_2} = (9 * {data_0})
+{data_2a} = (4.5 * {data_0})
+{data_4} = (0.2 * {data_0})
+{data_3} = curve {data_3}
+{data_5} = curve {data_5}
+
+{clawSegment_posY}+={data_1}
+{clawExtension_posY}+={data_2}
+{clawExtension2_posY}+={data_2a}
+{bendRight_rotZ}+=45'{data_3}
+{bendLeft_rotZ}+=-45'{data_3}
+
+{rightArm_rotY} +={data_4}
+
+{panel_left_rotY}+=-90'{data_5}
+{panel_left_posZ}+=-2.75{data_5}
+
+{panel_right_rotY}+=90'{data_5}
+{panel_right_posZ}+=-2.75{data_5}

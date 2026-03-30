@@ -1,0 +1,8 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:latchclose",
+    "condition": "entity.getWornChestplate().nbt().getByte('Swapper') == 2 && entity.getData('sind:dyn/slot1_timer') == 1 && entity.getData('sind:dyn/slot') == 1",
+    "pitch": 0.7,
+    "volume": 1.5
+  }
+  

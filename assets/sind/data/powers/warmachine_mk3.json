@@ -1,0 +1,217 @@
+{
+  "name": "- War Machine Armor Mk III",
+  "modifiers": {
+    "fiskheroes:controlled_flight|flight_unibeam": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false,
+      "canRoll": false,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:controlled_flight|flight_normal": {
+      "speed": 0.1,
+      "boostSpeed": 0.3,
+      "canBoost": true,
+      "canRoll": true,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:repulsor_blast": {
+      "damageProfile": {
+        "damage": 12.0,
+        "types": {
+          "ENERGY": 1
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 1,
+          "HIT_COOLDOWN": 0
+        }
+      },
+      "range": 48,
+      "speed": 20,
+      "spread": 0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:repblast"
+      }
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:charged_beam": {
+      "damageProfile": {
+        "damage": 9,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "chargeTime": 50,
+      "duration": 50,
+      "cooldownTime": 80,
+      "range": 18.0,
+      "radius": 1,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:repulsor_powerdown",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "sind:unibeam"
+      }
+    },
+    "fiskheroes:heat_vision": {
+      "damageProfile": {
+        "damage": 5.0,
+        "types": {
+          "BULLET": 1.0
+        }
+      },
+      "canDoGriefing": false,
+      "range": 16,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": "sind:gunshoot"
+      }
+    },
+    "fiskheroes:transformation": {
+      "key": "GUN",
+      "transformation": {
+        "toggleData": "sind:dyn/wmgun_bool",
+        "timerData": "sind:dyn/wmgun_timer",
+        "time": 0
+      },
+      "isToggle": false
+    },
+    "fiskheroes:transformation|1": {
+      "key": "ARMGUN",
+      "transformation": {
+        "toggleData": "sind:dyn/armgun_bool",
+        "timerData": "sind:dyn/armgun_timer",
+        "time": 0
+      },
+      "isToggle": false
+    },
+    "fiskheroes:energy_projection": {
+      "damageProfile": {
+        "damage": 6.5,
+        "types": {
+          "BULLET": 1
+        },
+        "properties": {
+          "HIT_COOLDOWN": 0,
+          "REDUCE_KNOCKBACK": 0.8
+        }
+      },
+      "range": 48,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": "sind:shootgun"
+      }
+    },
+    "fiskheroes:shadowdome": {
+      "chargeTime": 0,
+      "duration": 1,
+      "radius": 15.0,
+      "soundEvents": {
+        "CAST": "sind:radar"
+      }
+    },
+    "fiskheroes:sentry_mode": {
+      "soundEvents": {
+        "OPEN": "fiskheroes:sentry_mode_open",
+        "CLOSE": "fiskheroes:sentry_mode_close"
+      }
+    },
+    "fiskheroes:sonic_waves": {
+      "damageProfile": {
+        "damage": 1.0,
+        "types": {
+          "SOUND": 1.0
+        },
+        "properties": {
+          "REDUCE_KNOCKBACK": 1,
+          "EFFECTS": [
+            {
+              "id": "minecraft:slowness",
+              "duration": 300,
+              "amplifier": 4
+            }
+          ]
+        }
+      },
+      "knockback": 0.025,
+      "canBreakGlass": true
+    },
+    "fiskheroes:transformation|fake": {
+      "key": "FAKE_AIM",
+      "transformation": {
+        "toggleData": "sind:dyn/beam_charging2",
+        "timerData": "sind:dyn/beam_charging_timer2",
+        "time": 5
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:sonicrepulsors"
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/barbullet.png",
+      "data": "sind:dyn/wmgun_mag"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/barbullet2.png",
+      "data": "sind:dyn/armgun_mag"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    }
+  ]
+}

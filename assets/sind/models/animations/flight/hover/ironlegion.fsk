@@ -1,0 +1,69 @@
+{x} = 30{hover}min(1.5{vel}, 1)
+;out "rotate" ({x}clamp({strafe}, -2, 2), 0, 0, 1)
+;out "rotate" (-{x}clamp({forward}, -2, 2), 1, 0, 0)
+
+{x} = {hover}min(2{vel}, 1)
+{strafe} *= {x}
+{forward} *= {x}
+{adx} = abs {strafe}
+{adz} = abs {forward}
+
+{Head2_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm2_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm2_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm2_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm2_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg2_rotX} += 0.3{forward}
+{RightLeg2_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg2_rotX} += 0.2{forward}
+{LeftLeg2_rotZ} -= 0.05{adz} - 0.4{strafe}
+
+{Head3_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm3_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm3_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm3_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm3_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg3_rotX} += 0.3{forward}
+{RightLeg3_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg3_rotX} += 0.2{forward}
+{LeftLeg3_rotZ} -= 0.05{adz} - 0.4{strafe}
+
+{Head4_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm4_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm4_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm4_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm4_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg4_rotX} += 0.3{forward}
+{RightLeg4_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg4_rotX} += 0.2{forward}
+{LeftLeg4_rotZ} -= 0.05{adz} - 0.4{strafe}
+
+{Head5_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm5_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm5_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm5_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm5_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg5_rotX} += 0.3{forward}
+{RightLeg5_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg5_rotX} += 0.2{forward}
+{LeftLeg5_rotZ} -= 0.05{adz} - 0.4{strafe}
+
+{Head6_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm6_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm6_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm6_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm6_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg6_rotX} += 0.3{forward}
+{RightLeg6_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg6_rotX} += 0.2{forward}
+{LeftLeg6_rotZ} -= 0.05{adz} - 0.4{strafe}
+
+{Head7_rotX} -= 30'clamp({forward}, -2, 2)
+{RightArm7_rotX} += 0.2{forward} - 0.4{adx}
+{RightArm7_rotZ} += 0.1{adz} + 0.4{strafe} + 3'{data_0}
+{LeftArm7_rotX} += 0.2{forward} - 0.4{adx}
+{LeftArm7_rotZ} -= 0.1{adz} - 0.4{strafe} + 3'{data_0}
+{RightLeg7_rotX} += 0.3{forward}
+{RightLeg7_rotZ} += 0.05{adz} + 0.4{strafe}
+{LeftLeg7_rotX} += 0.2{forward}
+{LeftLeg7_rotZ} -= 0.05{adz} - 0.4{strafe}

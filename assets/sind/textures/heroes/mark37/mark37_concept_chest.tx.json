@@ -1,0 +1,10 @@
+{
+    "texture": "sind:mark37/mark37_concept_chest_<OPEN>",
+    "getters": {
+      "OPEN": {
+        "key": "entity.getInterpolatedData('sind:dyn/srockets_cooldown') > 0.083",
+        "values": ["true", "false"]
+      }
+    }
+  }
+  

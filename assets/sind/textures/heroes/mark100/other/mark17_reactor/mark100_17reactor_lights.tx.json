@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/other/mark17_reactor/mark100_17reactor_lights",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark17_reactor_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_17reactor_light_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(17 * entity.getInterpolatedData('sind:dyn/flight_timer')), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 17
+      }
+    }
+  },
+  "isDynamic": true
+}

@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark80/ffbackpack/mark80_ffbackpack",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_ffbackpack_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark80_ffbackpack_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(60 * entity.getInterpolatedData('fiskheroes:beam_charge')) | 0",
+      "values": {
+        "min": 1,
+        "max": 60
+      }
+    }
+  },
+  "isDynamic": true
+}

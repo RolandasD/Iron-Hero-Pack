@@ -1,0 +1,13 @@
+{
+  "texture": "sind:anim/mark50_clustercannon_r_lights_<TIMER>",
+  "getters": {
+    "TIMER": {
+      "key": "(Math.ceil(15 * entity.getInterpolatedData('fiskheroes:beam_charge')) + 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 16
+      }
+    }
+  },
+  "isDynamic": true
+}

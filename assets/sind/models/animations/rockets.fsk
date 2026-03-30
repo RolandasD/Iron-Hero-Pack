@@ -1,0 +1,12 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{data_2} = curve {data_2}
+
+{leftrockets1_posY} @ {data_0} -> 999
+{rightrockets1_posY} @ {data_0} -> 999
+
+{leftrockets2_posY} @ {data_1} -> 999
+{rightrockets2_posY} @ {data_1} -> 999
+
+{leftrockets3_posY} @ {data_2} -> 999
+{rightrockets3_posY} @ {data_2} -> 999

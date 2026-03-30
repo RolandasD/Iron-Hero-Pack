@@ -1,0 +1,63 @@
+{data_0} = curve {data_0}
+{wobble2} = {data_0}sin(2pi{data_1})
+{wobble4} = {data_0}sin(4pi{data_1})
+{wobble2p05} = {data_0}sin(2pi{data_1} + pi / 2)
+
+{Head2_rotX} -= 0.5'{wobble2}
+{Head2_rotZ} -= 0.4'{wobble2p05}
+{RightArm2_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm2_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm2_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm2_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg2_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg2_rotX} -= 2'{wobble4}{wobble2p05}
+
+{Head3_rotX} -= 0.5'{wobble2}
+{Head3_rotZ} -= 0.4'{wobble2p05}
+{RightArm3_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm3_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm3_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm3_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg3_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg3_rotX} -= 2'{wobble4}{wobble2p05}
+
+{Head4_rotX} -= 0.5'{wobble2}
+{Head4_rotZ} -= 0.4'{wobble2p05}
+{RightArm4_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm4_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm4_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm4_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg4_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg4_rotX} -= 2'{wobble4}{wobble2p05}
+
+{Head5_rotX} -= 0.5'{wobble2}
+{Head5_rotZ} -= 0.4'{wobble2p05}
+{RightArm5_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm5_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm5_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm5_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg5_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg5_rotX} -= 2'{wobble4}{wobble2p05}
+
+{Head6_rotX} -= 0.5'{wobble2}
+{Head6_rotZ} -= 0.4'{wobble2p05}
+{RightArm6_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm6_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm6_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm6_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg6_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg6_rotX} -= 2'{wobble4}{wobble2p05}
+
+{Head7_rotX} -= 0.5'{wobble2}
+{Head7_rotZ} -= 0.4'{wobble2p05}
+{RightArm7_rotX} -= 1.5'{wobble4}{wobble2}
+{LeftArm7_rotX} += 1.5'{wobble4}{wobble2p05}
+{RightArm7_rotZ} += 4'{data_0} + 2'{wobble2}
+{LeftArm7_rotZ} -= 4'{data_0} + 2'{wobble2}
+{RightLeg7_rotX} += 2'{wobble4}{wobble2}
+{LeftLeg7_rotX} -= 2'{wobble4}{wobble2p05}
+
+;out "pivot" (0, 0.7, 0)
+;out "rotate" (0.6{wobble2p05}, 0, 0, 1)
+;out "pivot" (0, 0.56, 0)
+;out "rotate" (0.6{wobble2}, 1, 0, 0)

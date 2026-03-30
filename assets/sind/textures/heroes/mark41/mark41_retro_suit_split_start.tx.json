@@ -1,0 +1,18 @@
+{
+  "texture": {
+    "in": "sind:mark41/mark41_retro_complete",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/iron_man_suit_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark41_retro_suit_split_start<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "(() => {var i = entity.getInterpolatedData('sind:dyn/srockets_timer');var data = Math.min(1, Math.max(0, i - 0.105) * 15);return Math.ceil((data - Math.min(1,Math.max(0, i -  0.175) * 4)) * 5) | 0;})()",
+      "values": [0, 1, 2, 3, 4, 5]
+    }
+  }
+}

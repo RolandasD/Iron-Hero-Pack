@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.boost.loop",
+  "loop": true,
+  "condition": "entity.getData('sind:dyn/drop')",
+  "fadeIn": 5,
+  "fadeOut": 10,
+  "volume": 0.25
+}

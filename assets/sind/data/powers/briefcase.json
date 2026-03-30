@@ -1,0 +1,24 @@
+{
+    "name": "Briefcase",
+    "modifiers": {
+      "fiskheroes:transformation":{
+        "key": "TRANSFORM",
+        "transformation": {
+          "toggleData": "sind:dyn/briefcase",
+          "timerData": "sind:dyn/b_timer",
+          "time": 20
+        }
+      },
+      "fiskheroes:cooldown": {
+        "cooldown": {
+          "toggleData": "sind:dyn/briefcase",
+          "cooldownData": "sind:dyn/b_cooldown",
+          "duration": 60000,
+          "recovery": 0.25
+        },
+        "soundEvents": {
+          "TIMEOUT": "fiskheroes:mk50_disable"
+        }
+      }
+    }
+}

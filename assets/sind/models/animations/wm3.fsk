@@ -1,0 +1,10 @@
+{data_0} = curve {data_0}
+{shoulder_gun_rotX} += 90'{data_0}
+
+{shoulder_pivot_rotX} = clamp({pitch}' * {data_0}, -90', 10')
+{shoulder_pivot_rotZ} = clamp(-({yaw} - {bodyYaw})' * {data_0}, -15', 90')
+
+{missle_pivot_posY} += -3{data_0}
+{missle_pivot_rotY} += 90'{data_0}
+
+{shoulder_pivot_rotX} += -75'{data_0} * {data_1}

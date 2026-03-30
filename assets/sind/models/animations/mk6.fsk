@@ -1,0 +1,17 @@
+{data_0} = curve ({data_0}^-3) * 10
+{data_1} = curve{data_1}
+{rightArm_rotX} @ {data_0} -> {head_rotX} - pi / 2
+{rightArm_rotY} @ {data_0} -'> {head_rotY}
+{rightArm_rotZ} @ {data_0} -> {head_rotZ}
+
+{leftArm_rotX} @ {data_0} -> {head_rotX} - pi / 2
+{leftArm_rotY} @ {data_0} -'> {head_rotY}
+{leftArm_rotZ} @ {data_0} -> {head_rotZ}
+
+{flap_rotX} = -90' * {data_1} + 90'
+
+out "firstPerson" (true)
+out "translate" (-0.35{data_0}, 0, 0.15{data_0})
+out "rotate" (-27{data_0}, 0, 1, 0)
+out "rotate" (-20{data_0}, 1, 0, 0)
+out "rotate" (-30{data_0}, 0, 0, 1)

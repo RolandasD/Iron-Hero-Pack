@@ -1,0 +1,5 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:flares_open",
+  "volume": 0.5
+}

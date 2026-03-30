@@ -1,0 +1,81 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{data_2} = curve {data_2}
+
+;unibeam
+{right_posX} += (-1*{data_0})
+{left_posX} += (1*{data_0})
+{right_posY} += (2.5*{data_0})
+{left_posY} += (2.5*{data_0})
+{right_posZ} += (-4.25*{data_0})
+{left_posZ} += (-4.25*{data_0})
+
+{right_rotX} += (-90'*{data_0})
+{left_rotX} += (-90'*{data_0})
+
+{right_rotZ} += (90'*{data_0})
+{left_rotZ} += (-90'*{data_0})
+
+{backR_rotY} += (75'*{data_0})
+{leftR_rotY} += (75'*{data_0})
+{rightR_rotY} += (75'*{data_0})
+{backL_rotY} += (75'*{data_0})
+{leftL_rotY} += (75'*{data_0})
+{rightL_rotY} += (75'*{data_0})
+
+{leftR_rotZ} += (60'*{data_0})
+{rightR_rotZ} += (-60'*{data_0})
+{leftL_rotZ} += (60'*{data_0})
+{rightL_rotZ} += (-60'*{data_0})
+
+{leftR_posX} += (2.598*{data_0})
+{leftR_posY} += (-1.5*{data_0})
+{rightR_posX} += (-2.598*{data_0})
+{rightR_posY} += (-1.5*{data_0})
+{backR_posY} += (-1*{data_0})
+
+{leftL_posX} += (2.598*{data_0})
+{leftL_posY} += (-1.5*{data_0})
+{rightL_posX} += (-2.598*{data_0})
+{rightL_posY} += (-1.5*{data_0})
+{backL_posY} += (-1*{data_0})
+
+;pulse cannon
+{right_posX} += (-6*{data_1})
+{left_posX} += (6*{data_1})
+{right_posY} += (1.5*{data_1})
+{left_posY} += (1.5*{data_1})
+{right_posZ} += (-4.25*{data_1})
+{left_posZ} += (-4.25*{data_1})
+
+{right_rotX} += (90'*{data_1})
+{left_rotX} += (90'*{data_1})
+
+{right_rotZ} += (-90'*{data_1})
+{left_rotZ} += (90'*{data_1})
+
+{backR_rotY} += (10'*{data_1})
+{leftR_rotY} += (10'*{data_1})
+{rightR_rotY} += (10'*{data_1})
+{backL_rotY} += (10'*{data_1})
+{leftL_rotY} += (10'*{data_1})
+{rightL_rotY} += (10'*{data_1})
+
+{leftR_rotZ} += (60'*{data_1})
+{rightR_rotZ} += (-60'*{data_1})
+{leftL_rotZ} += (60'*{data_1})
+{rightL_rotZ} += (-60'*{data_1})
+
+{leftR_posX} += (4.3301*{data_1})
+{leftR_posY} += (-2.5*{data_1})
+{rightR_posX} += (-4.3301*{data_1})
+{rightR_posY} += (-2.5*{data_1})
+{backR_posY} += (-3*{data_1})
+
+{leftL_posX} += (4.3301*{data_1})
+{leftL_posY} += (-2.5*{data_1})
+{rightL_posX} += (-4.3301*{data_1})
+{rightL_posY} += (-2.5*{data_1})
+{backL_posY} += (-3*{data_1})
+
+

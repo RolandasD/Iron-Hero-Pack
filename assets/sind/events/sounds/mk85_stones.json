@@ -1,0 +1,10 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:stones",
+    "condition": {
+      "continue": "entity.getData('sind:dyn/beam_charging2') && !entity.getData('sind:dyn/snap')"
+    },
+    "volume": 1.0,
+    "fadeOut": 20
+  }
+  

@@ -1,0 +1,24 @@
+{data_0} = curve {data_0}
+{RightArm2_rotX} @ {data_0} -> -pi / 2
+{RightArm3_rotX} @ {data_0} -> -pi / 2
+{RightArm5_rotX} @ {data_0} -> -pi / 2
+{RightArm6_rotX} @ {data_0} -> -pi / 2
+
+{LeftArm2_rotX} @ {data_0} -> -pi / 2
+{LeftArm3_rotX} @ {data_0} -> -pi / 2
+{LeftArm5_rotX} @ {data_0} -> -pi / 2
+{LeftArm6_rotX} @ {data_0} -> -pi / 2
+
+{fire2L_posY} -= 11*{data_0}
+{fire3L_posY} -= 11*{data_0}
+{fire5L_posY} -= 11*{data_0}
+{fire6L_posY} -= 11*{data_0}
+
+{rlauncher2_posX} -= 0.75{data_0}
+{llauncher2_posX} += 0.75{data_0}
+{rlauncher3_posX} -= 0.75{data_0}
+{llauncher3_posX} += 0.75{data_0}
+{rlauncher5_posX} -= 0.75{data_0}
+{llauncher5_posX} += 0.75{data_0}
+{rlauncher6_posX} -= 0.75{data_0}
+{llauncher6_posX} += 0.75{data_0}

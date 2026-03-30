@@ -1,0 +1,42 @@
+{
+  "requirements": [],
+  "display": {
+    "name": {
+      "translate": "\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l???"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/question.png"
+    },
+    "description": "Suit up in the..."
+  },
+  "criteria": {
+    "mk80": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 80 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark80'"
+      }
+    },
+    "mk85": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 85 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark85'"
+      }
+    }
+  }
+}

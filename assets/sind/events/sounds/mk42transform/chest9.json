@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:piece1",
+  "condition": "entity.getData('sind:dyn/mark42_chest_timer') < 0.963",
+  "pitch": "1.1 - (Math.random() * 0.7)",
+  "delay": 105,
+  "fadeOut": 5,
+  "volume": 0.75
+}

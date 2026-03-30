@@ -1,0 +1,7 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:mk7",
+  "condition": "entity.getData('sind:dyn/summon7')",
+  "fadeOut": 5,
+  "volume": 1.0
+}

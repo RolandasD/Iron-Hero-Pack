@@ -1,0 +1,9 @@
+{
+  "texture": "sind:mark16/camo16_mask_<VALUE>",
+  "getters": {
+    "VALUE": {
+      "key": "entity.getInterpolatedData('fiskheroes:mask_open_timer2') > 0 ? 'a' : 'b'",
+      "values": ["a", "b"]
+    }
+  }
+}

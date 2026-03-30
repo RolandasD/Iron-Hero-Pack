@@ -1,0 +1,12 @@
+{data} = signum({data})curve({data})
+{x} = sin(abs({data})pi)
+{y} = {x}signum({data})'
+
+{rightArmBuster_rotX} -= 30{y} + 10'{x}
+{leftArmBuster_rotX} += {y}30 - 10'{x}
+{rightLegBuster_rotX} -= {y}10 + 10'{x}
+{leftLegBuster_rotX} += {y}10 - 10'{x}
+
+out "rotate" (-10{x}, 1, 0, 0)
+out "rotate" (360{data}, 0, 1, 0)
+out "translate" (0, 0, -0.1{x})

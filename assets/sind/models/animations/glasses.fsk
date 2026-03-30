@@ -1,0 +1,37 @@
+{data} = curve {data}
+
+{anim1} = curve min(animate2({data}, 1, 0.4, 0.6, 0.0), 1)
+{anim2} = curve min(animate2({data}, 1, 0.6, 0.8, 1.0), 1)
+
+{Helm_posY} @ {anim1} -> -8
+{Helm_posZ} @ {anim1} -> -8.5
+{Helm_rotX} @ {anim1} -> 1.8
+
+{HelmO_posY} @ {anim1} -> -8
+{HelmO_posZ} @ {anim1} -> -8.5
+{HelmO_rotX} @ {anim1} -> 1.8
+
+{Helm_posY} @ {anim2} -> 45
+{Helm_posZ} @ {anim2} -> 9
+{Helm_rotX} @ {anim2} -> 4.5
+{Helm_rotZ} @ {anim2} -> 1.8
+
+{HelmO_posY} @ {anim2} -> 45
+{HelmO_posZ} @ {anim2} -> 9
+{HelmO_rotX} @ {anim2} -> 4.5
+{HelmO_rotZ} @ {anim2} -> 1.8
+;-----------------------------------------------;
+
+
+{data} = sin(pi{data})
+{x} = {data}sin(1.5pi{data} - pi)
+
+{head_rotX} @ {data} -> 30'
+{head_rotY} @ {data} -'> 0'
+
+{rightArm_rotX} @ {data} -> -180'
+;{rightArm_rotZ} @ {x} -> 20'
+{rightArm_rotY} @ {data} -> -7.5'
+
+{rightArm_posY} += 1{x}
+{rightArm_posX} -= 0.25{data}

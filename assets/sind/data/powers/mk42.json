@@ -1,0 +1,297 @@
+{
+  "name": "- Iron Man Armor Mk XLII:",
+  "modifiers": {
+    "fiskheroes:transformation|flares": {
+      "key": "FLARES",
+      "transformation": {
+        "toggleData": "sind:dyn/flares",
+        "timerData": "sind:dyn/flares_timer",
+        "time": 20
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:flares_open", "sind:flares"],
+        "DISABLE": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|flares_c": {
+      "cooldown": {
+        "toggleData": "sind:dyn/flares",
+        "cooldownData": "sind:dyn/flares_cooldown",
+        "duration": 30,
+        "recovery": 0.25
+      }
+    },
+    "fiskheroes:controlled_flight|flight_unibeam": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false,
+      "canRoll": false,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:controlled_flight|flight_normal": {
+      "speed": 0.1,
+      "boostSpeed": 0.3,
+      "canBoost": true,
+      "canRoll": true,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:repulsor_blast": {
+      "damageProfile": {
+        "damage": 11.0,
+        "types": {
+          "ENERGY": 1
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 1,
+          "HIT_COOLDOWN": 0
+        }
+      },
+      "range": 48,
+      "speed": 20,
+      "spread": 0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:repblast"
+      }
+    },
+    "fiskheroes:transformation|boots": {
+      "key": "BOOTS",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_boots",
+        "timerData": "sind:dyn/mark42_boots_timer",
+        "time": 63
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/boots1", "sind:mk42transform/boots2", "sind:mk42transform/boots1b", "sind:mk42transform/boots2b"
+        ]
+      }
+    },
+    "fiskheroes:transformation|chest": {
+      "key": "CHEST",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_chest",
+        "timerData": "sind:dyn/mark42_chest_timer",
+        "time": 120
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/chest1", "sind:mk42transform/chest2", "sind:mk42transform/chest3", "sind:mk42transform/chest4", "sind:mk42transform/chest5", "sind:mk42transform/chest6", "sind:mk42transform/chest7", "sind:mk42transform/chest8", "sind:mk42transform/chest9",
+          "sind:mk42transform/chest1b", "sind:mk42transform/chest2b", "sind:mk42transform/chest3b", "sind:mk42transform/chest4b", "sind:mk42transform/chest5b", "sind:mk42transform/chest6b", "sind:mk42transform/chest7b", "sind:mk42transform/chest8b", "sind:mk42transform/chest9b"
+        ]
+      }
+    },
+    "fiskheroes:transformation|helmet": {
+      "key": "HELMET",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_helmet",
+        "timerData": "sind:dyn/mark42_helmet_timer",
+        "time": 87
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/helmet1", "sind:mk42transform/helmet2", "sind:mk42transform/helmet3", "sind:mk42transform/helmet1b", "sind:mk42transform/helmet2b"
+        ]
+      }
+    },
+    "fiskheroes:transformation|pants": {
+      "key": "PANTS",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_pants",
+        "timerData": "sind:dyn/mark42_pants_timer",
+        "time": 63
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/pants1", "sind:mk42transform/pants2", "sind:mk42transform/pants1b", "sind:mk42transform/pants2b"
+        ]
+      }
+    },
+    "fiskheroes:transformation|full": {
+      "key": "FULL",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_full",
+        "timerData": "sind:dyn/mark42_full_timer",
+        "time": 189
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/full1", "sind:mk42transform/full2", "sind:mk42transform/full3", "sind:mk42transform/full4", "sind:mk42transform/full5", "sind:mk42transform/full6", "sind:mk42transform/full7", "sind:mk42transform/full8", "sind:mk42transform/full9", "sind:mk42transform/full10", "sind:mk42transform/full11", "sind:mk42transform/full12", "sind:mk42transform/full13", "sind:mk42transform/full14", "sind:mk42transform/full15",
+          "sind:mk42transform/full1b", "sind:mk42transform/full2b", "sind:mk42transform/full3b", "sind:mk42transform/full4b", "sind:mk42transform/full5b", "sind:mk42transform/full6b", "sind:mk42transform/full7b", "sind:mk42transform/full8b", "sind:mk42transform/full9b", "sind:mk42transform/full10b", "sind:mk42transform/full11b", "sind:mk42transform/full12b", "sind:mk42transform/full13b", "sind:mk42transform/full14b"
+        ]
+      }
+    },
+    "fiskheroes:transformation|full2": {
+      "key": "FULL2",
+      "transformation": {
+        "toggleData": "sind:dyn/mark42_full2",
+        "timerData": "sind:dyn/mark42_full2_timer",
+        "time": 105
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:mk42transform/2full1", "sind:mk42transform/2full2", "sind:mk42transform/2full3", "sind:mk42transform/2full4", "sind:mk42transform/2full5", "sind:mk42transform/2full6", "sind:mk42transform/2full7", "sind:mk42transform/2full8", "sind:mk42transform/2full9", "sind:mk42transform/2full10", "sind:mk42transform/2full11", "sind:mk42transform/2full12", "sind:mk42transform/2full13",
+          "sind:mk42transform/2full1b", "sind:mk42transform/2full2b", "sind:mk42transform/2full3b", "sind:mk42transform/2full4b", "sind:mk42transform/2full5b", "sind:mk42transform/2full6b", "sind:mk42transform/2full7b", "sind:mk42transform/2full8b", "sind:mk42transform/2full9b", "sind:mk42transform/2full10b", "sind:mk42transform/2full11b", "sind:mk42transform/2full12b", "sind:mk42transform/2full13b"
+        ]
+      }
+    },
+    "fiskheroes:lightning_cast|tnt": {
+      "damageProfile": {
+        "damage": 22.5,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:lightning_cast|fc": {
+      "damageProfile": {
+        "damage": 18.75,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:lightning_cast|gp": {
+      "damageProfile": {
+        "damage": 15.0,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        }
+      },
+      "cooldownTime": 25,
+      "chainRadius": 0,
+      "range": 24.0
+    },
+    "fiskheroes:transformation|arm": {
+      "key": "AROCKET",
+      "transformation": {
+        "toggleData": "sind:dyn/armgun_bool",
+        "timerData": "sind:dyn/armgun_timer",
+        "time": 10
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:arm_open",
+        "DISABLE": "sind:arm_close"
+      }
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:sentry_mode": {
+      "soundEvents": {
+        "OPEN": "fiskheroes:sentry_mode_open",
+        "CLOSE": "fiskheroes:sentry_mode_close"
+      }
+    },
+    "fiskheroes:charged_beam": {
+      "damageProfile": {
+        "damage": 8,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "chargeTime": 50,
+      "duration": 50,
+      "cooldownTime": 80,
+      "range": 18.0,
+      "radius": 1.0,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:mk85_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "sind:unibeam"
+      }
+    }
+  },
+  "hud": [
+    
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/gunmag.png",
+      "data": "sind:dyn/srockets_cooldown"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/gp_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('gp_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/fc_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('fc_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/tnt_rocket.png",
+      "data": "(() => {var ammo = Number(entity.getWornChestplate().nbt().getByte('tnt_ammo')); return ammo > 0 ? Math.max(0.5, ammo-1) : 0;})()"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/flares.png",
+      "data": "sind:dyn/flares_cooldown"
+    }
+  ]
+}

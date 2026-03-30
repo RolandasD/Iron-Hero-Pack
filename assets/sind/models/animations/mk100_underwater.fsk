@@ -1,0 +1,2 @@
+{rightArm_posX} -= 0.5*{data_0}
+{leftArm_posX} += 0.5*{data_0}

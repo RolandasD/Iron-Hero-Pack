@@ -1,0 +1,15 @@
+Copyright © 2026 Ergoslab & 3Talonz
+All rights reserved.
+By downloading, installing, or using this software, you acknowledge that you have read and agree to the following terms of this license.
+
+This directory contains proprietary visual assets and code, including but not limited to written code, images, textures, icons, models, animations, and other artwork ("Assets").
+
+Permission is not granted to copy, extract, modify, merge, publish, distribute, sublicense, sell, or use these Assets, in whole or in part, for any purpose, commercial or non-commercial, without prior explicit written permission from the copyright holder.
+
+The Assets may be used only as incorporated within the original software or project they were distributed with, and may not be used independently or in other projects.
+
+Any unauthorized use of these Assets is strictly prohibited.
+
+Displaying the Assets in screenshots, videos, or streams that showcase the original software is permitted, provided the Assets are not redistributed separately.
+
+

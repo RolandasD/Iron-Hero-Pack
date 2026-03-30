@@ -1,0 +1,24 @@
+{0}=curve animate2({data},0.5,0,0,0.5)
+{head_rotX} @ {0} -> 37.5'
+{head_posY} @ {0} -> 8
+{head_posZ} @ {0} -> -10
+
+{rightArm_rotX} @ {0} -> -25'
+{rightArm_rotZ} @ {0} -> 25'
+{rightArm_posY} @ {0} -> 7
+{rightArm_posZ} @ {0} -> -8
+
+{leftArm_rotX} @ {0} -> -25'
+{leftArm_rotZ} @{0} -> -25'
+{leftArm_posY} @ {0} -> 7
+{leftArm_posZ} @ {0} -> -8
+
+{body_rotX} @ {0} -> 70'
+{body_posY} @ {0} -> 8
+{body_posZ} @ {0} -> -10
+
+{rightLeg_rotX}+=25'{0}
+{rightLeg_posZ}+=1{0}
+
+{leftLeg_rotX}+=-22.5'{0}
+{leftLeg_posZ}+=2{0}

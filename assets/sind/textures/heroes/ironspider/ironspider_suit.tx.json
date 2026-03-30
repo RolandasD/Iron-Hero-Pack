@@ -1,0 +1,23 @@
+{
+    "texture": {
+      "in": "sind:ironspider/ironspider_suit",
+      "transform": [
+        {
+          "operation": "XOR",
+          "supply": "sind:xor/ironspider/ironspider_suit_<TIMER>"
+        }
+      ],
+      "out": "sind:generated/ironspider_suit_<TIMER>"
+    },
+    "getters": {
+      "TIMER": {
+        "key": "Math.ceil(24 * entity.getInterpolatedData('sind:dyn/nanite_timer')) | 0",
+        "values": {
+          "min": 0,
+          "max": 24
+        }
+      }
+    },
+    "isDynamic": true
+  }
+  

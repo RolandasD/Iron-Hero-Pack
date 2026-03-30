@@ -1,0 +1,115 @@
+{data_3}=sin(pi*{data_3})
+{0}=curve animate2({data_0},0.5,0,0,0.5)
+{1}=curve animate2({data_0},1,0,0.5,0.5)
+{2}=curve animate2({data_0},0.25,0,0,0.25)
+{3}=curve animate2({data_0},0.75,0,0.25,0.5)
+{4}=curve animate2({data_0},1,0,0.25,0.75)
+
+{root_posY}+=4.75{0} + 2.375{1}
+{root_posZ}+=-4.75{0}
+
+{right_rotZ}+=-90'{2} - 90'{3}
+{right_posX}+=6{2}+6{3}
+
+{topR_rotX}+=-5'{2} - 5'{4}
+{topR_rotZ}+=-60'{2} - 60'{4}
+{topR_posX}+=4{2} + 4{4}
+{topR_posY}+=4{2} + 4{4}
+
+{botR_rotX}+=-5'{2} - 5'{4}
+{botR_rotZ}+=60'{2} + 60'{4}
+{botR_posX}+=4{2} + 4{4}
+{botR_posY}+=-4{2} - 4{4}
+
+{left_rotZ}+=90'{2} + 90'{3}
+{left_posX}+=-6{2} - 6{3}
+
+{topL_rotX}+=-5'{2} - 5'{4}
+{topL_rotZ}+=60'{2} + 60'{4}
+{topL_posX}+=-4{2} - 4{4}
+{topL_posY}+=4{2} + 4{4}
+
+{botL_rotX}+=-5'{2} - 5'{4}
+{botL_rotZ}+=-60'{2} - 60'{4}
+{botL_posX}+=-4{2} - 4{4}
+{botL_posY}+=-4{2} - 4{4}
+
+{idle} = {data_3} * {data_0} * (1 - {data_1}) * (1-{data_2})
+
+{root_posY}+=0.75{idle}
+{topR_rotX}+=15'{idle}
+{botR_rotX}+=15'{idle}
+{topL_rotX}+=15'{idle}
+{botL_rotX}+=15'{idle}
+
+{weird} = {data_0} * (1-{data_2})
+{stupid} = (75' * max((1-{data_4}), min(2*{data_1},1)))
+{groot_rotX} = clamp({pitch}'*{weird}, (-15' + (-75' * {data_1}) ), 15' + {stupid})
+{groot_rotY} = ({yaw} - {bodyYaw})'*{weird}
+
+{rpivot_rotX} = {pitch}'*{data_2}
+{rpivot_rotY} = ({yaw} - {bodyYaw})'*{data_2}
+{lpivot_rotX} = {pitch}'*{data_2}
+{lpivot_rotY} = ({yaw} - {bodyYaw})'*{data_2}
+
+{f0}=curve animate2({data_1},10,0,1,9)
+{f1}=curve animate2({data_1},1,0,0.5,0.5)
+{f2}=curve animate2({data_1},9.5,0.5,0.5,9)
+{f3}=curve animate2({data_1},0.5,0,0.15,0.35)
+{f4}=curve animate2({data_1},0.65,0.15,0.35,0.3)
+{f5}=curve animate2({data_1},0.5,0.5,0.3,0.2)
+
+{root_posY}+=5{f0}
+{root_posZ}+=-19{f0}
+
+{right_posX}+=5{f0}
+
+{left_posX}+=-5{f0}
+
+{topRcenter_rotX}+=180'{f1}
+{topRcenter_rotX}+=360'{f2}
+{topRcenter_posX}+=2{f3}
+{topRcenter_posY}+=-3{f3}
+{topRcenter_posX}+=2{f4}
+{topRcenter_posY}+=-3{f4}
+{topRcenter_posX}+=2{f5}
+{topRcenter_posY}+=-3{f5}
+
+{midRcenter_rotY}+=-180'{f1}
+{midRcenter_rotY}+=-360'{f2}
+{midRcenter_posX}+=-9{f3}
+{midRcenter_posX}+=-11{f4}
+{midRcenter_posX}+=-9{f5}
+
+{botRcenter_rotX}+=180'{f1}
+{botRcenter_rotX}+=360'{f2}
+{botRcenter_posX}+=-2{f3}
+{botRcenter_posY}+=-2{f3}
+{botRcenter_posX}+=-2{f4}
+{botRcenter_posY}+=-3{f4}
+{botRcenter_posX}+=-2{f5}
+{botRcenter_posY}+=-2{f5}
+
+{topLcenter_rotX}+=180'{f1}
+{topLcenter_rotX}+=360'{f2}
+{topLcenter_posX}+=-2{f3}
+{topLcenter_posY}+=-2{f3}
+{topLcenter_posX}+=-2{f4}
+{topLcenter_posY}+=-3{f4}
+{topLcenter_posX}+=-2{f5}
+{topLcenter_posY}+=-2{f5}
+
+{midLcenter_rotY}+=-180'{f1}
+{midLcenter_rotY}+=-360'{f2}
+{midLcenter_posX}+=-9{f3}
+{midLcenter_posX}+=-11{f4}
+{midLcenter_posX}+=-9{f5}
+
+{botLcenter_rotX}+=180'{f1}
+{botLcenter_rotX}+=360'{f2}
+{botLcenter_posX}+=2{f3}
+{botLcenter_posY}+=-2{f3}
+{botLcenter_posX}+=2{f4}
+{botLcenter_posY}+=-3{f4}
+{botLcenter_posX}+=2{f5}
+{botLcenter_posY}+=-2{f5}

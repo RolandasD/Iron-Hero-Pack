@@ -1,0 +1,16 @@
+{
+  "suit": "sind:warmachine_mk2",
+  "requirements": [
+    "fiskheroes:tier6_7",
+    "sind:arc_reactor",
+    "sind:stark_tech",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee",
+    "fiskheroes:ranged2",
+    "sind:war_machines",
+    "sind:combat",
+    "sind:warmachine_mk1",
+    "sind:mark22"
+  ]
+}

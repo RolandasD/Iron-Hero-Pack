@@ -1,0 +1,659 @@
+{
+  "name": "\u00A79\u00A7lSoul \u00A79\u00A7lIndustries",
+  "watermark": "&c&lSOUL INDUSTRIES",
+  "description": "\u00A76Version: \u00A7c2.0.2",
+  "domain": "sind",
+  "minVersion": "2.4.0",
+  "packFormat": 1,
+  "sounds": {
+    "download": {
+      "repository": "Ergoslab/SindSounds",
+      "version": 16
+    },
+    "range": {
+      "unicharge": { "distance": 32.0, "target": "ALL" },
+      "unibeam": { "distance": 32.0, "target": "ALL" },
+      "armrocket_close": { "distance": 8.0, "target": "ALL" },
+      "armrocket_open": { "distance": 8.0, "target": "ALL" },
+      "armgun": { "distance": 32.0, "target": "ALL" },
+      "beep": { "distance": 8.0, "target": "ALL" },
+      "boop": { "distance": 8.0, "target": "ALL"},
+      "close": { "distance": 8.0, "target": "ALL" },
+      "dextend": { "distance": 8.0, "target": "ALL" },
+      "extend": { "distance": 8.0, "target": "ALL" },
+      "flares_open": { "distance": 8.0, "target": "ALL" },
+      "flares": { "distance": 16.0, "target": "ALL" },
+      "grab": { "distance": 8.0, "target": "ALL" },
+      "harpoon_reel": { "distance": 16.0, "target": "ALL" },
+      "harpoon_shoot": { "distance": 16.0, "target": "ALL" },
+      "hb_land": { "distance": 32.0, "target": "ALL" },
+      "mk1walk": { "distance": 16.0, "target": "ALL" },
+      "latchclose": { "distance": 8.0, "target": "ALL" },
+      "latchopen": { "distance": 8.0, "target": "ALL"},
+      "piece2": { "distance": 8.0, "target": "ALL" },
+      "piece1": { "distance": 8.0, "target": "ALL" },
+      "landing": { "distance": 8.0, "target": "ALL" },
+      "radar": { "target": "ONLY_SELF" },
+      "repblast": 48.0,
+      "rocket": { "distance": 32.0, "target": "ALL"},
+      "bullet": { "distance": 32.0, "target": "ALL" },
+      "wmgun": { "distance": 32.0, "target": "ALL"}
+    }
+  },
+  "dataVars": {
+    "string_data": { "type": "STRING", "resetWithoutSuit": true },
+    "camo": "BOOLEAN",
+    "camo_timer": "FLOAT_INTERP",
+
+    "briefcase": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "b_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "briefcasexor": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "b_timer_model": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "another_boolean": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "another_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "b_cooldown": { "type": "FLOAT", "resetWithoutSuit": true },
+
+    "drop": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "drop_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "tentacles": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "tentacles_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "hulkbuster": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "hulkbuster_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "cavecheck": { "type": "INTEGER", "resetWithoutSuit": true },
+    "tutcheck": { "type": "INTEGER", "resetWithoutSuit": true },
+    "radcheck": { "type": "INTEGER", "resetWithoutSuit": true },
+    "lowradcheck": { "type": "INTEGER", "resetWithoutSuit": true },
+    "jarvis": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "jarvis_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "jarvis_timer2": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "speaking": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "speaking_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "critical_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mobscan": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "danger": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "icing": "BOOLEAN",
+    "icing_cooldown": "FLOAT_INTERP",
+
+    "mob_cooldown": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "canfly": "BOOLEAN",
+
+    "reloading": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "armgun": { "type": "INTEGER", "resetWithoutSuit": true },
+    "armgun_bool": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "armgun_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "armgun_mag": { "type": "FLOAT", "resetWithoutSuit": true },
+    "armreloading": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "armgun_mag_int": { "type": "INTEGER", "resetWithoutSuit": true },
+
+    "wmgun": { "type": "INTEGER", "resetWithoutSuit": true },
+    "wmgun_bool": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "wmgun_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "wmgun_mag": { "type": "FLOAT", "resetWithoutSuit": true },
+    "wmreloading": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "wmgun_mag_int": { "type": "INTEGER", "resetWithoutSuit": true },
+
+    "srockets": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "srockets_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "srockets_cooldown": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "srockets_tog": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "armrockets": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "armrockets_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "armrockets_reloading": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "lava_cooldown": { "type": "FLOAT", "resetWithoutSuit": false },
+    "lava_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": false },
+    "lava": { "type": "BOOLEAN", "resetWithoutSuit": false },
+
+    "rep": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "rep_cooldown": { "type": "FLOAT", "resetWithoutSuit": false },
+    "rep_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "smash": { "type": "BOOLEAN", "resetWithoutSuit": false },
+
+    "falling": "FLOAT_INTERP",
+
+    "night_timer": "FLOAT_INTERP",
+    "night": "BOOLEAN",
+
+    "netherrack_timer": "FLOAT_INTERP",
+    "dirt_timer": "FLOAT_INTERP",
+    "sand_timer": "FLOAT_INTERP",
+    "stone_timer": "FLOAT_INTERP",
+    "endstone_timer": "FLOAT_INTERP",
+    "cobble_timer": "FLOAT_INTERP",
+    "clay_timer": "FLOAT_INTERP",
+    "redsand_timer": "FLOAT_INTERP",
+    "snow_timer": "FLOAT_INTERP",
+    "gravel_timer": "FLOAT_INTERP",
+    "soulsand_timer": "FLOAT_INTERP",
+    "obsidian_timer": "FLOAT_INTERP",
+    "mycelium_timer": "FLOAT_INTERP",
+    "podzol_timer": "FLOAT_INTERP",
+    "sandstone_timer": "FLOAT_INTERP",
+    "netherbrick_timer": "FLOAT_INTERP",
+    "mossycobble_timer": "FLOAT_INTERP",
+    "bedrock_timer": "FLOAT_INTERP",
+    "quartz_timer": "FLOAT_INTERP",
+    "oakwood_timer": "FLOAT_INTERP",
+    "sprucewood_timer": "FLOAT_INTERP",
+    "birchwood_timer": "FLOAT_INTERP",
+    "junglewood_timer": "FLOAT_INTERP",
+    "acaciawood_timer": "FLOAT_INTERP",
+    "darkoakwood_timer": "FLOAT_INTERP",
+    "sponge_timer": "FLOAT_INTERP",
+    "brick_timer": "FLOAT_INTERP",
+    "hardclay_timer": "FLOAT_INTERP",
+    "packedice_timer": "FLOAT_INTERP",
+    "glowstone_timer": "FLOAT_INTERP",
+
+    "sneaking_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+	  "telekinesis_timer": "FLOAT_INTERP",
+        
+    "booster_timer2": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "cluster_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "glovesL_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "glovesR_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "clamp_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "super_boost_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "swap": "BOOLEAN",
+    "swap_timer": "FLOAT_INTERP",
+    "slot" : { "type": "BYTE", "resetWithoutSuit": true },
+	  "slot0_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "slot1_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "slot2_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "slot3_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+	  "slot4_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "swapper0_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "swapper1_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "swapper2_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "swapper3_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+	  "swapper4_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "swapper5_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "fuel": { "type": "FLOAT_INTERP", "resetWithoutSuit": false },
+
+    "clawlength" : { "type": "DOUBLE_INTERP", "resetWithoutSuit": true },
+
+    "modularint1": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "modularint2": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "modularint3": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "modularint4": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "mark41_etimer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    
+    "mark42_full": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_full_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mark42_full2": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_full2_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "mark42_boots_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mark42_pants_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mark42_chest_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mark42_helmet_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "mark42_chest": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_helmet": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_pants": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_boots": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_chestc": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_helmetc": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_pantsc": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "mark42_bootsc": { "type": "BOOLEAN", "resetWithoutSuit": true },
+
+    "beam_charging2": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "beam_charge2": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "beam_charging_timer2": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "beam_shooting2": { "type": "FLOAT", "resetWithoutSuit": true },
+	  
+	  "nanites": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "nanite_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "nanite_counter": {"type": "SHORT", "resetWithoutSuit": false},
+    "nanite_regen_tick": {"type": "BYTE", "resetWithoutSuit": true},
+    "nanites2": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "nanite_timer2": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+	  "flight_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "flight_boost_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "wm_flight_boost_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "ground_smash": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "ground_smash_cooldown": {"type": "INTEGER", "resetWithoutSuit": true},
+    "ground_smash_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "ground_smash_use": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "ground_smash_use_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "earthquake": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "earthquake_cooldown": {"type": "INTEGER", "resetWithoutSuit": true},
+    "earthquake_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "earthquake_use": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "earthquake_use_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "underwater_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "underwater_timer2": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "underwater_timerR": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "underwater_timerL": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "shield_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "shield_blocking_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "pull": "BOOLEAN",
+    "pull_timer": "FLOAT",
+
+    "flares": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "flares_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "flares_cooldown": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "sprinting_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "dive_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+
+    "punch_right": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "punch_left": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "punch_left_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "punch_right_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "punch_decider": {"type": "BYTE", "resetWithoutSuit": true},
+
+    "leaping_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "idle_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "idle_timer2": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "can_leap": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "hulkbuster_arm_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "hulkbuster_arm": {"type": "BOOLEAN", "resetWithoutSuit": true},
+
+    "summon": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "summon_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "summon7": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "summon7_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "tony": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "tony_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "sentry": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "sentry_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "quantum": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "quantum_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "quantum_use": {"type": "BOOLEAN", "resetWithoutSuit": true},
+    "quantum_use_timer": {"type": "FLOAT_INTERP", "resetWithoutSuit": true},
+    "tp": {"type": "BOOLEAN", "resetWithoutSuit": true},
+
+    "snap": {"type": "BOOLEAN","resetWithoutSuit": false},
+    "snap_timer": {"type": "FLOAT_INTERP","resetWithoutSuit": false},
+    "snip": {"type": "BOOLEAN","resetWithoutSuit": false},
+    "snip_timer": {"type": "FLOAT_INTERP","resetWithoutSuit": false},
+    "creative": "BOOLEAN",
+    "fake_punch_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+
+    "wall_crawl": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "wall_crawl_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "wall_crawl_timer_above": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "wall_crawl_yaw": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "wall_crawl_anim": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "x": {"type": "FLOAT", "resetWithoutSuit": true},
+    "y": {"type": "FLOAT", "resetWithoutSuit": true},
+    "z": {"type": "FLOAT", "resetWithoutSuit": true},
+    "motionx": {"type": "FLOAT", "resetWithoutSuit": true},
+    "motiony": {"type": "FLOAT", "resetWithoutSuit": true},
+    "motionz": {"type": "FLOAT", "resetWithoutSuit": true},
+
+    "legion_cooldown": { "type": "FLOAT_INTERP", "resetWithoutSuit": false },
+    "instant_cooldown": { "type": "FLOAT_INTERP", "resetWithoutSuit": false },
+
+    "equip": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "equip_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true },
+    "edith": { "type": "BOOLEAN", "resetWithoutSuit": true },
+    "edith_timer": { "type": "FLOAT_INTERP", "resetWithoutSuit": true }
+  },
+  "alts": {
+    "sind:mark1":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 20
+      },
+      "gold": {
+        "name": "\u00A7e\u00A7lGolden Avenger",
+        "maskToggleTicks": 20
+      }
+    },
+    "sind:mark2": {
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark3":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "rc": "\u00a74R\u00a77e\u00a74d \u00a77& \u00a74C\u00a77h\u00a74r\u00a77o\u00a74m\u00a77e",
+      "gold": "\u00a7eGold",
+      "gm": "\u00a78Gunmetal",
+      "stealth": "\u00a79S\u00a73t\u00a79e\u00a73a\u00a79l\u00a73t\u00a79h \u00a73M\u00a79o\u00a73d\u00a79e"
+    },
+    "sind:mark4":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "sp": "\u00A77Secret Project",
+      "v2": "\u00A7cConcept"
+    },
+    "sind:mark5":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "ev": "\u00A7eEvolution Armor"
+    },
+    "sind:mark6":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "v2": "\u00A7cConcept"
+    },
+    "sind:mark7":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "bg": "\u00A78B\u00A76l\u00A78a\u00A76c\u00A78k \u00A76& \u00A78G\u00A76o\u00A78l\u00A76d",
+      "sz": "\u00A7fSubzero",
+      "d100": "\u00A77Disney \u00A74100"
+    },
+    "sind:mark8":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark9":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark10":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark11":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark12":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark13":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark14":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark15":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark16":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark17":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark18":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark19":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark20":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark21":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark22":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "c": "\u00A78C\u00A77o\u00A77l\u00A7fd \u00A71R\u00A79o\u00A7bd"
+    },
+    "sind:mark23":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark24":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark25":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark26":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark27":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark28":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark29":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark30":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark31":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark32":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark33":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark34":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark35":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark36":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark37":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "concept": "\u00A7cConcept"
+    },
+    "sind:mark38":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "rg": "\u00a74R\u00a7ee\u00a74d \u00a7e& \u00a74G\u00a7eo\u00a74l\u00a7ed"
+    },
+    "sind:mark39":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark40":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "h": "\u00A72Harley"
+    },
+    "sind:mark41":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      },
+      "retro": "\u00a74R\u00a7ee\u00a74t\u00a7er\u00a74o"
+    },
+    "sind:mark42":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark43":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark44":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark45":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark46": {
+      "$DEFAULT": {
+        "maskToggleTicks": 15,
+        "name": "\u00A7eReforged",
+        "soundProfile": "MK46"
+      },
+      "ip": "\u00A71I\u00A77r\u00A74o\u00A77n \u00A71P\u00A77a\u00A74t\u00A77r\u00A71i\u00A77o\u00A74t"
+    },
+    "sind:mark47":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark48":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged"
+      }
+    },
+    "sind:mark49": {
+      "$DEFAULT": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 15
+      }
+    },
+    "sind:mark50":{
+      "$DEFAULT": {
+        "name": "\u00A75Proconman"
+      },
+      "r": "\u00A7eReforged"
+    },
+    "sind:mark80":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 15
+      }
+    },
+    "sind:mark85":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 15
+      }
+    },
+    "sind:warmachine_mk1":{
+      "$DEFAULT": {
+        "name": "\u00A75Gillygogs"
+      },
+      "r": "\u00A7eReforged",
+      "mm": "\u00A7eReforged \u00A7fMilk \u00A77Magazine"
+    },
+    "sind:warmachine_mk2":{
+      "$DEFAULT": {
+        "name": "\u00A75Gillygogs"
+      },
+      "ip": "\u00A75Gillygogs \u00A71I\u00A77r\u00A74o\u00A77n \u00A71P\u00A77a\u00A74t\u00A77r\u00A71i\u00A77o\u00A74t",
+      "r": "\u00A7eReforged",
+      "aou": "\u00A7eReforged \u00A74Age \u00A7cOf \u00A78Ultron",
+      "ip_r": "\u00A7eReforged \u00A71I\u00A77r\u00A74o\u00A77n \u00A71P\u00A77a\u00A74t\u00A77r\u00A71i\u00A77o\u00A74t",
+      "ip_r_blue": "\u00A7eReforged \u00A71I\u00A77r\u00A74o\u00A77n \u00A71P\u00A77a\u00A74t\u00A77r\u00A71i\u00A77o\u00A74t \u00A7bBlue"
+    },
+    "sind:warmachine_mk3":{
+      "$DEFAULT": {
+        "name": "\u00A75Gillygogs"
+      },
+      "r": "\u00A7eReforged",
+      "p": "\u00A7eReforged \u00A77Punisher",
+      "h": "\u00A72Harley",
+      "s": "\u00A72Shawarmachine"
+    },
+    "sind:warmachine_mk4":{
+      "$DEFAULT": {
+        "name": "\u00A75Gillygogs",
+        "maskToggleTicks": 15,
+        "soundProfile": "MK46"
+      },
+      "r": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 15,
+        "soundProfile": "MK46"
+      }
+    },
+    "sind:warmachine_mk6":{
+      "$DEFAULT": {
+        "name": "\u00A75Gillygogs",
+        "maskToggleTicks": 15,
+        "soundProfile": "MK46"
+      },
+      "r": {
+        "name": "\u00A7eReforged",
+        "maskToggleTicks": 15,
+        "soundProfile": "MK46"
+      }
+    },
+    "sind:ironlegiondrone":{
+      "$DEFAULT": {
+        "name": "\u00A7eReforged \u00A74Unit 03"
+      },
+      "r1": "\u00A7eReforged \u00A77Unit 01",
+      "r2": "\u00A7eReforged \u00A79Unit 02",
+      "r4": "\u00A7eReforged \u00A78Unit 04",
+      "r5": "\u00A7eReforged \u00A76Unit 05"
+    }
+  }
+}

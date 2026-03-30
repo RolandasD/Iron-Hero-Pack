@@ -1,0 +1,9 @@
+{
+  "texture": "sind:wm2_ip/wm_mask_<OPEN>",
+  "getters": {
+    "OPEN": {
+      "key": "entity.getInterpolatedData('fiskheroes:mask_open_timer2') > 0",
+      "values": ["true", "false"]
+    }
+  }
+}

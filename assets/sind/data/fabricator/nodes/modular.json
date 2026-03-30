@@ -1,0 +1,12 @@
+{
+  "suit": "sind:modular",
+  "requirements": [
+    "fiskheroes:tier6_7",
+    "sind:compact",
+    "fiskheroes:stark",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee",
+    "fiskheroes:ranged2"
+  ]
+}

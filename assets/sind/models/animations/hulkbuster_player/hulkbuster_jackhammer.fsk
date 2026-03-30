@@ -1,0 +1,8 @@
+{data_0}=curve{data_0}
+{leftArm_rotX} @ {data_0} -> {pitch}' - (pi/2)
+{leftArm_rotY} @ {data_0} -> ({yaw})' + 30'
+;--------------------------------------------------------------
+{data_1}=curve{data_1}
+
+{leftArm_rotX} @ {data_1} -> {pitch}' - (pi/2)
+{leftArm_rotY} @ {data_1} -> ({yaw})' + 25'

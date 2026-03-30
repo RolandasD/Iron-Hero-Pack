@@ -1,0 +1,11 @@
+{data_0} = curve {data_0}
+
+{leftthruster_rotX}+=55'{data_0} 
+{leftthruster_posX}+=-2{data_0} 
+
+{rightthruster_rotX}+=55'{data_0} 
+{rightthruster_posX}+=2{data_0} 
+
+{left_posX}+=-2.2{data_0} 
+
+{right_posX}+=2.2{data_0} 

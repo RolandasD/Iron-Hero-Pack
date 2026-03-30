@@ -1,0 +1,8 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:modifier.shadowchain.start",
+  "condition": "fiskheroes:telekinesis && entity.getWornChestplate().nbt().getByte('Swapper') == 2 && ((entity.getData('sind:dyn/slot2_timer') == 1 && entity.getData('sind:dyn/slot') == 2) || (entity.getData('sind:dyn/slot4_timer') == 1 && entity.getData('sind:dyn/slot') == 4))",
+  "volume": 0.4,
+  "pitch": 1.0,
+  "fadeOut": 5
+}

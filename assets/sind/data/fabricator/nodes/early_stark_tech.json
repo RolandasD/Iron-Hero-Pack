@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "Early Stark Technology (I)"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/stark.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

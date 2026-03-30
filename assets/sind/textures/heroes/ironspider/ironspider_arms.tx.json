@@ -1,0 +1,23 @@
+{
+    "texture": {
+      "in": "sind:ironspider/ironspider_arms",
+      "transform": [
+        {
+          "operation": "XOR",
+          "supply": "sind:xor/ironspider/ironspider_arms_<TIMER>"
+        }
+      ],
+      "out": "sind:generated/ironspider_arms_<TIMER>"
+    },
+    "getters": {
+      "TIMER": {
+        "key": "Math.ceil(45 * entity.getInterpolatedData('sind:dyn/tentacles_timer')) | 0",
+        "values": {
+          "min": 0,
+          "max": 45
+        }
+      }
+    },
+    "isDynamic": true
+  }
+  

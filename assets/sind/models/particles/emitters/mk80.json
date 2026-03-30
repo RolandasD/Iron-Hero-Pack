@@ -1,0 +1,96 @@
+{
+  "particles": [
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/booster_r_timer') > 0 && entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "type": "SMOKE",
+      "anchor": "rightArm",
+      "amount": 2,
+      "offset": [ 1.0, 10.0, 0.0 ],
+      "motion": [ 0.0, -0.25, 0.0 ],
+      "randMotion": [ -0.025, 0.0, 0.025 ]
+    },
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/booster_l_timer') > 0 && entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "type": "SMOKE",
+      "anchor": "leftArm",
+      "amount": 2,
+      "offset": [ -1.0, 10.0, 0.0 ],
+      "motion": [ 0.0, -0.25, 0.0 ],
+      "randMotion": [ 0.025, 0.0, 0.025 ]
+    },
+    {
+      "type": "SMOKE",
+      "condition": "entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "anchor": "rightLeg",
+      "amount": 2,
+      "offset": {
+        "tp": [ 0.0, 12.0, 0.0 ],
+        "fp": [ 3.0, 24.0, 0.0 ]
+      },
+      "motion": [ 0.0, -0.25, 0.0 ],
+      "randMotion": [ 0.0125, 0.0, 0.025 ],
+      "mirror": true,
+      "lockFPYaw": true
+    },
+    {
+      "maxDistance": 256,
+      "condition": "!firstPerson && entity.isSprinting() && entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "type": "minecraft:largesmoke",
+      "anchor": "rightLeg",
+      "amount": 2,
+      "offset": [ -2.0, 12.0, 0.0 ],
+      "motion": [ 0.0, -0.25, 0.0 ],
+      "randMotion": [ 0.05, 0.0, 0.05 ]
+    },
+    {
+      "condition": "!firstPerson && entity.getData('sind:dyn/flight_timer') >= 1 && entity.getData('fiskheroes:suit_open_timer') == 0 && entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "type": "SMOKE_SMALL",
+      "anchor": "body",
+      "amount": 2,
+      "offset": [ -8.159903192878104, -5.43369008444747, 10.454026906390806 ],
+      "motion": [ 0.0, -0.075, 0.0 ],
+      "randMotion": [ -0.025, 0.0, 0.025 ],
+      "mirror": true
+    },
+    {
+      "condition": "!firstPerson && entity.getData('sind:dyn/flight_timer') >= 1 && entity.getData('fiskheroes:suit_open_timer') == 0 && entity.getData('fiskheroes:dyn/flight_super_boost') == 0",
+      "type": "SMOKE_SMALL",
+      "anchor": "body",
+      "amount": 2,
+      "offset": [-9.9072544159256237, 1, 11.701224751750157],
+      "motion": [ 0.0, -0.075, 0.0 ],
+      "randMotion": [ 0.025, 0.0, 0.025 ],
+      "mirror": true
+    },
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/flight_super_boost_timer') >= 1",
+      "type": "SMOKE",
+      "anchor": "body",
+      "amount": 6,
+      "offset": [ -22, 40, 18],
+      "motion": [ 0.0, -0.15, 0.0 ],
+      "randMotion": [ -0.05, 0.0, 0.05 ],
+      "mirror": true
+    },
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/flight_super_boost_timer') >= 1",
+      "type": "SMOKE",
+      "anchor": "body",
+      "amount": 6,
+      "offset": [-13, 35, -23],
+      "motion": [ 0.0, -0.15, 0.0 ],
+      "randMotion": [ 0.05, 0.0, 0.05 ],
+      "mirror": true
+    },
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/flight_super_boost_timer') >= 1",
+      "type": "SMOKE",
+      "anchor": "body",
+      "amount": 6,
+      "offset": [0, 12, -6],
+      "motion": [ 0.0, -0.15, 0.0 ],
+      "randMotion": [ 0.05, 0.0, 0.05 ],
+      "mirror": false
+    }
+  ]
+}

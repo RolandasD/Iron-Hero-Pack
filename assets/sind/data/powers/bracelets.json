@@ -1,0 +1,16 @@
+{
+  "name": "Tony Stark's Bracelets",
+  "modifiers": {
+    "fiskheroes:transformation|7": {
+      "key": "MARKSEVEN",
+      "transformation": {
+        "toggleData": "sind:dyn/summon7",
+        "timerData": "sind:dyn/summon7_timer",
+        "time": 80
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:summon7", "sind:summon7b"]
+      }
+    }
+  }
+}

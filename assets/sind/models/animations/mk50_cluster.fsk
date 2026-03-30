@@ -1,0 +1,43 @@
+{data_0} = curve {data_0}
+
+{fast} = {data_0} ^ (1/2)
+{slow} = {data_0} ^ 2
+
+{setting} = (90' * {data_1}) * (1 - {data_0})
+
+{sentry_posX} += -15 + (15*{fast})
+{sentry_posZ} += -1.5 + (1.5*{data_0})
+{sentry_posY} += 3 - (3*{data_0})
+{sentry_rotY} += {setting}
+
+{bottomHinge_rotX} += -137.5' + (137.5'*{slow})
+{topHinge_rotX} += 137.5' - (137.5'*{slow})
+
+{sentry2_posX} += -24 + (24*{data_0})
+{sentry2_posZ} += -1.5 + (1.5*{data_0})
+{sentry2_posY} += 3 - (3*{data_0})
+{sentry2_rotY} += {setting}
+
+{bottomHinge2_rotX} += -147.5' + (147.5'*{slow})
+{topHinge2_rotX} += 147.5' - (147.5'*{slow})
+
+{sentry3_posX} -= -15 + (15*{fast})
+{sentry3_posZ} += -1.5 + (1.5*{data_0})
+{sentry3_posY} += 3 - (3*{data_0})
+{sentry3_rotY} -= {setting}
+
+
+{bottomHinge3_rotX} += -137.5' + (137.5'*{slow})
+{topHinge3_rotX} += 137.5' - (137.5'*{slow})
+
+{sentry4_posX} -= -24 + (24*{data_0})
+{sentry4_posZ} += -1.5 + (1.5*{data_0})
+{sentry4_posY} += 3 - (3*{data_0})
+{sentry4_rotY} -= {setting}
+
+{bottomHinge4_rotX} += -147.5' + (147.5'*{slow})
+{topHinge4_rotX} += 147.5' - (147.5'*{slow})
+
+{eq} = -(((2*{data_0}) - 1)^2) + 1
+
+{root_posZ} += 4*{eq}

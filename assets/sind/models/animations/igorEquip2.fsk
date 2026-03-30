@@ -1,0 +1,19 @@
+{rightArm_posX} -= {data_0}
+{leftArm_posX} += {data_0}
+
+{rightLeg_posX} -= 3*{data_0}
+{leftLeg_posX} += 3*{data_0}
+
+{head_posZ} -= 7*{data_0}
+{head_posY} += -20*{data_0}
+
+{body_posY} += -24*{data_0}
+
+{leftArm_posY} += -21*{data_0}
+{rightArm_posY} += -21*{data_0}
+
+{leftArm_posX} += 5*{data_0}
+{rightArm_posX} -= 5*{data_0}
+
+{leftLeg_posY} += -12*{data_0}
+{rightLeg_posY} += -12*{data_0}

@@ -1,0 +1,19 @@
+{
+    "texture": {
+      "in": "sind:mark44/hulkbuster_arm",
+      "transform": [
+        {
+          "operation": "XOR",
+          "supply": "sind:xor/hulkbuster_arm_<OPEN>"
+        }
+      ],
+      "out": "sind:generated/hulkbuster_arm_<OPEN>"
+    },
+    "getters": {
+      "OPEN": {
+        "key": "entity.getInterpolatedData('sind:dyn/telekinesis_timer') > 0.3",
+        "values": ["true", "false"]
+      }
+    }
+  }
+  

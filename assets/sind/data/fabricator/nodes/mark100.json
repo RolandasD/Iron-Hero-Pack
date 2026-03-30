@@ -1,0 +1,20 @@
+{
+  "suit": "sind:mark100",
+  "requirements": [
+    "fiskheroes:tier8_9",
+    "sind:arc_reactor",
+    "sind:nanotech",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee2",
+    "fiskheroes:ranged3",
+    "sind:compact",
+    "sind:speed",
+    "sind:utility",
+    "sind:enhanced_vision2",
+    "sind:enlarged_reactor",
+    "sind:heavy",
+    "sind:stealth",
+    "sind:iamironman"
+  ]
+}

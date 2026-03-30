@@ -1,0 +1,82 @@
+{data} = curve {data}
+{head_rotX} @ {data} -> -30'
+{head_rotY} @ {data} -> 0
+
+{head_rotZ} @ {data} -> 0
+{head_posX} @ {data} -> 0
+{head_posY} @ {data} -> 0
+{head_posZ} @ {data} -> 0
+
+{body_rotX} @ {data} -> 0
+{body_rotY} @ {data} -> 0
+{body_rotZ} @ {data} -> 0
+{body_posX} @ {data} -> 0
+{body_posY} @ {data} -> 0
+{body_posZ} @ {data} -> 0
+
+{rightArm_rotX} @ {data} -> 0
+{rightArm_rotY} @ {data} -'> 0
+{rightArm_rotZ} @ {data} -> 0
+{rightArm_posX} @ {data} -> -5
+{rightArm_posY} @ {data} -> 2
+{rightArm_posZ} @ {data} -> 0
+
+{leftArm_rotX} @ {data} -> 0
+{leftArm_rotY} @ {data} -'> 0
+{leftArm_rotZ} @ {data} -> 0
+{leftArm_posX} @ {data} -> 5
+{leftArm_posY} @ {data} -> 2
+{leftArm_posZ} @ {data} -> 0
+
+{rightLeg_rotX} @ {data} -> 0
+{rightLeg_rotY} @ {data} -> 0
+{rightLeg_rotZ} @ {data} -> 0
+{rightLeg_posX} @ {data} -> -2
+{rightLeg_posY} @ {data} -> 12
+{rightLeg_posZ} @ {data} -> 0.10
+
+{leftLeg_rotX} @ {data} -> 0
+{leftLeg_rotY} @ {data} -> 0
+{leftLeg_rotZ} @ {data} -> 0
+{leftLeg_posX} @ {data} -> 2
+{leftLeg_posY} @ {data} -> 12
+{leftLeg_posZ} @ {data} -> 0.10
+
+{data} = curve {data}
+{move_1} = {data}(cos(0.6662{limbSwing}) + 1) / 2
+{move_0} = {data}(cos(0.6662{limbSwing} + pi) + 1) / 2
+{body_rotY} -= 0.1{data} - 0.2{move_0}
+
+{rightArm_rotX} -= (0.9{data} + 1.5{move_1})
+{rightArm_rotY} += (0.2{data} - 0.5{move_1})
+{rightArm_rotZ} += (0.2{move_1})
+{rightArm_posY} += ({data} - {move_1})
+{rightArm_posZ} += (2{data} - 3.5{move_1})
+
+{leftArm_rotX} -= (0.9{data} + 1.5{move_0})
+{leftArm_rotY} -= (0.2{data} - 0.5{move_0})
+{leftArm_rotZ} -= (0.2{move_0})
+{leftArm_posZ} += (2{data} - 3.5{move_0})
+
+{rightLeg_rotY} += 0.2{move_0}
+{rightLeg_rotZ} -= 0.2{move_0}
+{leftLeg_rotY} -= 0.2{move_1}
+{leftLeg_rotZ} += 0.2{move_1}
+
+{rightLeg_posX} -= 2{move_0}
+{rightLeg_posY} -= 5{move_0}
+{rightLeg_posZ} -= 3{move_0}
+{leftLeg_posX} += 2{move_1}
+{leftLeg_posY} -= 5{move_1}
+{leftLeg_posZ} -= 3{move_1}
+
+{strafe} = ({motX}cos({bodyYaw}') + {motZ}sin({bodyYaw}'))*{data}
+out "rotate" (30{strafe}, 0, 1, 0)
+out "rotate" (45{strafe}, 0, 0, 1)
+{factor} = -0.05
+{d} = (({move_0} * {factor}) - ({move_1} * {factor}))
+out "translate" ({d}, 0, 0)
+
+out "pivot" (0, 0.5{data}, 0)
+out "translate" (0, -0.4{data}, 0.25{data})
+out "rotate" (-75{data}, 1, 0, 0)

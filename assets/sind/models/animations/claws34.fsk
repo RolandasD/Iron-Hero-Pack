@@ -1,0 +1,19 @@
+{data_0} = curve {data_0}
+{data_1} = (18 * {data_0})
+{data_2} = (6 * {data_0})
+{data_4} = (0.05 * {data_0})
+{data_3} = curve {data_3}
+{data_5} = curve {data_5}
+
+{clawSegment_posY}+={data_1}
+{clawExtension_posY}+={data_2}
+{bendRight_rotZ}+=45'{data_3}
+{bendLeft_rotZ}+=-45'{data_3}
+
+{leftArm_rotY} -={data_4}
+
+{panel_left_rotY}+=-90'{data_5}
+{panel_left_posZ}+=-2.75{data_5}
+
+{panel_right_rotY}+=90'{data_5}
+{panel_right_posZ}+=-2.75{data_5}

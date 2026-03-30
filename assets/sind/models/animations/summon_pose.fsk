@@ -1,0 +1,42 @@
+{cancel} = min({data_0} * 20, 1)
+{head_posX} @ {cancel} -> 0
+{head_posY} @ {cancel} -> 0
+{head_posZ} @ {cancel} -> 0
+{head_rotX} @ {cancel} -> 0
+{head_rotY} @ {cancel} -> 0
+{head_rotZ} @ {cancel} -> 0
+
+{rightArm_rotX} @ {cancel} -> 0
+{rightArm_rotY} @ {cancel} -> 0
+{rightArm_rotZ} @ {cancel} -> 0
+{rightArm_posX} @ {cancel} -> -5
+{rightArm_posY} @ {cancel} -> 2
+{rightArm_posZ} @ {cancel} -> 0
+
+{leftArm_rotX} @ {cancel} -> 0
+{leftArm_rotY} @ {cancel} -> 0
+{leftArm_rotZ} @ {cancel} -> 0
+{leftArm_posX} @ {cancel} -> 5
+{leftArm_posY} @ {cancel} -> 2
+{leftArm_posZ} @ {cancel} -> 0
+
+{body_rotX} @ {cancel} -> 0
+{body_rotY} @ {cancel} -> 0
+{body_rotZ} @ {cancel} -> 0
+{body_posX} @ {cancel} -> 0
+{body_posY} @ {cancel} -> 0
+{body_posZ} @ {cancel} -> 0
+
+{leftLeg_posX} @ {cancel} -> 2
+{leftLeg_posY} @ {cancel} -> 12
+{leftLeg_posZ} @ {cancel} -> 0
+{leftLeg_rotX} @ {cancel} -> 0
+{leftLeg_rotY} @ {cancel} -> 0
+{leftLeg_rotZ} @ {cancel} -> 0
+
+{rightLeg_posX} @ {cancel} -> -2
+{rightLeg_posY} @ {cancel} -> 12
+{rightLeg_posZ} @ {cancel} -> 0
+{rightLeg_rotX} @ {cancel} -> 0
+{rightLeg_rotY} @ {cancel} -> 0
+{rightLeg_rotZ} @ {cancel} -> 0

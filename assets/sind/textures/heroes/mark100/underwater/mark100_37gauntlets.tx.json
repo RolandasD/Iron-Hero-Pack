@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/underwater/mark100_37gauntlets",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark37_gauntlets_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark37_gauntlets_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(15 * entity.getInterpolatedData('sind:dyn/underwater_timer2')) | 0",
+      "values": {
+        "min": 1,
+        "max": 15
+      }
+    }
+  },
+  "isDynamic": true
+}

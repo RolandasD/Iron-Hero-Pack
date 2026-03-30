@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:latchopen",
+  "condition": "entity.isWearingFullSuit()",
+  "pitch": "1.1 - (Math.random() * 0.7)",
+  "delay": 38,
+  "fadeOut": 5,
+  "volume": 0.75
+}

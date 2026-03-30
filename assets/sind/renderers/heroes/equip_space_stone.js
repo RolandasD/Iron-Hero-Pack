@@ -1,0 +1,1 @@
+extend("sind:equip_mind_stone");

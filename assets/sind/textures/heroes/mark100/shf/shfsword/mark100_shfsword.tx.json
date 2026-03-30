@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/shf/shfsword/mark100_shfsword",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_shfsword_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_shfsword_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(20 * entity.getInterpolatedData('sind:dyn/slot1_timer')), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 20
+      }
+    }
+  },
+  "isDynamic": true
+}

@@ -1,0 +1,15 @@
+{
+  "suit": "sind:mark85",
+  "requirements": [
+    "fiskheroes:tier8_9",
+    "sind:arc_reactor",
+    "sind:nanotech",
+    "fiskheroes:flight",
+    "fiskheroes:defense2",
+    "fiskheroes:melee2",
+    "fiskheroes:ranged3",
+    "sind:compact",
+    "sind:enhanced_vision2",
+    "sind:mark50"
+  ]
+}

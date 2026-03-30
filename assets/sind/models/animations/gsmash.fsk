@@ -1,0 +1,95 @@
+{0}=curve animate2({data},0.4166666667,0,0.1166666667,0.3)
+{1}=curve animate2({data},0.5333333333,0.11666666666666665,0.3,0.2333333333)
+{2}=curve animate2({data},0.4444444444,0.41666666666666663,0.2333333333,0.2111111111)
+{3}=curve animate2({data},0.3166666667,0.6499999999999999,0.2111111111,0.1055555556)
+{4}=curve animate2({data},17.1388888889,0.8611111111111112,0.1055555556,17.0333333333)
+{5}=curve animate2({data},0.4166666667,0,0.0333333333,0.3833333333)
+{6}=curve animate2({data},0.6166666667,0.03333333333333333,0.3833333333,0.2333333333)
+{7}=curve animate2({data},0.4166666667,0,0.2611111111,0.1555555556)
+{8}=curve animate2({data},0.3888888889,0.26111111111111107,0.1555555556,0.2333333333)
+{9}=curve animate2({data},0.8611111111,0,0.65,0.2111111111)
+{10}=curve animate2({data},0.6222222222,0.23888888888888887,0.2111111111,0.4111111111)
+{11}=curve animate2({data},0.5166666667,0.45,0.4111111111,0.1055555556)
+{12}=curve animate2({data},0.6222222222,0.23888888888888887,0.1833333333,0.4388888889)
+{13}=curve animate2({data},0.5444444444,0.4222222222222222,0.4388888889,0.1055555556)
+
+{head_rotX} @ {0} -> 10'
+{head_rotX} @ {1} -> 10'
+{head_rotX} @ {2} -> -5'
+{head_rotX} @ {3} -> 10'
+{head_rotX} @ {4} -> 37.5'
+{head_posZ} @ {5} -> 0.8
+{head_posZ} @ {6} -> 0.8
+{head_posZ} @ {2} -> 1.8
+{head_posZ} @ {3} -> 0.8
+{head_posY} @ {4} -> 8
+{head_posZ} @ {4} -> -10
+
+{rightArm_rotX} @ {7} -> -59'
+{rightArm_rotY}+=27'{7}
+{rightArm_rotZ}+=95'{7}
+{rightArm_rotX} @ {8} -> -32.5'
+{rightArm_rotY}+=22.5'{8}
+{rightArm_rotZ}+=110'{8}
+{rightArm_rotX} @ {2} -> -15'
+{rightArm_rotY}+=35'{2}
+{rightArm_rotZ}+=123'{2}
+{rightArm_rotX} @ {3} -> -15'
+{rightArm_rotY}+=35'{3}
+{rightArm_rotZ}+=123'{3}
+{rightArm_rotX} @ {4} -> -25'
+{rightArm_rotZ}+=25'{4}
+{rightArm_posX}+=-1{9}
+{rightArm_posY}+=1.34{9}
+{rightArm_posZ}+=0.64{9}
+{rightArm_posX}+=-1{3}
+{rightArm_posY}+=1.34{3}
+{rightArm_posZ}+=0.64{3}
+{rightArm_posY}+=7{4}
+{rightArm_posZ}+=-8{4}
+
+{leftArm_rotX} @ {7} -> -59'
+{leftArm_rotY}+=-27'{7}
+{leftArm_rotZ}+=-95'{7}
+{leftArm_rotX} @ {8} -> -32.5'
+{leftArm_rotY}+=-22.5'{8}
+{leftArm_rotZ}+=-110'{8}
+{leftArm_rotX} @ {2} -> -35.1497286573'
+{leftArm_rotY}+=-42.9364778353'{2}
+{leftArm_rotZ}+=-110.2183096585'{2}
+{leftArm_rotX} @ {3} -> -35.1497286573'
+{leftArm_rotY}+=-42.9364778353'{3}
+{leftArm_rotZ}+=-110.2183096585'{3}
+{leftArm_rotX} @ {4} -> -25'
+{leftArm_rotZ}+=-25'{4}
+{leftArm_posX}+=1{9}
+{leftArm_posY}+=1.34{9}
+{leftArm_posZ}+=0.64{9}
+{leftArm_posX}+=1{3}
+{leftArm_posY}+=1.34{3}
+{leftArm_posZ}+=0.64{3}
+{leftArm_posY}+=7{4}
+{leftArm_posZ}+=-8{4}
+
+{body_rotX} @ {2} -> -7.5'
+{body_rotX} @ {3} -> -7.5'
+{body_rotX} @ {4} -> 70'
+{body_posZ} @ {2} -> 1
+{body_posZ} @ {3} -> 1
+{body_posY} @ {4} -> 8
+{body_posZ} @ {4} -> -10
+
+{rightLeg_rotX}+=-20'{10}
+{rightLeg_rotX}+=-20'{11}
+{rightLeg_rotX}+=25'{4}
+{rightLeg_posY}+=0.25{10}
+{rightLeg_posY}+=0.25{11}
+{rightLeg_posZ}+=1{4}
+
+{leftLeg_rotX}+=25'{12}
+{leftLeg_rotX}+=25'{13}
+{leftLeg_rotX}+=-22.5'{4}
+{leftLeg_posY}+=0.25{12}
+{leftLeg_posY}+=0.25{13}
+{leftLeg_posZ}+=2{4}
+

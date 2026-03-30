@@ -1,0 +1,15 @@
+{data} = curve {data}
+{rightArm_rotX} @ {data} -> {head_rotX} - pi / 2
+{rightArm_rotY} = clamp(({head_rotY} - 75')*{data}, -75', 90')
+{rightArm_rotZ} @ {data} -> {head_rotZ}
+{leftArm_posZ} @ {data} -> 2{data}
+
+{leftArm_rotX} @ {data} -> {head_rotX} - pi / 2
+{leftArm_rotY} @ {data} -'> {head_rotY} 
+{leftArm_rotZ} @ {data} -> {head_rotZ}
+
+out "firstPerson" (true)
+out "translate" (-0.35{data}, 0, -0.1{data})
+out "rotate" (-12{data}, 0, 1, 0)
+out "rotate" (-70{data}, 1, 0, 0)
+out "rotate" (-30{data}, 0, 0, 1)

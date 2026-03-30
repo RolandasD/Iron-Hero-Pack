@@ -1,0 +1,7 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:unicharge",
+    "condition": "fiskheroes:beam_charging",
+    "volume": 1.5
+}
+  

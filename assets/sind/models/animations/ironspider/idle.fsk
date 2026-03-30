@@ -1,0 +1,23 @@
+{data_4} = sin(pi*{data_4})
+{data_4} *= {data_0}
+{data_4} *= (1-{data_1})(1-{data_3})
+
+{topLeftClawFirst_rotX}+=5'{data_4}
+{topLeftClawFirst_rotY}+=5'{data_4}
+
+{topLeftClawSecond_rotX}+=5'{data_4}
+
+{topRightClawFirst_rotX}+=5'{data_4}
+{topRightClawFirst_rotY}+=-5'{data_4}
+
+{topRightClawSecond_rotX}+=5'{data_4}
+
+{bottomRightClawFirst_rotX}+=5'{data_4}
+{bottomRightClawFirst_rotY}+=5'{data_4}
+
+{bottomRightClawSecond_rotX}+=5'{data_4}
+
+{bottomLeftClawFirst_rotX}+=5'{data_4}
+{bottomLeftClawFirst_rotY}+=-5'{data_4}
+
+{bottomLeftClawSecond_rotX}+=5'{data_4}

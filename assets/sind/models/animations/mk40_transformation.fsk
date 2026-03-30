@@ -1,0 +1,36 @@
+{data} = curve {data}
+;right arm
+{rightArm_rotX} @ {data} -> 0'
+{rightArm_rotY} @ {data} -> 0'
+{rightArm_rotZ} @ {data} -> -15'
+
+{rightArm_posX} @ {data} -> -4
+{rightArm_posY} @ {data} -> 2
+{rightArm_posZ} @ {data} -> 0
+
+;left arm
+{leftArm_rotX} @ {data} -> 0'
+{leftArm_rotY} @ {data} -> 0'
+{leftArm_rotZ} @ {data} -> 15'
+
+{leftArm_posX} @ {data} -> 4
+{leftArm_posY} @ {data} -> 2
+{leftArm_posZ} @ {data} -> 0
+
+;right leg
+{rightLeg_posX} @ {data} -> -2
+{rightLeg_posY} @ {data} -> 12
+{rightLeg_posZ} @ {data} -> 0
+
+{rightLeg_rotX} @ {data} -> 0'
+{rightLeg_rotY} @ {data} -> 0'
+{rightLeg_rotZ} @ {data} -> 0'
+
+;left leg
+{leftLeg_posX} @ {data} -> 2
+{leftLeg_posY} @ {data} -> 12
+{leftLeg_posZ} @ {data} -> 0
+
+{leftLeg_rotX} @ {data} -> 0'
+{leftLeg_rotY} @ {data} -> 0'
+{leftLeg_rotZ} @ {data} -> 0'

@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "Super-Enhanced Vision Suits"
+    },
+    "icon": {
+      "texture": "sind:textures/items/heroes/mark43_0.png"
+    }
+  },
+  "requirements": ["sind:enhanced_vision"],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

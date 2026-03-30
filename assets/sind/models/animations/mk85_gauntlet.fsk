@@ -1,0 +1,122 @@
+{cancel} = min({data} * 20, 1)
+
+{rightArm_rotX} @ {cancel} -> 0
+{rightArm_rotY} @ {cancel} -> 0
+{rightArm_rotZ} @ {cancel} -> 0
+{rightArm_posX} @ {cancel} -> -5
+{rightArm_posY} @ {cancel} -> 2
+{rightArm_posZ} @ {cancel} -> 0
+
+{0}=curve animate2({data},0.3,0,0.2,0.1)
+{1}=curve animate2({data},0.04,0.3,0.02,0.02)
+{2}=curve animate2({data},0.04,0.32,0.02,0.02)
+{3}=curve animate2({data},0.66,0.33999999999999997,0.02,0.64)
+{4}=curve animate2({data},0.12,0.2,0.1,0.02)
+{5}=curve animate2({data},49.64,0.36,0.64,49)
+{6}=curve animate2({data},0.36,0,0.2,0.16)
+{7}=curve animate2({data},0.8,0.2,0.16,0.64)
+{8}=curve animate2({data},0.3,0,0.15,0.15)
+{9}=curve animate2({data},0.1,0,0,0.1)
+{10}=curve animate2({data},0.21,0,0.1,0.11)
+{11}=curve animate2({data},0.12,0,0,0.12)
+{12}=curve animate2({data},0.2,0,0.12,0.08)
+{13}=curve animate2({data},0.1,0.12,0.08,0.02)
+{14}=curve animate2({data},0.06,0,0,0.06)
+{15}=curve animate2({data},0.17,0,0.06,0.11)
+{16}=curve animate2({data},0.14,0.06,0.11,0.03)
+{17}=curve animate2({data},0.08,0.16999999999999998,0.03,0.05)
+{18}=curve animate2({data},0.18,0,0.1,0.08)
+{19}=curve animate2({data},0.16,0.1,0.08,0.08)
+{20}=curve animate2({data},0.08,0,0,0.08)
+{21}=curve animate2({data},0.17,0,0.08,0.09)
+{22}=curve animate2({data},0.19,0.08,0.09,0.1)
+{23}=curve animate2({data},0.15,0,0.06,0.09)
+{24}=curve animate2({data},0.17,0.06,0.09,0.08)
+
+{head_rotX}+=5'{0}
+{head_rotY}+=20'{0}
+{head_rotX}+=-15'{1}
+{head_rotX}+=-10'{2}
+{head_rotX}+=-15'{3}
+
+{rightArm_rotX}+=-137'{0}
+{rightArm_rotY}+=-45'{0}
+{rightArm_rotZ}+=-35'{0}
+{rightArm_rotX}+=-124.5'{4}
+{rightArm_rotY}+=-45'{4}
+{rightArm_rotZ}+=-35'{4}
+{rightArm_rotX}+=-129.5'{1}
+{rightArm_rotY}+=-45'{1}
+{rightArm_rotZ}+=-35'{1}
+{rightArm_rotX}+=-126.5'{2}
+{rightArm_rotY}+=-45'{2}
+{rightArm_rotZ}+=-35'{2}
+{rightArm_rotX}+=-129.5'{3}
+{rightArm_rotY}+=-45'{3}
+{rightArm_rotZ}+=-35'{3}
+{rightArm_rotX}+=-124.5'{5}
+{rightArm_rotY}+=-45'{5}
+{rightArm_rotZ}+=-35'{5}
+{rightArm_posX}+=-1{6}
+{rightArm_posY}+=4{6}
+{rightArm_posX}+=-1{7}
+{rightArm_posY}+=4{7}
+{rightArm_posX}+=-1{5}
+{rightArm_posY}+=4{5}
+
+{leftArm_rotZ}+=-5'{8}
+{leftArm_rotY}+=-10'{1}
+{leftArm_rotZ}+=-5'{1}
+{leftArm_rotY}+=-5'{2}
+{leftArm_rotZ}+=-5'{2}
+{leftArm_rotY}+=-10'{3}
+{leftArm_rotZ}+=-5'{3}
+
+{green_posY}+=-4{9}
+{green_posZ}+=1{9}
+{green_posY}+=-4{10}
+{green_posZ}+=-0.5{10}
+
+{pink_posX}+=1{11}
+{pink_posY}+=-4{11}
+{pink_posX}+=-0.5{12}
+{pink_posY}+=-4{12}
+{pink_posX}+=-1.1{13}
+{pink_posY}+=-0.8{13}
+
+{blue_posX}+=1{14}
+{blue_posY}+=-4{14}
+{blue_posX}+=-0.5{15}
+{blue_posY}+=-4{15}
+{blue_posX}+=-1.21{16}
+{blue_posY}+=-1.68{16}
+{blue_posX}+=-0.76{17}
+{blue_posY}+=-1.05{17}
+
+{red_posX}+=1{9}
+{red_posY}+=-4{9}
+{red_posX}+=-0.5{18}
+{red_posY}+=-4{18}
+{red_posX}+=-1.25{19}
+{red_posY}+=-2{19}
+
+{orange_posX}+=1{20}
+{orange_posY}+=-4{20}
+{orange_posX}+=-0.5{21}
+{orange_posY}+=-4{21}
+{orange_posX}+=-1.26{22}
+{orange_posY}+=-2.11{22}
+
+{yellow_posX}+=1{14}
+{yellow_posY}+=-4{14}
+{yellow_posX}+=1{23}
+{yellow_posY}+=-4{23}
+{yellow_posX}+=-0.53{24}
+{yellow_posY}+=-1.88{24}
+
+{sus} = min(1, {data} * 10/3)
+out "firstPerson" (true)
+out "translate" (-0.3{sus}, 0.2{sus}, 0.4{sus})
+out "rotate" (70{sus}, 0, 1, 0)
+out "rotate" (-80{sus}, 0, 0, 1)
+out "rotate" (-50{sus}, 1, 0, 0)

@@ -1,0 +1,9 @@
+{
+  "sound": "fiskheroes:suit.ironman.nanotech.mk50.cannon.static",
+  "condition": {
+    "continue": "entity.getData('sind:dyn/nanites')"
+  },
+  "volume": "0.05 * entity.getInterpolatedData('sind:dyn/nanite_timer')",
+  "pitch": 1,
+  "loop": true
+}

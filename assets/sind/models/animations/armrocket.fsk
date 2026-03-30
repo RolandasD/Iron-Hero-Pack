@@ -1,0 +1,29 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{0}=curve animate2({data_0},4,0,0.5,3.5)
+{1}=curve animate2({data_0},3.375,0.625,0.375,3)
+{2}=curve animate2({data_0},3.75,0.25,0.375,3.375)
+{3}=curve animate2({data_0},0.75,0.25,0.375,0.375)
+
+{flaps_right_rotY}+=-12.5'{0}
+{flaps_right_rotZ}+=5'{0}
+{flaps_right_posZ}+=-0.5{0}
+
+{flaps_left_rotY}+=12.5'{0}
+{flaps_left_rotZ}+=5'{0}
+{flaps_left_posZ}+=0.5{0}
+
+{flaps_layer_rotZ}+=10'{1}
+{rightArm_rotZ} @ {1} -> 90'
+{flaps_layer_posX}+=-1{2}
+
+{rocket_whole_posX}+=-2.2{3}
+{rocket_whole_posX}+=-2.3{1}
+
+{rocket_rotZ}+=10'{1}
+{rocket_posX}+=0.1{1}
+
+{mk1_panel_rotX} += 30'{data_0}
+
+{rocket_posY}+=500{data_1}
+{rocket2_posY}+=500{data_1}

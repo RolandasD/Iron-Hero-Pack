@@ -1,0 +1,10 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.boost.loop",
+  "condition": "entity.isWearingFullSuit() && entity.getData('sind:dyn/hulkbuster') && entity.getData('sind:dyn/hulkbuster_arm_timer') < 0.9",
+  "delay": 8,
+  "loop": true,
+  "fadeIn": 5,
+  "fadeOut": 5,
+  "volume": 0.4
+}

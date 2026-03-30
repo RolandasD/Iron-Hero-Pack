@@ -1,0 +1,218 @@
+{
+  "name": "- Iron Man Armor Mk XVIII:",
+  "modifiers": {
+    "fiskheroes:shield": {
+      "shield": {
+        "health": 40.0,
+        "regeneration": 5.0,
+        "recoveryDelay": 60,
+        "cooldown": 60
+      },
+      "coverage": {
+        "yawRadius": 180.0,
+        "pitchRadius": 180.0,
+        "yawOffset": 0.0,
+        "pitchOffset": 0.0
+      },
+      "knockback": 0.2,
+      "isToggle": false,
+      "soundEvents": {
+        "BLOCK_START": "fiskheroes:anti_forcefield",
+        "DEFLECT": "fiskheroes:anti_forcefield_deflect",
+        "DISARM": "fiskheroes:shield_disarm"
+      }
+    },
+    "fiskheroes:charged_beam": {
+      "damageProfile": {
+        "damage": 6,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "chargeTime": 50,
+      "duration": 50,
+      "cooldownTime": 85,
+      "range": 18.0,
+      "radius": 1,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:mk85_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "sind:unibeam"
+      }
+    },
+    "fiskheroes:heat_vision": {
+      "damageProfile": {
+        "damage": 4,
+        "types": {
+          "BULLET": 1.0
+        }
+      },
+      "canDoGriefing": false,
+      "range": 16,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": "sind:gunshoot"
+      }
+    },
+    "fiskheroes:transformation": {
+      "key": "SCROCKETS",
+      "transformation": {
+        "toggleData": "sind:dyn/srockets",
+        "timerData": "sind:dyn/srockets_timer",
+        "time": 0
+      }
+    },
+    "fiskheroes:cooldown": {
+      "cooldown": {
+        "toggleData": "sind:dyn/srockets",
+        "cooldownData": "sind:dyn/srockets_cooldown",
+        "duration": 30,
+        "recovery": 0.25
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:transformation|1": {
+      "key": "ARMGUN",
+      "transformation": {
+        "toggleData": "sind:dyn/armgun_bool",
+        "timerData": "sind:dyn/armgun_timer",
+        "time": 0
+      },
+      "isToggle": false
+    },
+    "fiskheroes:energy_projection": {
+      "damageProfile": {
+        "damage": 6.5,
+        "types": {
+          "ENERGY": 0.4,
+          "FIRE": 0.4,
+          "EXPLOSION": 0.4
+        },
+        "properties": {
+          "HIT_COOLDOWN": 0,
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 80
+        }
+      },
+      "canDoGriefing": false,
+      "range": 20,
+      "radius": 0.1
+    },
+    "fiskheroes:controlled_flight|flight_unibeam": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false,
+      "canRoll": false,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:controlled_flight|flight_normal": {
+      "speed": 0.1,
+      "boostSpeed": 0.3,
+      "canBoost": true,
+      "canRoll": true,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.4,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:repulsor_blast": {
+      "damageProfile": {
+        "damage": 8.5,
+        "types": {
+          "ENERGY": 1.5
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 2.0,
+          "HIT_COOLDOWN": 0.0
+        }
+      },
+      "range": 48.0,
+      "speed": 20.0,
+      "spread": 0.0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:repblast"
+      }
+    },
+    "fiskheroes:sentry_mode": {
+      "soundEvents": {
+        "OPEN": "fiskheroes:sentry_mode_open",
+        "CLOSE": "fiskheroes:sentry_mode_close"
+      }
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:invisibility": {},
+    "fiskheroes:transformation|invis": {
+      "key": "INVIS",
+      "transformation": {
+        "toggleData": "sind:dyn/night",
+        "timerData": "sind:dyn/night_timer",
+        "time": 10
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    },
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/gunmag.png",
+      "data": "sind:dyn/srockets_cooldown"
+    },
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/barbullet2.png",
+      "data": "sind:dyn/armgun_mag"
+    }
+  ]
+}

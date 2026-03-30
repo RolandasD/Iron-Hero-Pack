@@ -1,0 +1,154 @@
+{
+  "requirements": [],
+  "display": {
+    "name": {
+      "translate": "\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l\u00A7l???"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/question.png"
+    },
+    "description": "Suit up in the..."
+  },
+  "criteria": {
+    "mk31": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 31 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark31' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark31' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark31' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark31'"
+      }
+    },
+    "mk32": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 32 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark32' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark32' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark32' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark32'"
+      }
+    },
+    "mk33": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 33 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark33' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark33' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark33' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark33'"
+      }
+    },
+    "mk34": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 34 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark34' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark34' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark34' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark34'"
+      }
+    },
+    "mk35": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 35 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark35' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark35' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark35' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark35'"
+      }
+    },
+    "mk36": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 36 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark36' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark36' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark36' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark36'"
+      }
+    },
+    "mk37": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 37 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark37' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark37' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark37' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark37'"
+      }
+    },
+    "mk38": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 38 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark38' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark38' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark38' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark38'"
+      }
+    },
+    "mk39": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 39 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark39' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark39' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark39' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark39'"
+      }
+    },
+    "mk40": {
+      "trigger": "fiskheroes:tick",
+      "minSuccessCount": 1,
+      "description": {
+        "translate": "Mark 40 Armor"
+      },
+      "ignoreRequirements": false,
+      "condition": {
+        "variables": {
+          "player": "PLAYER_TICKING"
+        },
+        "check": "player.getWornChestplate().suitType().split('/')[0] == 'sind:mark40' && player.getWornLeggings().suitType().split('/')[0] == 'sind:mark40' && player.getWornBoots().suitType().split('/')[0] == 'sind:mark40' && player.getWornHelmet().suitType().split('/')[0] == 'sind:mark40'"
+      }
+    }
+  }
+}

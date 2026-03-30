@@ -1,0 +1,21 @@
+{data_3} *= {data_0} == 1
+
+{topLeftClawFirst_rotX}+=90'{data_3}
+{topLeftClawFirst_rotZ}+=-10'{data_3}
+
+{topLeftClawSecond_rotX}+=20'{data_3}
+
+{topRightClawFirst_rotX}+=90'{data_3}
+{topRightClawFirst_rotZ}+=10'{data_3}
+
+{topRightClawSecond_rotX}+=7.5'{data_3}
+
+{bottomRightClawFirst_rotX}+=90'{data_3}
+{bottomRightClawFirst_rotZ}+=-10'{data_3}
+
+{bottomRightClawSecond_rotX}+=20'{data_3}
+
+{bottomLeftClawFirst_rotX}+=90'{data_3}
+{bottomLeftClawFirst_rotZ}+=10'{data_3}
+
+{bottomLeftClawSecond_rotX}+=10'{data_3}

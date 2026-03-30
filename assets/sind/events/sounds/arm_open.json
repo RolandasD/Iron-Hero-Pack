@@ -1,0 +1,5 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:armrocket_open",
+  "volume": 2.0
+}

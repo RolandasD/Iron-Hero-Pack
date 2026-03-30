@@ -1,0 +1,7 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.beam.stop",
+  "condition": {
+    "continue": "entity.getData('fiskheroes:aiming')"
+  }
+}

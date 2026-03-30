@@ -1,0 +1,47 @@
+{
+  "name": "Stark Level Genius",
+  "modifiers": {
+    "fiskheroes:transformation|skin": {
+      "key": "SKIN",
+      "transformation": {
+        "toggleData": "sind:dyn/tony",
+        "timerData": "sind:dyn/tony_timer",
+        "time": 0
+      }
+    },
+    "fiskheroes:transformation": {
+      "key": "SUMMON",
+      "transformation": {
+        "toggleData": "sind:dyn/summon",
+        "timerData": "sind:dyn/summon_timer",
+        "time": 120
+      },
+      "soundEvents": {
+        "ENABLE": [
+          "sind:summon",
+          "sind:sentry_mode_open",
+          "sind:sentry_mode_close"
+        ]
+      }
+    },
+    "fiskheroes:transformation|edith": {
+      "key": "EDITH",
+      "transformation": {
+        "toggleData": "sind:dyn/edith",
+        "timerData": "sind:dyn/edith_timer",
+        "time": 10
+      }
+    },
+    "fiskheroes:transformation|7": {
+      "key": "MARKSEVEN",
+      "transformation": {
+        "toggleData": "sind:dyn/summon7",
+        "timerData": "sind:dyn/summon7_timer",
+        "time": 80
+      },
+      "soundEvents": {
+        "ENABLE": ["sind:summon7", "sind:summon7b"]
+      }
+    }
+  }
+}

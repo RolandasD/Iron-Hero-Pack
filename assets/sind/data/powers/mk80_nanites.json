@@ -1,0 +1,233 @@
+{
+  "name": "- Iron Man Armor Mk LXXX",
+  "modifiers": {
+    "fiskheroes:transformation": {
+      "key": "NANITE_TRANSFORM",
+      "transformation": {
+        "toggleData": "sind:dyn/nanites",
+        "timerData": "sind:dyn/nanite_timer",
+        "time": 10
+      },
+      "soundEvents": {
+        "ENABLE": "fiskheroes:mk50_enable",
+        "DISABLE": "fiskheroes:mk50_disable"
+      }
+    },
+    "fiskheroes:potion_immunity": {
+      "potionEffects": [
+        "minecraft:nausea",
+        "minecraft:poison",
+        "minecraft:wither",
+        "minecraft:weakness",
+        "minecraft:slowness",
+        "minecraft:mining_fatigue"
+      ]
+    },
+    "fiskheroes:controlled_flight": {
+      "speed": 0.1,
+      "boostSpeed": 0.35,
+      "canBoost": true,
+      "barrelRoll": {
+        "duration": 10,
+        "speed": 0.15,
+        "drag": 0.06
+      },
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.4,
+      "soundEvents": {
+        "ENABLE": [
+          "fiskheroes:iron_man_flight_enable",
+          "fiskheroes:iron_man_flight_loop"
+        ],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": [
+          "fiskheroes:flight_dive_loop",
+          "fiskheroes:iron_man_flight_dive"
+        ]
+      }
+    },
+    "fiskheroes:controlled_flight|boosted": {
+      "speed": 0.1,
+      "boostSpeed": 0.6,
+      "canBoost": true,
+      "barrelRoll": {
+        "duration": 10,
+        "speed": 0.15,
+        "drag": 0.06
+      },
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.4,
+      "soundEvents": {
+        "ENABLE": [
+          "fiskheroes:falcon_boost_enable",
+          "fiskheroes:iron_man_flight_loop",
+          "sind:boom"
+        ],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": [
+          "fiskheroes:flight_dive_loop",
+          "fiskheroes:iron_man_flight_dive"
+        ]
+      }
+    },
+    "fiskheroes:repulsor_blast": {
+      "damageProfile": {
+        "damage": 11.0,
+        "types": {
+          "ENERGY": 1.0
+        }
+      },
+      "isExplosive": true,
+      "cooldownTime": 15,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk50_cannon_shoot"
+      }
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:energy_projection": {
+      "damageProfile": {
+        "damage": 3.75,
+        "types": {
+          "ENERGY": 1,
+          "FIRE": 0.25
+        },
+        "properties": {
+          "HIT_COOLDOWN": 4,
+          "REDUCE_KNOCKBACK": 0.8,
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 80
+        }
+      },
+      "range": 38,
+      "radius": 0.1,
+      "soundEvents": {
+        "SHOOT": ["fiskheroes:cosmic_beam", "fiskheroes:mk50_cannon_aim", "sind:mk80/mk50_cannon_static"],
+        "SHOOT_STOP": ["fiskheroes:mk50_cannon_retract"]
+      }
+    },
+    "fiskheroes:charged_beam": {
+      "damageProfile": {
+        "damage": 7.0,
+        "types": {
+          "ENERGY": 1.0,
+          "FIRE": 0.25
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20
+        }
+      },
+      "chargeTime": 20,
+      "duration": 40,
+      "cooldownTime": 40,
+      "range": 32.0,
+      "radius": 0.6,
+      "soundEvents": {
+        "SHOOT": "fiskheroes:mk85_beam_start",
+        "SHOOT_STOP": "fiskheroes:mk85_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:mk85_beam_loop",
+        "CHARGE": "fiskheroes:mk85_beam_charge"
+      }
+    },
+    "fiskheroes:regeneration": {
+      "factor": 1.5
+    },
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:teleportation": {
+      "canReachMoon": true,
+      "range": 100000.0,
+      "soundEvents": {}
+    },
+    "fiskheroes:telekinesis": {
+      "telekinesis": {
+        "crushMelons": false,
+        "crushThrowables": false,
+        "squeezeChickens": false,
+        "explodeCreepers": false,
+        "destroyInanimates": false
+      },
+      "canGrab": {
+        "mobs": true,
+        "items": true,
+        "projectiles": true,
+        "inanimates": false
+      },
+      "range": 2,
+      "soundEvents": {
+        "GRAB": [
+          "sind:mk80/shadowchain_loop",
+          "sind:mk80/shadowchain_start"
+        ],
+        "RELEASE": ["sind:mk80/shadowchain_release"]
+      }
+    },
+    "fiskheroes:tentacles": {
+      "tentacles": [
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "fiskheroes:transformation|fake": {
+      "key": "FAKE_AIM",
+      "transformation": {
+        "toggleData": "sind:dyn/beam_charging2",
+        "timerData": "sind:dyn/telekinesis_timer",
+        "time": 5
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "fiskheroes:mk50_blade_enable",
+        "DISABLE": "fiskheroes:mk50_blade_disable"
+      }
+    }
+  },
+  "hud": [{
+      "type": "PROGRESS",
+      "texture": "fiskheroes:textures/gui/bars/falcon_boost.png",
+      "data": "fiskheroes:dyn/super_boost_cooldown"
+    }, {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/nanite_transformation.png",
+      "data": "entity.getData('sind:dyn/nanite_counter')/300"
+    }, {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "fiskheroes:beam_charge"
+    }, {
+      "type": "CIRCLE",
+      "color": "fiskheroes:charged_beam",
+      "data": "sind:dyn/beam_charge2"
+    }
+  ]
+}

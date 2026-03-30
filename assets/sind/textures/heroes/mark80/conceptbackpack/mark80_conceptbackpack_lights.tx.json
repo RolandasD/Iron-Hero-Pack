@@ -1,0 +1,9 @@
+{
+  "texture": "sind:mark80/conceptbackpack/mark80_conceptbackpack_lights_<FLYING>",
+  "getters": {
+    "FLYING": {
+      "key": "entity.getData('sind:dyn/flight_timer') == 1",
+      "values": ["true", "false"]
+    }
+  }
+}

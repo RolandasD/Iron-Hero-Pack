@@ -1,0 +1,13 @@
+{
+  "particles": [
+    {
+      "condition": "!firstPerson && entity.getData('fiskheroes:dyn/booster_timer') > 0 && entity.getData('fiskheroes:suit_open_timer') == 0",
+      "type": "SMOKE_SMALL",
+      "anchor": "body",
+      "amount": 2,
+      "offset": [ 4.3, 11.0, 5.5 ],
+      "motion": [ 0.0, -0.075, 0.0 ],
+      "mirror": true
+    }
+  ]
+}

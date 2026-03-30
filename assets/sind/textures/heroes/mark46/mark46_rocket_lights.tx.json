@@ -1,0 +1,18 @@
+{
+  "texture": {
+    "in": "sind:mark46/mark46_rocket_lights",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/arm_rocket_<OPEN>"
+      }
+    ],
+    "out": "sind:generated/mark46_rocket_lights_<OPEN>"
+  },
+  "getters": {
+    "OPEN": {
+      "key": "entity.getData('fiskheroes:suit_open_timer') > 0",
+      "values": ["true", "false"]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "inputs": [
+    "sind:flight/hulkbusterheader",
+    "sind:flight/hover/hulkbuster",
+    "sind:flight/boost/hulkbuster"
+  ]
+}

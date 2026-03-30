@@ -1,0 +1,49 @@
+{
+    "particles": [
+        {
+            "maxDistance": 256,
+            "type": "minecraft:largeexplode",
+            "amount": {
+                "tp": 20,
+                "fp": 20
+            },
+            "offset": {
+                "tp": [
+                    0.0,
+                    1.4,
+                    0.0
+                ],
+                "fp": [
+                    0.0,
+                    2.0,
+                    0.0
+                ]
+            },
+            "randOffset": {
+                "tp": [
+                    0.5,
+                    0.0,
+                    0.5
+                ],
+                "fp": [
+                    0.5,
+                    0.0,
+                    0.5
+                ]
+            },
+            "randMotion": {
+                "tp": [
+                    0.05,
+                    0.05,
+                    0.05
+                ],
+                "fp": [
+                    0.05,
+                    0.05,
+                    0.05
+                ]
+            },
+            "mirror": false
+        }
+    ]
+}

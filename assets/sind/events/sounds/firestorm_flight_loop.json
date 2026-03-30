@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.firestorm.boost.loop",
+  "condition": "entity.getData('fiskheroes:jetpacking') || entity.getData('fiskheroes:aiming') || entity.getData('fiskheroes:aiming_timer') > 0",
+  "volume": 0.8,
+  "loop": true,
+  "fadeIn": 5,
+  "fadeOut": 10
+}

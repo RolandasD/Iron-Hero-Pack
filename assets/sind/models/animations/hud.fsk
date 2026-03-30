@@ -1,0 +1,148 @@
+{data_5} = curve{data_5}
+{data_6} = curve{data_6}
+{data_7} = curve{data_7}
+{data_8} = curve{data_8}
+{data_9} = curve{data_9}
+; DO NOT CURVE OTHER DATAS
+{vel} = sqrt({motX}^2 + {motZ}^2)
+{dir} = sqrt({lookX}^2 + {lookZ}^2)
+{fade} = clamp({dir}/0.1, 0, 1)
+{d} = acos clamp(if({dir} > 0 && {vel} > 0, ({motX}{lookX} + {motZ}{lookZ}) / {vel} / {dir}, 1), -1, 1)
+{d1} = signum({motX}{lookZ} - {motZ}{lookX})
+{x} = min({vel} / 2, 1) / 2
+
+{sidebar_posY} += {data_0}
+
+{radaroutline_rotZ} += 360'*{data_2}
+{radartriangle_rotZ} = 180' - ({yaw})'
+
+{aim_rotZ} += 360'*{data_1}
+{aimouter_rotZ} -= 360'*{data_1}
+
+{aim_posX} += 50*{data_5}
+{aimouter_posX} += 50*{data_5}
+{aim_posZ} += -30*{data_5}
+{aimouter_posZ} += -30*{data_5}
+
+{aim_posY} += -32*{data_5}
+{aimouter_posY} += -32*{data_5}
+
+{sidehorizon_posZ} += 150-(150*{data_6}) - 20*{data_7}
+{horizonlock_posZ} += -20*{data_7}
+
+{sidehorizon_rotZ} = {d1}{d}{x}{fade}{data_7}
+{horizonlock_rotZ} = {d1}{d}{x}{fade}{data_7}
+
+;{sidehorizon_posY} -= ({pitch}/5.5)*{data_6}
+{horizonlock_posY} -= ({pitch}/5.5)*{data_6}
+
+{player_rotY} -= 360'*{data_3}
+
+{bigcanvas_rotY} += 125'*{data_8}
+
+;------------------------------------------------------
+{0}=curve animate2({data_9},0.2,0,0,0.2)
+{1}=curve animate2({data_9},0.3,0,0.2,0.1)
+{2}=curve animate2({data_9},0.1,0,0,0.1)
+{3}=curve animate2({data_9},0.2,0,0.1,0.1)
+{4}=curve animate2({data_9},0.35,0,0,0.35)
+{5}=curve animate2({data_9},0.4,0,0.35,0.05)
+{6}=curve animate2({data_9},0.15,0.35,0.05,0.1)
+{7}=curve animate2({data_9},0.2,0.4,0.1,0.1)
+{8}=curve animate2({data_9},0.5,0,0,0.5)
+{9}=curve animate2({data_9},0.6,0,0.5,0.1)
+{10}=curve animate2({data_9},9.35,0.65,0.1,9.25)
+{11}=curve animate2({data_9},0.45,0,0,0.45)
+{12}=curve animate2({data_9},0.55,0,0.45,0.1)
+{13}=curve animate2({data_9},0.15,0,0,0.15)
+{14}=curve animate2({data_9},0.25,0,0.15,0.1)
+{15}=curve animate2({data_9},0.2,0.15,0.1,0.1)
+{16}=curve animate2({data_9},0.2,0.25,0.1,0.1)
+{17}=curve animate2({data_9},0.6,0,0,0.6)
+{18}=curve animate2({data_9},0.7,0,0.6,0.1)
+{19}=curve animate2({data_9},0.2,0.6,0.1,0.1)
+{20}=curve animate2({data_9},0.2,0.7,0.1,0.1)
+{21}=curve animate2({data_9},0.85,0,0.6,0.25)
+{22}=curve animate2({data_9},0.35,0.6,0.25,0.1)
+{23}=curve animate2({data_9},0.15,0.85,0.1,0.05)
+
+{sidebar_posX}+=200{0}
+{sidebar_posX}+=200{1}
+
+{coord_posX}+=-200{0}
+{coord_posX}+=-200{1}
+
+{speed_posX}+=-200{0}
+{speed_posX}+=-200{1}
+
+{sidehorizon_posZ}+=200{0}
+{sidehorizon_posZ}+=200{1}
+
+{helmetindent_posY}+=-70{2}
+{helmetindent_posY}+=-70{3}
+
+{radar_posX}+=57{4}
+{radar_posY}+=30{4}
+{radar_posZ}+=200{4}
+{radar_posX}+=57{5}
+{radar_posY}+=30{5}
+{radar_posZ}+=200{5}
+{radar_posX}+=57{6}
+{radar_posY}+=30{6}
+{radar_posX}+=57{7}
+{radar_posY}+=30{7}
+
+{aim_posZ}+=200{8}
+{aim_posZ}+=200{9}
+{aim_posX}+=-50{10}
+{aim_posY}+=32{10}
+
+{aimouter_posZ}+=200{11}
+{aimouter_posZ}+=200{12}
+{aimouter_posX}+=-50{10}
+{aimouter_posY}+=32{10}
+
+{player_posX}+=-63{13}
+{player_posY}+=-25{13}
+{player_posZ}+=200{13}
+{player_posX}+=-63{14}
+{player_posY}+=-25{14}
+{player_posZ}+=200{14}
+{player_posX}+=-63{15}
+{player_posY}+=-25{15}
+{player_posX}+=-63{16}
+{player_posY}+=-25{16}
+
+{speechbars_posX}+=73.5{17}
+{speechbars_posY}+=-14{17}
+{speechbars_posZ}+=200{17}
+{speechbars_posX}+=73.5{18}
+{speechbars_posY}+=-14{18}
+{speechbars_posZ}+=200{18}
+{speechbars_posX}+=73.5{19}
+{speechbars_posY}+=-14{19}
+{speechbars_posX}+=73.5{20}
+{speechbars_posY}+=-14{20}
+
+{text_posX}+=73.5{17}
+{text_posY}+=-14{17}
+{text_posZ}+=200{17}
+{text_posX}+=73.5{18}
+{text_posY}+=-14{18}
+{text_posZ}+=200{18}
+{text_posX}+=73.5{19}
+{text_posY}+=-14{19}
+{text_posX}+=73.5{20}
+{text_posY}+=-14{20}
+
+{warning_posX}+=-48{17}
+{warning_posY}+=12{17}
+{warning_posZ}+=200{17}
+{warning_posX}+=-48{21}
+{warning_posY}+=12{21}
+{warning_posZ}+=200{21}
+{warning_posX}+=-48{22}
+{warning_posY}+=12{22}
+{warning_posZ}+=200{22}
+{warning_posX}+=-48{23}
+{warning_posY}+=12{23}

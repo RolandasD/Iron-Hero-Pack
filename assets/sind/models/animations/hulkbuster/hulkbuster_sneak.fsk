@@ -1,0 +1,40 @@
+{data_5} *= {data_1}
+{data_8} *= {data_1}
+;crouch
+{data_8} = curve{data_8} * (1 - {data_5})
+{headBuster_posY}+=6.25{data_8}
+
+{bodyBuster_rotX}+=10'{data_8}
+{bodyBuster_posY}+=5.5{data_8}
+{bodyBuster_posZ}+=1.5{data_8}
+
+{rightArmBuster_rotX}+=-0.2186512015'{data_8}
+{rightArmBuster_rotY}+=-4.995229008'{data_8}
+{rightArmBuster_rotZ}+=10.0095374083'{data_8}
+{rightArmBuster_posY}+=6.25{data_8}
+{rightArmBuster_posZ}+=1{data_8}
+
+{leftArmBuster_rotX}+=-0.2186512015'{data_8}
+{leftArmBuster_rotY}+=4.995229008'{data_8}
+{leftArmBuster_rotZ}+=-10.0095374083'{data_8}
+{leftArmBuster_posY}+=6.25{data_8}
+{leftArmBuster_posZ}+=1{data_8}
+
+{lowerLeftLeg_rotX}+=32.5'{data_8}
+
+{lowerRightLeg_rotX}+=32.5'{data_8}
+
+{player_rotX}+=10'{data_8}
+{player_posY}+=5.5{data_8}
+{player_posZ}+=1.5{data_8}
+
+{leftLegBuster_rotX}+=-32.5'{data_8}
+{leftLegBuster_posY}+=6.75{data_8}
+{leftLegBuster_posZ}+=3.5{data_8}
+
+{rightLegBuster_rotX}+=-32.5'{data_8}
+{rightLegBuster_posY}+=6.75{data_8}
+{rightLegBuster_posZ}+=3.5{data_8}
+
+; {bone_posY}+=-3{data_8}
+; {player_posY}+=-3{data_8}

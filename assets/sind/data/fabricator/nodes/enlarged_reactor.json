@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "Enlarged Arc Reactor Suits"
+    },
+    "icon": {
+      "texture": "sind:textures/items/heroes/mark17_1.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

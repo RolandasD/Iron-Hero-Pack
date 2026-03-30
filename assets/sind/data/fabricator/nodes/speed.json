@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "Fast-Flight Suits"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/speed.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

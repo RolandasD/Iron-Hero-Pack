@@ -1,0 +1,20 @@
+RD Mark 1 files added:
+- assets/sind/data/heroes/rd_mark1.js
+- assets/sind/renderers/heroes/rd_mark1.js
+- assets/sind/data/fabricator/nodes/rd_mark1.json
+
+Where to put them in your heropack zip/folder:
+1. Put rd_mark1.js into assets/sind/data/heroes/
+2. Put rd_mark1.js into assets/sind/renderers/heroes/
+3. Put rd_mark1.json into assets/sind/data/fabricator/nodes/
+
+What this version does:
+- Reuses the Mark 1 visuals/model so nothing gets mixed up with existing suits.
+- Adds a separate RD Mark 1 entry in the fabricator.
+- Removes true flight.
+- Removes arm rocket.
+- Keeps only the coal-fed flamethrower.
+- Nerfs speed, jump, damage, and fall resistance.
+
+Recommended next step:
+Create RD Mark 2 as the first assisted-mobility prototype.

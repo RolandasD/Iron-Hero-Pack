@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/shf/shffeetclamp/mark100_shffeetclamp",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_shffeetclamp_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_shffeetclamp_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(11 * entity.getInterpolatedData('sind:dyn/clamp_timer')) | 0",
+      "values": {
+        "min": 1,
+        "max": 11
+      }
+    }
+  },
+  "isDynamic": true
+}

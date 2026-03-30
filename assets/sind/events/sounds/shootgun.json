@@ -1,0 +1,6 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:bullet",
+    "volume": 0.5,
+    "pitch": 1.35
+}

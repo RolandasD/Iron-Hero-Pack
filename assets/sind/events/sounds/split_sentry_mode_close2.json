@@ -1,0 +1,8 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:modifier.sentrymode.close",
+  "condition": "entity.getData('sind:dyn/srockets')",
+  "pitch": 0.9,
+  "delay": 120,
+  "volume": 0.5
+}

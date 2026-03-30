@@ -1,0 +1,40 @@
+{
+    "particles": [
+      {
+          "type": "FLAME_BALL",
+          "anchor": "rightLeg",
+          "amount": {
+              "tp": 20,
+              "fp": 10
+            },
+          "offset": {
+            "tp": [ 0.0, 12.0, 0.0 ],
+            "fp": [ 3.0, 24.0, 0.0 ]
+          },
+          "motion": [0.0, -0.25, 0.0],
+          "randOffset": [0.1, 0.0, 0.1],
+          "randMotion": [0.05, 0.0, 0.05],
+          "mirror": true,
+          "lockFPYaw": true
+        },
+  
+        {
+          "type": "BIG_SMOKE",
+          "anchor": "rightLeg",
+          "amount": {
+              "tp": 20,
+              "fp": 10
+            },
+          "offset": {
+            "tp": [ 0.0, 12.0, 0.0 ],
+            "fp": [ 3.0, 24.0, 0.0 ]
+          },
+          "motion": [0.0, -0.35, 0.0],
+          "randOffset": [0.1, 0.0, 0.1],
+          "randMotion": [0.05, 0.0, 0.05],
+          "mirror": true,
+          "lockFPYaw": true
+        }
+    ]
+  }
+  

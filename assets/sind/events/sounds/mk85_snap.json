@@ -1,0 +1,7 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:snap",
+    "delay": 5,
+    "volume": 1.0
+  }
+  

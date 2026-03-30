@@ -1,0 +1,15 @@
+{
+  "display": {
+    "name": {
+      "translate": "Combative Suits"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/combat.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 5,
+    "XP_LEVELS": 10
+  }
+}

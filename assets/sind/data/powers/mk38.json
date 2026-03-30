@@ -1,0 +1,198 @@
+{
+  "name": "- Iron Man Armor Mk XXXVIII:",
+  "modifiers": {
+    "fiskheroes:charged_beam": {
+      "damageProfile": {
+        "damage": 7,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 2.25
+        }
+      },
+      "chargeTime": 45,
+      "duration": 5,
+      "cooldownTime": 45,
+      "range": 18.0,
+      "radius": 8,
+      "soundEvents": {
+        "CHARGE": "sind:unibeam"
+      }
+    },
+    "fiskheroes:controlled_flight|flight_unibeam": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false,
+      "canRoll": false,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.2,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:controlled_flight|flight_normal": {
+      "speed": 0.05,
+      "boostSpeed": 0.2,
+      "canBoost": true,
+      "canRoll": true,
+      "diveSpeedRetention": 0.5,
+      "collision": {
+        "blocks": {
+          "stopFlying": false,
+          "takeDamage": true
+        },
+        "entities": {
+          "stopFlying": false,
+          "dealDamage": true
+        }
+      },
+      "knockback": 0.4,
+      "soundEvents": {
+        "ENABLE": ["fiskheroes:iron_man_flight_enable", "fiskheroes:iron_man_flight_loop"],
+        "BOOST": "fiskheroes:iron_man_boost",
+        "IMPACT_BLOCK": "fiskheroes:flight_impact_block",
+        "IMPACT_ENTITY": "fiskheroes:flight_impact_entity",
+        "ROLL": "fiskheroes:iron_man_flight_roll",
+        "DIVE": ["fiskheroes:flight_dive_loop", "fiskheroes:iron_man_flight_dive"]
+      }
+    },
+    "fiskheroes:repulsor_blast": {
+      "damageProfile": {
+        "damage": 9,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "ADD_KNOCKBACK": 1.0,
+          "HIT_COOLDOWN": 0.0
+        }
+      },
+      "range": 48.0,
+      "speed": 20.0,
+      "spread": 0.0,
+      "radius": 0.1,
+      "cooldownTime": 30,
+      "soundEvents": {
+        "SHOOT": "sind:repblast"
+      }
+    },
+    "fiskheroes:sentry_mode": {
+      "soundEvents": {
+        "OPEN": "fiskheroes:sentry_mode_open",
+        "CLOSE": "fiskheroes:sentry_mode_close"
+      }
+    },
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:ground_smash": {
+      "damageProfile": {
+        "damage": 11,
+        "types": {
+          "EXPLOSION": 2.25
+        }
+      },
+      "isInstant": true,
+      "affectsUser": true,
+      "radius": 4,
+      "cooldownTime": 40
+    },
+    "fiskheroes:earthquake": {
+      "damageProfile": {
+        "damage": 6.5,
+        "types": {
+          "EXPLOSION": 1.0
+        }
+      },
+      "radius": 5,
+      "duration": 20,
+      "cooldownTime": 40
+    },
+    "fiskheroes:transformation|ground_smash": {
+      "key": "GROUND_SMASH_VISUAL",
+      "transformation": {
+        "toggleData": "sind:dyn/ground_smash",
+        "timerData": "sind:dyn/ground_smash_timer",
+        "time": 5
+      },
+      "isToggle": false
+    },
+    "fiskheroes:transformation|earthquake": {
+      "key": "EARTHQUAKE_VISUAL",
+      "transformation": {
+        "toggleData": "sind:dyn/earthquake",
+        "timerData": "sind:dyn/earthquake_timer",
+        "time": 5
+      },
+      "isToggle": false
+    },
+    "fiskheroes:transformation|beam_charging": {
+      "key": "FAKE_CHARGED_BEAM",
+      "transformation": {
+        "toggleData": "sind:dyn/beam_charging2",
+        "timerData": "sind:dyn/beam_charging_timer2",
+        "time": 1
+      },
+      "isToggle": false,
+      "soundEvents": {
+        "ENABLE": "sind:unibeam2",
+        "DISABLE": "sind:fakechargedbeam/beam_stop"
+      }
+    },
+    "fiskheroes:heat_vision": {
+      "damageProfile": {
+        "damage": 6.5,
+        "types": {
+          "ENERGY": 1.0
+        },
+        "properties": {
+          "COOK_ENTITY": true,
+          "HEAT_TRANSFER": 20,
+          "REDUCE_KNOCKBACK": 0.1
+        }
+      },
+      "range": 18.0,
+      "radius": 1.0,
+      "canDoGriefing": false,
+      "soundEvents": {
+        "SHOOT": [
+          "sind:fakechargedbeam/beam_start",
+          "sind:fakechargedbeam/beam_loop"
+        ]
+      }
+    },
+    "fiskheroes:damage_immunity": {
+      "damageType": "EXPLOSION"
+    }
+  },
+  "hud": [
+    
+    {
+      "type": "CHARGE",
+      "texture": "sind:textures/gui/bars/unibeam.png",
+      "data": "sind:dyn/beam_charge2"
+    },
+    {
+      "type": "CIRCLE",
+      "color": "fiskheroes:charged_beam",
+      "data": "fiskheroes:beam_charge"
+    }
+  ]
+}

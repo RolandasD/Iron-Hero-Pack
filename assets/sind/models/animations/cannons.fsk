@@ -1,0 +1,10 @@
+{data_2} = curve {data_2}
+
+{leftcannon_posZ} @ {data_2} -> -0.6
+{rightcannon_posZ} @ {data_2} -> -0.6
+
+{leftcannon_rotY} @ {data_2} -> -5'
+{rightcannon_rotY} @ {data_2} -> 5'
+
+{leftcannon_rotX} @ {data_2} -> 17.5'
+{rightcannon_rotX} @ {data_2} -> 17.5'

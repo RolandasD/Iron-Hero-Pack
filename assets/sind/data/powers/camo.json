@@ -1,0 +1,347 @@
+{
+  "name": "Advanced Camouflage",
+  "modifiers": {
+    "fiskheroes:transformation": {
+      "key": "CAMO",
+      "transformation": {
+        "toggleData": "sind:dyn/camo",
+        "timerData": "sind:dyn/camo_timer",
+        "time": 10
+      },
+      "soundEvents": {
+        "ENABLE": "sind:beep",
+        "DISABLE": "sind:boop"
+      }
+    },
+    "fiskheroes:cooldown|sand": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:sand'",
+        "cooldownData": "sind:dyn/sand_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|clay": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:clay'",
+        "cooldownData": "sind:dyn/clay_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|stone": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:stone'",
+        "cooldownData": "sind:dyn/stone_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|cobble": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:cobblestone'",
+        "cooldownData": "sind:dyn/cobble_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|snow": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:snow'",
+        "cooldownData": "sind:dyn/snow_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|endstone": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:end_stone'",
+        "cooldownData": "sind:dyn/endstone_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|redsand": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:sand' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 1",
+        "cooldownData": "sind:dyn/redsand_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|netherrack": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:netherrack'",
+        "cooldownData": "sind:dyn/netherrack_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|soulsand": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -0.125, 0)) == 'minecraft:soul_sand'",
+        "cooldownData": "sind:dyn/soulsand_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|gravel": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:gravel'",
+        "cooldownData": "sind:dyn/gravel_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|obsidian": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:obsidian'",
+        "cooldownData": "sind:dyn/obsidian_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|mycelium": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:mycelium'",
+        "cooldownData": "sind:dyn/mycelium_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|podzol": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:dirt' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 2",
+        "cooldownData": "sind:dyn/podzol_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|sandstone": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:sandstone'",
+        "cooldownData": "sind:dyn/sandstone_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|netherbrick": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:nether_brick'",
+        "cooldownData": "sind:dyn/netherbrick_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|mossycobble": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:mossy_cobblestone'",
+        "cooldownData": "sind:dyn/mossycobble_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|bedrock": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:bedrock'",
+        "cooldownData": "sind:dyn/bedrock_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|quartz": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:quartz_block'",
+        "cooldownData": "sind:dyn/quartz_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|dirt": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:dirt'",
+        "cooldownData": "sind:dyn/dirt_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|sponge": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:sponge'",
+        "cooldownData": "sind:dyn/sponge_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|brick": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:brick_block'",
+        "cooldownData": "sind:dyn/brick_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|hardclay": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:hardened_clay'",
+        "cooldownData": "sind:dyn/hardclay_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|packedice": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:packed_ice'",
+        "cooldownData": "sind:dyn/packedice_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|glowstone": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:glowstone'",
+        "cooldownData": "sind:dyn/glowstone_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|oakwood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks'",
+        "cooldownData": "sind:dyn/oakwood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|birchwood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 2",
+        "cooldownData": "sind:dyn/birchwood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|sprucewood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 1",
+        "cooldownData": "sind:dyn/sprucewood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|acaciawood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 4",
+        "cooldownData": "sind:dyn/acaciawood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|darkoakwood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 5",
+        "cooldownData": "sind:dyn/darkoakwood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    },
+    "fiskheroes:cooldown|junglewood": {
+      "cooldown": {
+        "toggleData": "entity.world().getBlock(entity.pos().add(0, -1, 0)) == 'minecraft:planks' && entity.world().getBlockMetadata(entity.pos().add(0, -1, 0)) == 3",
+        "cooldownData": "sind:dyn/junglewood_timer",
+        "duration": 15,
+        "recovery": 1
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:close"
+      }
+    }
+  }
+}

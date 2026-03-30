@@ -1,0 +1,151 @@
+;rotate reactor if is mk48
+{reactor_rotX} += 21'{data_4}
+
+;smash start
+{ground_smash_start_time}=curve{data_0}
+{ground_smash_start_0}=animate2({ground_smash_start_time},10,0,1,9)
+{ground_smash_start_1}=animate2({ground_smash_start_time},10,0,0.5,9.5)
+{ground_smash_start_2}=animate2({ground_smash_start_time},1,0,0.5,0.5)
+{ground_smash_start_3}=animate2({ground_smash_start_time},9.5,0.5,0.5,9)
+
+{bodyBuster_rotY}+=20'{ground_smash_start_0}
+
+{rightArmBuster_rotX} @ {ground_smash_start_0} -> -163.7031020219'
+{rightArmBuster_rotY} @ {ground_smash_start_0} -> 42.6414807831'
+{rightArmBuster_rotZ} @ {ground_smash_start_0} -> -6.6957024419'
+{rightArmBuster_posX}+=1.25{ground_smash_start_0}
+{rightArmBuster_posY}+=-7{ground_smash_start_0}
+{rightArmBuster_posZ}+=2.75{ground_smash_start_0}
+
+{lowerRightArm_rotX} @ {ground_smash_start_0} -> -35'
+
+{leftArmBuster_rotX} @ {ground_smash_start_0} -> -172.5229216696'
+{leftArmBuster_rotY} @ {ground_smash_start_0} -> -14.3337533242'
+{leftArmBuster_rotZ} @ {ground_smash_start_0} -> 13.2625046984'
+{leftArmBuster_posY}+=-8.25{ground_smash_start_0}
+{leftArmBuster_posZ}+=-3.75{ground_smash_start_0}
+
+{lowerLeftArm_rotX} @ {ground_smash_start_0} -> -35'
+
+{lowerLeftLeg_rotZ} += 5'{ground_smash_start_1}
+{lowerLeftLeg_posY} += 0.5{ground_smash_start_1}
+
+{lowerRightLeg_rotX}+=12.5'{ground_smash_start_2}
+{lowerRightLeg_rotX}+=-5.1406844873'{ground_smash_start_3}
+{lowerRightLeg_rotY}+=2.2494361891'{ground_smash_start_3}
+{lowerRightLeg_rotZ}+=-7.1565621013'{ground_smash_start_3}
+
+{player_rotY} @ {ground_smash_start_0} -> 20'
+
+{leftLegBuster_rotZ}+=-5'{ground_smash_start_1}
+
+{rightLegBuster_rotX}+=9.6692811013'{ground_smash_start_0}
+{rightLegBuster_rotY}+=14.2746889165'{ground_smash_start_0}
+{rightLegBuster_rotZ}+=8.7584189193'{ground_smash_start_0}
+{rightLegBuster_posZ}+=1.75{ground_smash_start_0}
+
+;-------------------------------------------------------------------------------------------------
+;smash down
+{data_1}=curve{data_1}
+
+{headBuster_rotX} @ {data_1} -> 35'
+{headBuster_posY}+=11.75{data_1}
+{headBuster_posZ}+=-16{data_1}
+
+{bodyBuster_rotX} @ {data_1} -> 44.53'
+{bodyBuster_posY}+=12.9{data_1}
+{bodyBuster_posZ}+=-14.85{data_1}
+
+{rightArmBuster_rotX} @ {data_1} -> -20'
+{rightArmBuster_posY}+=13.41{data_1}
+{rightArmBuster_posZ}+=-15.58{data_1}
+
+{lowerRightArm_rotX} @ {data_1} -> 2.5'
+
+{leftArmBuster_rotX} @ {data_1} -> -25'
+{leftArmBuster_posY}+=12.92{data_1}
+{leftArmBuster_posZ}+=-16.34{data_1}
+
+{lowerLeftArm_rotX} @ {data_1} -> 7.5'
+
+{lowerLeftLeg_rotX}+=17.43'{data_1}
+
+{lowerRightLeg_rotX}+=20'{data_1}
+
+{player_rotX} @ {data_1} -> 44.53'
+{player_posY}+=12.9{data_1}
+{player_posZ}+=-14.85{data_1}
+
+{leftLegBuster_rotX}+=-17.35'{data_1}
+{leftLegBuster_posY}+=3.5{data_1}
+
+{rightLegBuster_rotX}+=22.5'{data_1}
+;-------------------------------------------------------------------------------------------------
+;stomp start
+{data_2}=curve{data_2}
+
+{headBuster_posY}+=0.268699257{data_2}
+{headBuster_posZ}+=6.318844887{data_2}
+
+{bodyBuster_rotX} @ {data_2} -> -12.5'
+{bodyBuster_posY}+=0.6746354856{data_2}
+{bodyBuster_posZ}+=6.5082537573{data_2}
+
+{rightArmBuster_rotZ} @ {data_2} -> 12.5'
+{rightArmBuster_posZ}+=6{data_2}
+
+{leftArmBuster_rotZ} @ {data_2} -> -5'
+{leftArmBuster_posZ}+=6{data_2}
+
+{lowerLeftLeg_rotX} @ {data_2} -> 47.5'+22.5'
+
+{player_rotX} @ {data_2} -> -12.5'
+{player_posY}+=0.6746354856{data_2}
+{player_posZ}+=6.5082537573{data_2}
+
+{leftLegBuster_rotX}+=-70'{data_2}
+;-------------------------------------------------------------------------------------------------
+;stomp down
+{data_3}=curve{data_3}
+
+{headBuster_rotX} @ {data_3} -> 57.5'
+{headBuster_posY}+=7{data_3}
+{headBuster_posZ}+=-15{data_3}
+
+{bodyBuster_rotX} @ {data_3} -> 37.5'
+{bodyBuster_posY}+=7{data_3}
+{bodyBuster_posZ}+=-13{data_3}
+
+{rightArmBuster_rotY} @ {data_3} -> 10'{data_3}
+{rightArmBuster_rotZ} @ {data_3} -> 22.5'{data_3}
+{rightArmBuster_posY}+=5{data_3}
+{rightArmBuster_posZ}+=-12{data_3}
+
+{leftArmBuster_rotX} @ {data_3} -> -10.151081711'
+{leftArmBuster_rotY} @ {data_3} -> -9.8465519398'
+{leftArmBuster_rotZ} @ {data_3} -> -15.7462165419'
+{leftArmBuster_posY}+=5{data_3}
+{leftArmBuster_posZ}+=-12{data_3}
+
+{lowerLeftLeg_rotX} @ {data_3} -> 2.5'+22.5'
+
+{player_rotX} @ {data_3} -> 37.5'
+{player_posY}+=7{data_3}
+{player_posZ}+=-13{data_3}
+
+{leftLegBuster_rotX} @ {data_3} -> -2.5'
+{leftLegBuster_posZ}+=-4.5{data_3}
+;-------------------------------------------------------------------------------------------------
+;block
+{data_5}=curve{data_5}
+{rightArmBuster_rotX} @ {data_5} -> -85'
+{rightArmBuster_rotY} @ {data_5} -> -41'
+{rightArmBuster_rotZ} @ {data_5} -> 5'
+
+{lowerRightArm_rotX} @ {data_5} -> -55'
+
+{leftArmBuster_rotX} @ {data_5} -> -85'
+{leftArmBuster_rotY} @ {data_5} -> 41'
+{leftArmBuster_rotZ} @ {data_5} -> -5'
+
+{lowerLeftArm_rotX} @ {data_5} -> -55'

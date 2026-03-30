@@ -1,0 +1,31 @@
+{data_0} = curve{data_0}
+{data_1} = curve{data_1}
+{data_2} = curve{data_2}
+{data_3} = curve{data_3}
+{data_4} = curve{data_4}
+{data_5} = curve{data_5}
+{data_6} = curve{data_6}
+
+{repulsorLegRight_posX}+=-1.4848309603+(1.4848309603*max({data_0}, {data_5}))
+{repulsorLegRight_posY}+=-18.8844051305+(18.8844051305*max({data_0}, {data_5}))
+{repulsorLegRight_posZ}+=0.6630904373-(0.6630904373*max({data_0}, {data_5}))
+
+{repulsorLegLeft_posX}+=1.4848309599-(1.4848309599*max({data_0}, {data_5}))
+{repulsorLegLeft_posY}+=-18.8844051305+(18.8844051305*max({data_0}, {data_5}))
+{repulsorLegLeft_posZ}+=0.6630904373-(0.6630904373*max({data_0}, {data_5}))
+
+{repulsorArmRight_posX}+=1.0882266066-1.0882266066*max({data_1}, {data_5})(1-{data_3})(1-{data_6})
+{repulsorArmRight_posY}+=-7.7049871962+7.7049871962*max({data_1}, {data_5})(1-{data_3})(1-{data_6})
+{repulsorArmRight_posZ}+=3.4203706198-3.4203706198*max({data_1}, {data_5})(1-{data_3})(1-{data_6})
+
+{repulsorArmLeft_posX}+=-1.0882266066+1.0882266066*max({data_2}, {data_5})(1-{data_4})(1-{data_6})
+{repulsorArmLeft_posY}+=-7.7049871966+7.7049871966*max({data_2}, {data_5})(1-{data_4})(1-{data_6})
+{repulsorArmLeft_posZ}+=3.4203706202-3.4203706202*max({data_2}, {data_5})(1-{data_4})(1-{data_6})
+
+{handLeft_posY} += -9.5 + 9.5*max({data_2}, {data_5})(1-{data_4})(1-{data_6})
+{handLeft_posX} += 0.95 - 0.95*max({data_2}, {data_5})(1-{data_4})(1-{data_6})
+
+{sus} = max(max(0, {data_0} - 0.98) * 50, max(0, {data_5} - 0.98) * 50)
+
+{footRight_rotZ} += 5' + -5'{sus}
+{footLeft_rotZ} += -5' + 5'{sus}

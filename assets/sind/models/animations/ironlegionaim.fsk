@@ -1,0 +1,46 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+
+{RightArm2_rotX} @ {data_0} -> -pi / 2
+{RightArm3_rotX} @ {data_0} -> -pi / 2
+{RightArm4_rotX} @ {data_0} -> -pi / 2
+{RightArm5_rotX} @ {data_0} -> -pi / 2
+{RightArm6_rotX} @ {data_0} -> -pi / 2
+{RightArm7_rotX} @ {data_0} -> -pi / 2
+
+{fire2_posY} -= 11*{data_0}
+{fire3_posY} -= 11*{data_0}
+{fire4_posY} -= 11*{data_0}
+{fire5_posY} -= 11*{data_0}
+{fire6_posY} -= 11*{data_0}
+{fire7_posY} -= 11*{data_0}
+
+{mk15_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head2_rotX} += ({pitch}' * {data_1})
+{Head2_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm2_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+
+{mk33_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head3_rotX} += ({pitch}' * {data_1})
+{Head3_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm3_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+
+{mk39_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head4_rotX} += ({pitch}' * {data_1})
+{Head4_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm4_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+
+{mk17_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head5_rotX} += ({pitch}' * {data_1})
+{Head5_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm5_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+
+{mk40_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head6_rotX} += ({pitch}' * {data_1})
+{Head6_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm6_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+
+{mk16_rotY} = clamp( ({yaw} - {bodyYaw})' * {data_1}, -12, 6)
+{Head7_rotX} += ({pitch}' * {data_1})
+{Head7_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')
+{RightArm7_rotY} = -clamp((-{pitch}' * {data_1}), 0', 0')

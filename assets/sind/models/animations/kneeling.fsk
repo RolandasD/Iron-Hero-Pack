@@ -1,0 +1,58 @@
+{data_0} = curve {data_0}
+
+{head_posX} @ {data_0} -> 0
+{head_posY} @ {data_0} -> 0
+{head_posZ} @ {data_0} -> 0
+
+{rightArm_rotX} @ {data_0} -> 0
+{rightArm_rotY} @ {data_0} -> 0
+{rightArm_rotZ} @ {data_0} -> 0
+{rightArm_posX} @ {data_0} -> -5
+{rightArm_posY} @ {data_0} -> 2
+{rightArm_posZ} @ {data_0} -> 0
+
+{leftArm_rotX} @ {data_0} -> 0
+{leftArm_rotY} @ {data_0} -> 0
+{leftArm_rotZ} @ {data_0} -> 0
+{leftArm_posX} @ {data_0} -> 5
+{leftArm_posY} @ {data_0} -> 2
+{leftArm_posZ} @ {data_0} -> 0
+
+{body_rotX} @ {data_0} -> 0
+{body_rotY} @ {data_0} -> 0
+{body_rotZ} @ {data_0} -> 0
+{body_posX} @ {data_0} -> 0
+{body_posY} @ {data_0} -> 0
+{body_posZ} @ {data_0} -> 0
+
+{leftLeg_posX} @ {data_0} -> 2
+{leftLeg_posY} @ {data_0} -> 12
+{leftLeg_posZ} @ {data_0} -> 0
+
+{rightLeg_posX} @ {data_0} -> -2
+{rightLeg_posY} @ {data_0} -> 12
+{rightLeg_posZ} @ {data_0} -> 0
+
+{head_rotX}+=72.5'{data_0}
+{head_posY}+=11{data_0}
+{head_posZ}+=-9{data_0}
+
+{body_rotX}+=47.5'{data_0}
+{body_posY}+=13{data_0}
+{body_posZ}+=-12{data_0}
+
+{rightArm_posY}+=14{data_0}
+{rightArm_posZ}+=-9{data_0}
+
+{leftArm_posY}+=14{data_0}
+{leftArm_posZ}+=-9{data_0}
+
+{rightLeg_rotX}+=30'{data_0}
+{rightLeg_posY}+=1{data_0}
+{rightLeg_posZ}+=-1{data_0}
+
+{leftLeg_rotX}+=72.5'{data_0}
+{leftLeg_posY}+=9{data_0}
+{leftLeg_posZ}+=1{data_0}
+
+out "translate" (0.0,if({data_1} == 1, 0.2, 0.05){data_0},0.0)

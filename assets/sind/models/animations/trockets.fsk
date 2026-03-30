@@ -1,0 +1,12 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{data_2} = curve {data_2}
+
+{thigh1_posY} @ {data_0} -> 999
+{thigh1_posY} @ {data_0} -> 999
+
+{thigh2_posY} @ {data_1} -> 999
+{thigh2_posY} @ {data_1} -> 999
+
+{thigh3_posY} @ {data_2} -> 999
+{thigh3_posY} @ {data_2} -> 999

@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:piece1",
+  "condition": "entity.getData('sind:dyn/mark42_helmet_timer') < 0.765",
+  "pitch": "1.1 - (Math.random() * 0.7)",
+  "delay": 30,
+  "volume": 0.5,
+  "fadeOut": 5
+}

@@ -1,0 +1,147 @@
+{
+    "name": "- Tactical:",
+    "modifiers": {
+      "fiskheroes:charged_beam": {
+        "damageProfile": {
+          "damage": 10.5,
+          "types": {
+            "ENERGY": 1.0
+          },
+          "properties": {
+            "COOK_ENTITY": true,
+            "HEAT_TRANSFER": 20,
+            "REDUCE_KNOCKBACK": 0.1
+          }
+        },
+        "chargeTime": 75,
+        "duration": 25,
+        "cooldownTime": 40,
+        "range": 18.0,
+        "radius": 6.0,
+        "soundEvents": {
+        "SHOOT": "fiskheroes:manta_beam_start",
+        "SHOOT_STOP": "fiskheroes:manta_beam_stop",
+        "BEAM_AMBIENT": "fiskheroes:manta_beam_loop",
+        "CHARGE": "fiskheroes:manta_beam_charge"
+        }
+      },
+      "fiskheroes:heat_vision": {
+        "damageProfile": {
+          "damage": 2.5,
+          "types": {
+            "ENERGY": 1,
+            "FIRE": 0.25
+          },
+          "properties": {
+            "COOK_ENTITY": true,
+            "HEAT_TRANSFER": 80
+          }
+        },
+        "range": 12,
+        "radius": 0.085,
+        "soundEvents": {
+            "SHOOT": "sind:gunshoot"
+          }
+      },
+      "fiskheroes:transformation": {
+        "key": "SCROCKETS",
+        "transformation": {
+          "toggleData": "sind:dyn/srockets",
+          "timerData": "sind:dyn/srockets_timer",
+          "time": 0
+        }
+      },
+      "fiskheroes:cooldown": {
+        "cooldown": {
+          "toggleData": "sind:dyn/srockets",
+          "cooldownData": "sind:dyn/srockets_cooldown",
+          "duration": 30,
+          "recovery": 0.25
+        },
+        "soundEvents": {
+          "TIMEOUT": "sind:close"
+        }
+      },
+      "fiskheroes:transformation|1": {
+        "key": "ARMGUN",
+        "transformation": {
+          "toggleData": "sind:dyn/armgun_bool",
+          "timerData": "sind:dyn/armgun_timer",
+          "time": 0
+        },
+        "isToggle": false
+      },
+      "fiskheroes:energy_projection": {
+        "damageProfile": {
+          "damage": 3,
+          "types": {
+            "ENERGY": 1,
+            "FIRE": 0.25
+          },
+          "properties": {
+            "COOK_ENTITY": true,
+            "HEAT_TRANSFER": 80
+          }
+        },
+        "range": 20,
+        "radius": 0.1
+      },
+
+      "fiskheroes:repulsor_blast": {
+        "damageProfile": {
+          "damage": 10.0,
+          "types": {
+            "ENERGY": 1.0
+          },
+          "properties": {
+            "ADD_KNOCKBACK": 1.0,
+            "HIT_COOLDOWN": 0.0
+          }
+        },
+        "range": 48.0,
+        "speed": 20.0,
+        "spread": 0.0,
+        "radius": 0.1,
+        "cooldownTime": 30,
+        "soundEvents": {
+          "SHOOT": "fiskheroes:repulsor_blast"
+        }
+      },
+      "fiskheroes:sentry_mode": {
+        "soundEvents": {
+          "OPEN": "fiskheroes:sentry_mode_open",
+          "CLOSE": "fiskheroes:sentry_mode_close"
+        }
+      },
+      "fiskheroes:fire_immunity": {
+      },
+      "fiskheroes:projectile_immunity": {
+      },
+      "fiskheroes:water_breathing": {
+      },
+      "fiskheroes:metal_skin": {
+      }
+    },
+    "hud": [
+      {
+        "type": "PROGRESS",
+        "texture": "fiskheroes:textures/gui/bars/nanite_transformation.png",
+        "data": "sind:mk8_cooldown"
+      },
+      {
+        "type": "CIRCLE",
+        "color": "fiskheroes:charged_beam",
+        "data": "fiskheroes:beam_charge"
+      },
+      {
+        "type": "PROGRESS",
+        "texture": "sind:textures/gui/bars/laser.png",
+        "data": "sind:dyn/srockets_cooldown"
+      },
+      {
+        "type": "PROGRESS",
+        "texture": "sind:textures/gui/bars/laser.png",
+        "data": "sind:dyn/armgun_mag"
+      }
+    ]
+  }

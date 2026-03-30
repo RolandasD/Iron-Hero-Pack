@@ -1,0 +1,9 @@
+{data} = curve {data}
+
+{root_rotX} -= 20'*{data}
+{root_posY} += {data}
+
+{front_rotX} += 10'*{data}
+{back_rotX} += 10'*{data}
+{right_rotZ} += 10'*{data}
+{left_rotZ} -= 10'*{data}

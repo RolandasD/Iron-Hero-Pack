@@ -1,0 +1,12 @@
+{data} = sin(pi*{data})
+
+{head_rotX} @ {data} -> 20'
+{head_rotY} @ {data} -> -15'
+
+{rightArm_rotX} @ {data} -> -70'
+{rightArm_rotY} @ {data} -> -65'
+{rightArm_rotZ} @ {data} -> 15'
+
+{leftArm_rotX} @ {data} -> -45'
+{leftArm_rotY} @ {data} -> 65'
+{leftArm_rotZ} @ {data} -> -15'

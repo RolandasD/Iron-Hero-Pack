@@ -1,0 +1,17 @@
+{
+  "display": {
+    "name": {
+      "translate": "The New Iron Legion (Drones)."
+    },
+    "icon": {
+      "texture": "sind:textures/items/heroes/ironlegiondrone_0.png"
+    }
+  },
+  "requirements": [
+    "sind:iron_legion"
+  ],
+  "price": {
+    "TUTRIDIUM": 2,
+    "XP_LEVELS": 10
+  }
+}

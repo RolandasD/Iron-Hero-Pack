@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "fiskheroes:suit.ironman.boost.loop",
+  "condition": "entity.getData('sind:dyn/mark42_full2_timer') < 0.247",
+  "loop": true,
+  "volume": 0.25,
+  "fadeIn": 5,
+  "fadeOut": 5
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "name": {
+      "translate": "Arc Reactor"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/reactor.png"
+    }
+  },
+  "requirements": [],
+  "price": {
+    "TUTRIDIUM": 10,
+    "XP_LEVELS": 10
+  },
+  "criteria": {
+    "ore": {
+      "trigger": "fiskheroes:item_crafted",
+      "description": {
+        "translate": "Creating your first arc reactor. Craft 1 beacon."
+      },
+      "condition": {
+        "variables": {
+          "block": "ITEM_BEING_CRAFTED"
+        },
+        "check": "block.name() == 'minecraft:beacon'"
+      }
+    }
+  }
+}

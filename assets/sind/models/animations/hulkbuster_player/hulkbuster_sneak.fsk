@@ -1,0 +1,45 @@
+{data_5} *= {data_1}
+{data_8} *= {data_1}
+
+{not_aiming} = 1 - {data_4}
+{not_energyproj} = 1 - {data_3}
+;crouch
+{data_8} = curve{data_8} * (1 - {data_5})
+{head_posY}+=(6.25/2.125){data_8}
+
+{body_rotX}+=10'{data_8}
+{body_posY}+=(5.5/2.125){data_8}
+{body_posZ}+=(1.5/2.125){data_8}
+
+{rightArm_rotX}+=-0.2186512015'{data_8}
+{rightArm_rotY}+=-4.995229008'{data_8}
+{rightArm_rotZ}+=10.0095374083'{data_8}
+{rightArm_posY}+=(6.25/2.125){data_8}{not_aiming}
+{rightArm_posZ}+=(1/2.125){data_8}{not_aiming}
+
+{leftArm_rotX}+=-0.2186512015'{data_8}
+{leftArm_rotY}+=4.995229008'{data_8}
+{leftArm_rotZ}+=-10.0095374083'{data_8}
+{leftArm_posY}+=(6.25/2.125){data_8}{not_energyproj}
+{leftArm_posZ}+=(1/2.125){data_8}{not_energyproj}
+
+; {lowerLeftLeg_rotX}+=32.5'{data_8}
+
+; {lowerRightLeg_rotX}+=32.5'{data_8}
+
+; {player_rotX}+=10'{data_8}
+; {player_posY}+=5.5{data_8}
+; {player_posZ}+=1.5{data_8}
+
+{leftLeg_rotX}+=-32.5'{data_8}
+{leftLeg_posY}+=(6.75/2.125){data_8}
+{leftLeg_posZ}+=(3.5/2.125){data_8}
+
+{rightLeg_rotX}+=-32.5'{data_8}
+{rightLeg_posY}+=(6.75/2.125){data_8}
+{rightLeg_posZ}+=(3.5/2.125){data_8}
+
+; {bone_posY}+=-3{data_8}
+; /16 to /34
+out "translate" (0, (3/34){data_8}, 0)
+; {player_posY}+=-3{data_8}

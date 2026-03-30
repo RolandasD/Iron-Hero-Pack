@@ -1,0 +1,53 @@
+{body_posY} += 0{data_0}
+;old vals
+; {rightArm_posX} += -3.05{data_0}
+; {rightArm_posY} += -3.6{data_0}
+; {rightArm_posZ} += 1.42{data_0}
+
+; {leftArm_posX} += 3.05{data_0}
+; {leftArm_posY} += -3.6{data_0}
+; {leftArm_posZ} += 1.42{data_0}
+
+{head_posX} @ {data_0} -> 0
+{head_posY} @ {data_0} -> 0
+{head_posZ} @ {data_0} -> 0
+
+{body_posX} @ {data_0} -> 0
+{body_posY} @ {data_0} -> -3.4
+{body_posZ} @ {data_0} -> 0
+
+{rightArm_posX} @ {data_0} -> -5-2.059
+{rightArm_posY} @ {data_0} -> 2-3.047056
+{rightArm_posZ} @ {data_0} -> 1.411765
+
+{leftArm_posX} @ {data_0} -> 5+2.059
+{leftArm_posY} @ {data_0} -> 2-3.047056
+{leftArm_posZ} @ {data_0} -> 1.411765
+
+{rightLeg_posX} @ {data_0} -> -2-0.94324235
+{rightLeg_posY} @ {data_0} -> 12-4.0177035
+{rightLeg_posZ} @ {data_0} -> 1.426546
+
+{leftLeg_posX} @ {data_0} -> 2+0.94324235
+{leftLeg_posY} @ {data_0} -> 12-4.0177035
+{leftLeg_posZ} @ {data_0} -> 1.426546
+
+;data_0
+{head_rotX} @ {data_0} -> 0
+{head_rotY} @ {data_0} -> 0
+{head_rotZ} @ {data_0} -> 0
+{body_rotX} @ {data_0} -> 0
+{body_rotY} @ {data_0} -> 0
+{body_rotZ} @ {data_0} -> 0
+{rightArm_rotX} @ {data_0} -> 0
+{rightArm_rotY} @ {data_0} -> 0
+{rightArm_rotZ} @ {data_0} -> 0
+{leftArm_rotX} @ {data_0} -> 0
+{leftArm_rotY} @ {data_0} -> 0
+{leftArm_rotZ} @ {data_0} -> 0
+{rightLeg_rotX} @ {data_0} -> 0
+{rightLeg_rotY} @ {data_0} -> 0
+{rightLeg_rotZ} @ {data_0} -> 0
+{leftLeg_rotX} @ {data_0} -> 0
+{leftLeg_rotY} @ {data_0} -> 0
+{leftLeg_rotZ} @ {data_0} -> 0

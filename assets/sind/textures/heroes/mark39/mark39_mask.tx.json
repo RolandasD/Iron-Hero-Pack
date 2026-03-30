@@ -1,0 +1,9 @@
+{
+  "texture": "sind:mark39/mark39_mask_<OPEN>",
+  "getters": {
+    "OPEN": {
+      "key":  "entity.world().getDimension() == 2595 ? 'space' : entity.getInterpolatedData('fiskheroes:mask_open_timer2') > 0 ? 'true' : 'false'",
+      "values": ["space", "true", "false"]
+    }
+  }
+}

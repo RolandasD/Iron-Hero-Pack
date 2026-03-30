@@ -1,0 +1,35 @@
+{num} = -1
+{ang} = 35'
+
+{LeftArm2_posZ} += {data_0} * {num}
+{RightArm2_posZ} += {data_0} * {num} * {data_1}
+{LeftArm3_posZ} += {data_0} * {num}
+{RightArm3_posZ} += {data_0} * {num} * {data_1}
+{LeftArm4_posZ} += {data_0} * {num}
+{RightArm4_posZ} += {data_0} * {num} * {data_1}
+{LeftArm5_posZ} += {data_0} * {num}
+{RightArm5_posZ} += {data_0} * {num} * {data_1}
+{LeftArm6_posZ} += {data_0} * {num}
+{RightArm6_posZ} += {data_0} * {num} * {data_1}
+{LeftArm7_posZ} += {data_0} * {num}
+{RightArm7_posZ} += {data_0} * {num} * {data_1}
+
+{Head2_rotX} -= {data_0} * {ang}
+{Head3_rotX} -= {data_0} * {ang}
+{Head4_rotX} -= {data_0} * {ang}
+{Head5_rotX} -= {data_0} * {ang}
+{Head6_rotX} -= {data_0} * {ang}
+{Head7_rotX} -= {data_0} * {ang}
+
+{RightLeg2_rotX} -= {data_0} * {ang}
+{LeftLeg2_rotX} -= {data_0} * {ang}
+{RightLeg3_rotX} -= {data_0} * {ang}
+{LeftLeg3_rotX} -= {data_0} * {ang}
+{RightLeg4_rotX} -= {data_0} * {ang}
+{LeftLeg4_rotX} -= {data_0} * {ang}
+{RightLeg5_rotX} -= {data_0} * {ang}
+{LeftLeg5_rotX} -= {data_0} * {ang}
+{RightLeg6_rotX} -= {data_0} * {ang}
+{LeftLeg6_rotX} -= {data_0} * {ang}
+{RightLeg7_rotX} -= {data_0} * {ang}
+{LeftLeg7_rotX} -= {data_0} * {ang}

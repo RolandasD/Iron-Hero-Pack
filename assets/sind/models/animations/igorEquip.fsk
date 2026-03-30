@@ -1,0 +1,8 @@
+{rightArm_posX} -= {data_0}
+{leftArm_posX} += {data_0}
+
+{rightLeg_posX} -= 0.5*{data_0}
+{leftLeg_posX} += 0.5*{data_0}
+
+{head_posZ} -= 2.5*{data_0}
+{head_posY} += 2.5*{data_0}

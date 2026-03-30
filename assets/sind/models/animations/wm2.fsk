@@ -1,0 +1,34 @@
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+{data_2} = curve {data_2}
+{data_3} = curve {data_3}
+
+{slide_rotX} = clamp({pitch}' * {data_0}, -90', 30')
+{slide_rotY} = clamp(({yaw} - {bodyYaw})' * {data_0}, -22.5', 90')
+{slide_rotX} @ {data_3} -> -90'
+
+{leftFlap_rotY}+=(-90'*{data_1})
+{rightFlap_rotY}+=(90'*{data_1})
+
+{0}=curve animate2({data_2},0.4,0,0.2,0.2)
+{1}=curve animate2({data_2},4.8,0.2,0.2,4.6)
+{2}=curve animate2({data_2},0.56,0,0.26,0.3)
+{3}=curve animate2({data_2},0.74,0.26,0.3,0.44)
+{4}=curve animate2({data_2},4.44,0.56,0.44,4)
+{5}=curve animate2({data_2},1,0,0.7,0.3)
+{6}=curve animate2({data_2},4.3,0.7,0.3,4)
+{7}=curve animate2({data_2},1,0,0.82,0.18)
+{8}=curve animate2({data_2},4.18,0.82,0.18,4)
+
+{bone_posY}+=2{0}
+{bone_posX}+=2.5{1}
+{bone_posY}+=2{1}
+
+{bone3_rotY}+=90'{2}
+{bone3_rotX}+=-90'{3}-90'{4}
+{bone3_rotZ}+=-90'{3}-90'{4}
+
+{slide_rotY}+=-90'{5}-90'{6}
+{slide_posY}+=0.75{7}+0.75{8}
+
+{slide_rotX} += -75'{data_0} * {data_4}

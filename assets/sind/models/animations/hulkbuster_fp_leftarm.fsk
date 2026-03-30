@@ -1,0 +1,3 @@
+{data}=curve{data}
+{leftArmBuster_rotY}+=-2.5'*{data}
+{leftArmBuster_rotZ}+=7.5'*{data}

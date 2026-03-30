@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark100/rivals/mark100_pulsecannon_lights",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark85_pulsecannon_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark100_pulsecannon_lights_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(41 * entity.getInterpolatedData('fiskheroes:beam_charge')) | 0",
+      "values": {
+        "min": 1,
+        "max": 41
+      }
+    }
+  },
+  "isDynamic": true
+}

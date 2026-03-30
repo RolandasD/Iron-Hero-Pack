@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark50/mark50_suit",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/mark50_energymallet_xor_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark50_energymallet_xor_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(Math.ceil(2 * entity.getInterpolatedData('sind:dyn/slot2_timer')), 1) | 0",
+      "values": {
+        "min": 1,
+        "max": 2
+      }
+    }
+  },
+  "isDynamic": true
+}

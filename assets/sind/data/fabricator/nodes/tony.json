@@ -1,0 +1,11 @@
+{
+  "suit": "sind:tony",
+  "requirements": [
+    "fiskheroes:tier1",
+    "sind:arc_reactor",
+    "sind:early_stark_tech",
+    "fiskheroes:flight",
+    "fiskheroes:defense",
+    "fiskheroes:melee"
+  ]
+}

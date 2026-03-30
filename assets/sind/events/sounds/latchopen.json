@@ -1,0 +1,7 @@
+{
+    "parent": "fiskheroes:sound_base",
+    "sound": "sind:latchopen",
+    "pitch": 0.7,
+    "volume": 1.5
+  }
+  

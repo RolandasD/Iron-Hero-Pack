@@ -1,0 +1,11 @@
+{
+  "name": "War Hammer",
+  "holdingPose": "SINGLE",
+  "damageProfile": {
+    "damage": 7,
+    "types": {
+      "BLUNT": 1.0,
+      "ENERGY": 0.25
+    }
+  }
+}

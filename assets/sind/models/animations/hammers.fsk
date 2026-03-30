@@ -1,0 +1,12 @@
+;if({ticks} >= 100, {minutes}, {seconds})
+{data_0} = curve {data_0}
+{data_1} = curve {data_1}
+
+{seconds} = max(-20, sin{ticks})
+{minutes} = cbrt{seconds}
+
+{rightjack_posY} = {data_1} 
+{leftjack_posY} = {data_1}
+
+{rightjack_posY} = -6 + {data_0} * min({data_0} * 1.4{seconds} * curve (log 7{seconds}), 0.7)
+{leftjack_posY} = -6 + {data_0} * min({data_0} * 1.4{seconds} * curve (log 7{seconds}), 0.7)

@@ -1,0 +1,9 @@
+{
+  "texture": "sind:mark50_r/thruster/mark50_thruster_lights_<FLYING>",
+  "getters": {
+    "FLYING": {
+      "key": "entity.getData('fiskheroes:dyn/flight_super_boost_timer') == 1",
+      "values": ["true", "false"]
+    }
+  }
+}

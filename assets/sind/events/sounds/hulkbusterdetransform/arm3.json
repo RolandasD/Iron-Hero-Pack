@@ -1,0 +1,9 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:piece2",
+  "condition": "entity.isWearingFullSuit() && entity.getData('sind:dyn/hulkbuster')",
+  "pitch": "1.1 - (Math.random() * 0.7)",
+  "delay": 22,
+  "fadeOut": 5,
+  "volume": 0.75
+}

@@ -1,0 +1,7 @@
+{data_0} = curve {data_0}
+
+{leftside_posX} @ {data_0} -> -3.45
+{rightside_posX} @ {data_0} -> 3.45
+
+{leftside_posY} @ {data_0} -> -2.45
+{rightside_posY} @ {data_0} -> -2.45

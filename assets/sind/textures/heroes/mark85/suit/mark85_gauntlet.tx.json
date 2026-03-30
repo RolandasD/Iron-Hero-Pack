@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark85/suit/mark85_gauntlet",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/mark85_gauntlet_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark85_gauntlet_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.min(Math.ceil(5 * 6 * entity.getInterpolatedData('sind:dyn/beam_charge2')), 6) | 0",
+      "values": {
+        "min": 1,
+        "max": 6
+      }
+    }
+  },
+  "isDynamic": true
+}

@@ -1,0 +1,42 @@
+{data_0} = curve{data_0}
+{data_1} = curve{data_1}
+{data_3} = sin(pi*{data_3})
+
+{cosa} = cos({bodyYaw}')
+{sina} = sin({bodyYaw}')
+{strafe} = {motX}{cosa} + {motZ}{sina}
+
+{ruflap_posY} += {data_4}
+{luflap_posY} += {data_4}
+{rlflap_posY} += {data_4}
+{llflap_posY} += {data_4}
+
+{ruflap_rotX} @ {data_0} -> 10' + (if({strafe} > 0, 80'*{strafe}, 0)) + 10'{data_3}
+{luflap_rotX} @ {data_0} -> 10' + (if({strafe} < 0, -80'*{strafe}, 0)) + 10'{data_3}
+{ruflap_rotY} @ {data_0} -> -7.5'{data_3}
+{luflap_rotY} @ {data_0} -> 7.5'{data_3}
+{ruflap_rotZ} @ {data_0} -> 5'{data_3}
+{luflap_rotZ} @ {data_0} -> -5'{data_3}
+
+{rlflap_rotX} @ {data_0} -> 5' + 7.5'{data_3}
+{llflap_rotX} @ {data_0} -> 5' + 7.5'{data_3}
+{rlflap_rotY} @ {data_0} -> -60' - 10'{data_3} + (if({strafe} > 0, 10'*{strafe}, 0))
+{llflap_rotY} @ {data_0} -> 60' + 10'{data_3} + (if({strafe} < 0, -10'*{strafe}, 0))
+
+{ruflap_rotX} @ {data_1} -> 110'
+{luflap_rotX} @ {data_1} -> 110'
+
+{rlflap_rotX} @ {data_1} -> 10'
+{llflap_rotX} @ {data_1} -> 10'
+{rlflap_rotY} @ {data_1} -> -75'
+{llflap_rotY} @ {data_1} -> 75'
+
+{ruflap_rotY} @ {data_2} -> -90'
+{luflap_rotY} @ {data_2} -> 90'
+{ruflap_posX} += -2.05*{data_2}
+{luflap_posX} += 2.05*{data_2}
+
+{rlflap_rotY} @ {data_2} -> -90'
+{llflap_rotY} @ {data_2} -> 90'
+{rlflap_posX} += -1.05*{data_2}
+{llflap_posX} += 1.05*{data_2}

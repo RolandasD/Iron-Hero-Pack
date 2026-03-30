@@ -1,0 +1,123 @@
+{
+  "name": "- Iron Spider Armor",
+  "modifiers": {
+    "fiskheroes:fire_immunity": {},
+    "fiskheroes:projectile_immunity": {},
+    "fiskheroes:water_breathing": {},
+    "fiskheroes:metal_skin": {},
+    "fiskheroes:transformation": {
+      "key": "NANITE_TRANSFORM",
+      "transformation": {
+        "toggleData": "sind:dyn/nanites",
+        "timerData": "sind:dyn/nanite_timer",
+        "time": 10
+      },
+      "soundEvents": {
+        "ENABLE": "fiskheroes:mk50_enable",
+        "DISABLE": "fiskheroes:mk50_disable"
+      }
+    },
+    "fiskheroes:transformation|tentacles": {
+      "key": "TOGGLE_TENTACLES",
+      "transformation": {
+        "toggleData": "sind:dyn/tentacles",
+        "timerData": "sind:dyn/tentacles_timer",
+        "time": 20
+      },
+      "soundEvents": {
+        "ENABLE": "sind:ironspider/enable",
+        "DISABLE": "sind:ironspider/disable"
+      }
+    },
+    "fiskheroes:shield": {
+      "shield": {
+        "health": 80.0,
+        "regeneration": 12.0,
+        "recoveryDelay": 40,
+        "cooldown": 100
+      },
+      "coverage": {
+        "yawRadius": 35.0,
+        "pitchRadius": 35.0,
+        "yawOffset": 0.0,
+        "pitchOffset": 0.0
+      },
+      "isToggle": true,
+      "knockback": 0.05,
+      "soundEvents": {
+        "BLOCK_START": "fiskheroes:ock_strike",
+        "BLOCK_STOP": "fiskheroes:ock_unanchor",
+        "DEFLECT": "fiskheroes:shield_deflect",
+        "DISARM": "fiskheroes:shield_disarm"
+      }
+    },
+    "fiskheroes:transformation|webzip": {
+      "key": "WEB_ZIP_FAKE",
+      "transformation": {
+        "toggleData": "sind:dyn/nanites2",
+        "timerData": "sind:dyn/nanite_timer2",
+        "time": 10
+      },
+      "isToggle": true
+    },
+    "fiskheroes:tentacles|wall_crawling": {
+      "tentacles": [
+        [0, -1, 0],
+        [0, -1, 0],
+        [0, 1, 0],
+        [0, 1, 0]
+      ],
+      "climbing": {
+        "speed": 0.035,
+        "range": 1.5,
+        "tolerance": 1,
+        "minAnchorPoints": 1,
+        "anchorPointZones": [
+          ["TOP", "RIGHT", "FRONT"],
+          ["TOP", "LEFT", "FRONT"],
+          ["BOTTOM", "RIGHT", "FRONT"],
+          ["BOTTOM", "LEFT", "FRONT"]
+        ]
+      },
+      "soundEvents": {
+        "ENABLE": "fiskheroes:utility_belt_switch"
+      }
+    },
+    "fiskheroes:controlled_flight|wall_crawling_flight": {
+      "speed": 0.0,
+      "boostSpeed": 0.0,
+      "canBoost": false
+    },
+    "fiskheroes:transformation|instant": {
+      "key": "INSTANT",
+      "transformation": {
+        "toggleData": "sind:dyn/rep",
+        "timerData": "sind:dyn/rep_timer",
+        "time": 5
+      },
+      "isToggle": true,
+      "soundEvents": {
+        "ENABLE": "sind:latchopen2",
+        "DISABLE": "sind:latchopen"
+      }
+    },
+    "fiskheroes:cooldown": {
+      "cooldown": {
+        "toggleData": "sind:dyn/rep",
+        "cooldownData": "sind:dyn/instant_cooldown",
+        "duration": 610,
+        "recovery": 0.5
+      },
+      "soundEvents": {
+        "TIMEOUT": "sind:latchopen"
+      }
+    }
+  },
+  "hud": [
+    {
+      "type": "PROGRESS",
+      "texture": "sind:textures/gui/bars/laser.png",
+      "data": "sind:dyn/instant_cooldown"
+    }
+  ]
+}

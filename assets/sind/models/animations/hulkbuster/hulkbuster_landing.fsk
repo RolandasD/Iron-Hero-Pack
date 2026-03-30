@@ -1,0 +1,90 @@
+{data} = curve {data}
+
+{landingPose_0}=curve animate2({data},3.8,0,0.6578947368,3.1421052632)
+{landingPose_1}=curve animate2({data},0.6578947368,0,0.3157894737,0.3421052632)
+{landingPose_2}=curve animate2({data},3.4842105263,0.3157894736842105,0.3421052632,3.1421052632)
+{landingPose_3}=curve animate2({data},3.4578947368,0.34210526315789475,0.3157894737,3.1421052632)
+{landingPose_4}=curve animate2({data},0.6578947368,0,0.3421052632,0.3157894737)
+{landingPose_5}=curve animate2({data},0.3421052632,0,0.1315789474,0.2105263158)
+{landingPose_6}=curve animate2({data},0.5263157895,0.13157894736842105,0.2105263158,0.3157894737)
+
+{headBuster_rotX} @ {landingPose_0} -> 4.6343870935'
+{headBuster_rotY} @ {landingPose_0} -> -1.0673303684'
+{headBuster_rotZ} @ {landingPose_0} -> 21.2702107904'
+{headBuster_posX}+=7{landingPose_0}
+{headBuster_posY}+=15{landingPose_0}
+{headBuster_posZ}+=-4.6{landingPose_0}
+
+{bodyBuster_rotX} @ {landingPose_0} -> 30.1348391007'
+{bodyBuster_rotY} @ {landingPose_0} -> 17.1439978487'
+{bodyBuster_rotZ} @ {landingPose_0} -> 32.6191315029'
+{bodyBuster_posX}+=6.6{landingPose_0}
+{bodyBuster_posY}+=14.7{landingPose_0}
+{bodyBuster_posZ}+=-3.2{landingPose_0}
+
+{rightArmBuster_rotX} @ {landingPose_0} -> 19.9733402352'
+{rightArmBuster_rotY} @ {landingPose_0} -> -24.5084738303'
+{rightArmBuster_rotZ} @ {landingPose_0} -> 48.561441725'
+{rightArmBuster_posX}+=7.7{landingPose_0}
+{rightArmBuster_posY}+=5.5{landingPose_0}
+{rightArmBuster_posZ}+=4.2{landingPose_0}
+
+{lowerRightArm_rotX} @ {landingPose_1} -> -18.4080567697'
+{lowerRightArm_rotY} @ {landingPose_1} -> 6.6451097013'
+{lowerRightArm_rotZ} @ {landingPose_1} -> -2.2055269518'
+{lowerRightArm_rotX} @ {landingPose_2} -> -31'
+
+{leftArmBuster_rotY} @ {landingPose_0} -> 62.5'
+{leftArmBuster_posX}+=3.9{landingPose_0}
+{leftArmBuster_posY}+=24{landingPose_0}
+{leftArmBuster_posZ}+=-3.1{landingPose_0}
+
+{lowerLeftArm_rotX} @ {landingPose_0} -> 20.587196125'
+{lowerLeftArm_rotY} @ {landingPose_0} -> 6.2648542017'
+{lowerLeftArm_rotZ} @ {landingPose_0} -> 4.7260508628'
+{lowerLeftArm_posX}+=0.3049808326{landingPose_0}
+{lowerLeftArm_posZ}+=-0.4969775564{landingPose_0}
+
+{lowerLeftLeg_rotX} @ {landingPose_1} -> 34.3'+22.5'
+{lowerLeftLeg_rotX} @ {landingPose_2} -> 35'+22.5'
+
+{lowerRightLeg_rotX} @ {landingPose_0} -> 32.476726745'+22.5'
+{lowerRightLeg_rotY} @ {landingPose_0} -> 7.3500893956'
+{lowerRightLeg_rotZ} @ {landingPose_0} -> -2.9132556266'-2'
+{lowerRightLeg_posX}+=0.2996705403{landingPose_0}
+{lowerRightLeg_posY}+=0.8326476162{landingPose_0}
+{lowerRightLeg_posZ}+=1.4254314065{landingPose_0}
+
+{player_rotX} @ {landingPose_0} -> 30.1348391007'
+{player_rotY} @ {landingPose_0} -> 17.1439978487'
+{player_rotZ} @ {landingPose_0} -> 32.6191315029'
+{player_posX}+=6.6{landingPose_0}
+{player_posY}+=14.7{landingPose_0}
+{player_posZ}+=-3.2{landingPose_0}
+
+{footLeft_rotX} @ {landingPose_3} -> 37.5'
+{footLeft_posX}+=0.3588674064{landingPose_3}
+{footLeft_posY}+=3.0917536069{landingPose_3}
+{footLeft_posZ}+=-0.1107872564{landingPose_3}
+
+{footRight_rotX} @ {landingPose_0} -> 14.9878817691'
+{footRight_rotY} @ {landingPose_0} -> 0.3483419949'
+{footRight_rotZ} @ {landingPose_0} -> 3.5151720789'
+
+{leftLegBuster_rotX} @ {landingPose_4} -> 40'
+{leftLegBuster_rotX} @ {landingPose_3} -> 55'
+{leftLegBuster_posY}+=3{landingPose_5}
+{leftLegBuster_posZ}+=0.8{landingPose_5}
+{leftLegBuster_posX}+=-0.7{landingPose_6}
+{leftLegBuster_posY}+=9{landingPose_6}
+{leftLegBuster_posZ}+=4.48{landingPose_6}
+{leftLegBuster_posX}+=1.4{landingPose_3}
+{leftLegBuster_posY}+=18{landingPose_3}
+{leftLegBuster_posZ}+=6.6{landingPose_3}
+
+{rightLegBuster_rotX} @ {landingPose_0} -> -47.4562436106'
+{rightLegBuster_rotY} @ {landingPose_0} -> 0.0094973435'
+{rightLegBuster_rotZ} @ {landingPose_0} -> 3.3345085875'
+{rightLegBuster_posX}+=-0.9{landingPose_0}
+{rightLegBuster_posY}+=8{landingPose_0}
+{rightLegBuster_posZ}+=8.1{landingPose_0}

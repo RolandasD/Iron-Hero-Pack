@@ -1,0 +1,12 @@
+{
+  "requirements": ["sind:inconspicuous1", "sind:inconspicuous2", "sind:inconspicuous3", "sind:inconspicuous4", "sind:inconspicuous5", "sind:inconspicuous6"],
+  "display": {
+    "name": {
+      "translate": "I am Iron Man"
+    },
+    "icon": {
+      "texture": "sind:textures/gui/nodes/iamironman.png"
+    },
+    "description": "Collect all the previous armors to craft the ultimate suit of armor"
+  }
+}

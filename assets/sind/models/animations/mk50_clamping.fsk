@@ -1,0 +1,24 @@
+{data} = curve {data}
+
+{body_rotX} @ {data} -> 10'
+
+{body_posZ} @ {data} -> -2
+{head_posZ} @ {data} -> -2
+{rightArm_posZ} @ {data} -> -2
+{leftArm_posZ} @ {data} -> -2
+
+{body_posY} @ {data} -> -2
+{head_posY} @ {data} -> -2
+{rightArm_posY} @ {data} -> -1
+{leftArm_posY} @ {data} -> -1
+
+{rightLeg_rotX} @ {data} -> 20'
+{rightLeg_posZ} @ {data} -> 1
+{leftLeg_rotX} @ {data} -> -20'
+{leftLeg_posZ} @ {data} -> -1
+
+{leftArm_rotZ} -= 15'*{data}
+{rightArm_rotZ} += 15'*{data}
+
+{leftLeg_rotY} -= 10'*{data}
+{rightLeg_rotY} += 10'*{data}

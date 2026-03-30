@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark80/ffcannon/mark80_ffcannon_lights",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor2/mark100_ffcannon_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark80_ffcannon_lights_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.ceil(60 * entity.getInterpolatedData('fiskheroes:beam_charge')) | 0",
+      "values": {
+        "min": 1,
+        "max": 60
+      }
+    }
+  },
+  "isDynamic": true
+}

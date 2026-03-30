@@ -1,0 +1,9 @@
+{
+  "texture": "sind:mark50_r/batteringram/mark50_batteringram_lights_<ON>",
+  "getters": {
+    "ON": {
+      "key": "entity.getData('sind:dyn/slot1_timer') == 1",
+      "values": ["true", "false"]
+    }
+  }
+}

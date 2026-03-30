@@ -1,0 +1,18 @@
+{data_0} = curve {data_0}
+
+{flap_left_rotY} @ {data_0} -> -90'
+{flap_right_rotY} @ {data_0} -> 90'
+{flap_left_posX} @ {data_0} -> 4
+{flap_right_posX} @ {data_0} -> -4
+
+{mid_left_posX} @ {data_0} -> 4
+{mid_right_posX} @ {data_0} -> -4
+
+{bottom_left_rotY} @ {data_0} -> -22.5'
+{bottom_right_rotY} @ {data_0} -> 22.5'
+{top_left_rotY} @ {data_0} -> -22.5'
+{top_right_rotY} @ {data_0} -> 22.5'
+{thruster_left_rotY} @ {data_0} -> -22.5'
+{thruster_right_rotY} @ {data_0} -> 22.5'
+
+{centre_posY} @ {data_0} -> 9000

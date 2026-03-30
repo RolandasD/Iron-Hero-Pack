@@ -1,0 +1,6 @@
+{
+  "parent": "fiskheroes:sound_base",
+  "sound": "sind:harpoon_reel",
+  "volume": 1,
+  "pitch": "0.9 + Math.random() * 0.3"
+}

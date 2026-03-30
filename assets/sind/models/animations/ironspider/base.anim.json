@@ -1,0 +1,8 @@
+{
+    "inputs": [
+      "sind:ironspider/toggle",
+      "sind:ironspider/jab",
+      "sind:ironspider/block",
+      "sind:ironspider/idle"
+    ]
+  }
