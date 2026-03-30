@@ -1,0 +1,18 @@
+{
+  "texture": {
+    "in": "sind:mark30/mark30_shoulder",
+    "transform": [
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/mark30_shoulder_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark30_shoulder_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(entity.getData('fiskheroes:suit_open_timer'), (Math.ceil(5 * entity.getInterpolatedData('sind:dyn/sentry_timer')))) | 0",
+      "values": [0, 1, 2, 3, 4, 5]
+    }
+  }
+}

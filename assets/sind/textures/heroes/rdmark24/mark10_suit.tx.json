@@ -1,0 +1,22 @@
+{
+  "texture": {
+    "in": "sind:mark10/mark10_layer2",
+    "transform": [
+      {
+        "operation": "OR",
+        "supply": "sind:mark10/mark10_layer1"
+      },
+      {
+        "operation": "XOR",
+        "supply": "sind:xor/iron_man_suit_<TIMER>"
+      }
+    ],
+    "out": "sind:generated/mark10_suit_<TIMER>"
+  },
+  "getters": {
+    "TIMER": {
+      "key": "Math.max(entity.getData('fiskheroes:suit_open_timer'), (Math.ceil(5 * entity.getInterpolatedData('sind:dyn/sentry_timer')))) | 0",
+      "values": [0, 1, 2, 3, 4, 5]
+    }
+  }
+}

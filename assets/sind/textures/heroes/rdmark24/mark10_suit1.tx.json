@@ -1,0 +1,12 @@
+{
+  "texture": "sind:anim/mark10_transform_<TIMER>",
+  "getters": {
+    "TIMER": {
+      "key": "Math.min(Math.floor(12 * entity.getInterpolatedData('sind:dyn/srockets_cooldown')), 6) | 0",
+      "values": {
+        "min": 0,
+        "max": 6
+      }
+    }
+  }
+}
